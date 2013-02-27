@@ -6,9 +6,15 @@
 ============================================
 
 
+20130222
+--------
+- build group
+- create project on github
+- install software development environment
+
 20130227
 --------
-- worked on CS1 Task1 
+- work on CS1 Task1
 -- Discussion about first analysis, target users, key features & critical success factors
--- Drawing of high-level architecture
+-- Draw of high-level architecture
 -- => results: firstAnalysis.txt & highlevel_architecture.jpg
