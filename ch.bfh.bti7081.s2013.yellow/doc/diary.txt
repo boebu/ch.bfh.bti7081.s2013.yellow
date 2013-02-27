@@ -1,1 +1,13 @@
-diary
+============================================
+=== DIARY OF ch.bfh.bti7081.s2013.yellow ===
+===                                      ===
+===    last change: 20130227, bronc1     ===
+===                                      ===
+============================================
+
+
+20130227
+--------
+- worked on CS1 Task1 
+-- Discussion about first analysis, target users, key features & critical success factors)
+-- Drawing of high-level architecture
