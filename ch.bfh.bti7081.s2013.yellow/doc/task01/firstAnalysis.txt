@@ -1,0 +1,24 @@
+1) Target users
+    - Ärzte
+    - Krankenschwestern / Pflegefachkräfte
+    - Gesundheitskontrolle
+    - Management
+    - Reception
+
+2) Key Features
+    - Patientendaten verwalten
+    - Medikation eines Patienten
+    - Terminverwaltung (+ Therapien, Sprechstunden)
+    - Reporting
+
+3) Critical Success Factors
+    - Datenschutz (+ Berechtigungen)
+    - Einhaltung von Mental Health Act
+
+4) Probleme:
+    - Wie viele Benutzer?
+    - Auf welchen Clients muss es laufen?
+    - Systemanforderungen?
+    - Was für die Ressourcen steht den Spitälern noch zur Verfügung?
+
+Skizze: highlevel_architecture.jpg
