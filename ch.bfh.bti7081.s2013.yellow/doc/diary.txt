@@ -9,5 +9,6 @@
 20130227
 --------
 - worked on CS1 Task1 
--- Discussion about first analysis, target users, key features & critical success factors)
+-- Discussion about first analysis, target users, key features & critical success factors
 -- Drawing of high-level architecture
+-- => results: firstAnalysis.txt & highlevel_architecture.jpg
