@@ -1,16 +1,17 @@
 ============================================
 === DIARY OF ch.bfh.bti7081.s2013.yellow ===
 ===                                      ===
-===    last change: 20130227, bronc1     ===
 ===                                      ===
 ============================================
 
 
-20130222
+20130301
 --------
-- build group
-- create project on github
-- install software development environment
+- work on CS1 Task2
+-- Pro/Con List of different SE Processes
+-- Decicion of SE Process for the CS Project, based on first_analysis
+-- Design SE-Process Model
+-- => results: SE_Process.txt & XXX:TODO
 
 20130227
 --------
@@ -18,3 +19,9 @@
 -- Discussion about first analysis, target users, key features & critical success factors
 -- Draw of high-level architecture
 -- => results: firstAnalysis.txt & highlevel_architecture.jpg
+
+20130222
+--------
+- build group
+- create project on github
+- install software development environment
