@@ -1,12 +1,10 @@
 *** Plan driven
 
  # Pro's
- 
   - definierte Roadmap
   - klarer Vertrag mit Kunde, welche Objekte wann geliefert werden müssen
  
  # Con's
-  
   - Viele Unklarheiten
   - fehlende Anforderungen
  
@@ -14,17 +12,12 @@
 *** Agile
  
  # Pro's
- 
  - Schritteweise erarbeiten der Lösung (mit Kunde)
  - Flexibilität
  - 
  
-  
-  
  # Con's
- 
  - Kunde fehlt tech Verständnis -> setzt Prioritäten evtl. Falsch
-  
   
 *** Combination
 
