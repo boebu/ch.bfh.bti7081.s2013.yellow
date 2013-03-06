@@ -1,9 +1,28 @@
-Functual requirements:
+High-Level-User-Requirements:
+- Ersatz von Spritzen
+- Regelung des Blutzuckerhaushalts
+- Portables Geräte -> Langanhaltender Akku
+- Immer und einfach bedienbar -> evtl. kalibrierbar, einfach nachfüllbar
+- Reporting?
 
 
+Aufgeteilt in:
+	Functional requirements:
+	- Messen des Blutzuckers
+	- Anhand der Messung, Entscheid ob und wenn wieviel Insulin benötigt wird
+	- Abgabe von berechneter Menge Insulin
+	- Möglichkeit zum Kalibrieren
+	- Möglichkeit zum Nachfüllen
+	- Meldung, wenn Akku oder Insulin leer
+	- Reporting?
 
-Non-functual requirements:
+
+	Non-functional requirements:
+	- Portabilität
+	- Einfache Bedienbarkeit (im Alltag) -> auch langer Akku
+	- Einfaches Nachfüllen, z.B. mit Dosen
 
 
-
-Domain requirements:
+	Domain requirements:
+	- Medizinische Richtlinien (Steril,...)
+	- Belastbar (Wasser, Schweiss, Sport...)
