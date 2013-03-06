@@ -1,29 +1,29 @@
 High-Level-User-Requirements:
 - Ersatz von Spritzen
 - Regelung des Blutzuckerhaushalts
-- Portables Ger�te -> Langanhaltender Akku
-- Immer und einfach bedienbar -> evtl. kalibrierbar, einfach nachf�llbar
-- Reporting?
+- Portables Geräte -> Langanhaltender Akku
+- Immer und einfach bedienbar -> evtl. kalibrierbar, einfach nachfüllbar
+- Alarm bei kritischem Zustand (Zuckerwert, Gerätefunktion)
 
 
-Aufgeteilt in:
+System requirements:
 	Functional requirements:
 	- Messen des Blutzuckers
-	- Anhand der Messung, Entscheid ob und wenn wieviel Insulin ben�tigt wird
+	- Anhand der Messung, Entscheid ob und wenn wieviel Insulin benötigt wird
 	- Abgabe von berechneter Menge Insulin
-	- M�glichkeit zum Kalibrieren
-	- M�glichkeit zum Nachf�llen
+	- Möglichkeit zum Kalibrieren
+	- Möglichkeit zum Nachfüllen
 	- Meldung, wenn Akku oder Insulin leer
-	- Reporting?
+	- Reporting
 
 
 	Non-functional requirements:
-	- Portabilit�t (Grösse und Gewicht genau angeben)
+	- Portabilität (Grösse und Gewicht genau angeben)
 	- Auswechselbare Batterie
 	- Einfache Bedienbarkeit (im Alltag) -> auch langer Akku
-	- Einfaches Nachf�llen, z.B. mit Dosen
+	- Einfaches Nachfüllen, z.B. mit Dosen
+	- Belastbar (Wasser, Schweiss, Sport...)
 
 
 	Domain requirements:
 	- Medizinische Richtlinien (Steril,...)
-	- Belastbar (Wasser, Schweiss, Sport...)
