@@ -4,6 +4,10 @@
 ===                                      ===
 ============================================
 
+20130306
+--------
+- work on CS2 Task1
+-- Discussion about Requirements
 
 20130301
 --------
@@ -26,7 +30,3 @@
 - create project on github
 - install software development environment
 
-20130306
---------
-- work on CS2 Task1
--- Discussion about Requirements
