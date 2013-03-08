@@ -1,0 +1,8 @@
+Potential users:
+- Diabetiker
+
+Use cases:
+
+Dependencies:
+
+Use case scenario:
