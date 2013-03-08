@@ -4,6 +4,12 @@
 ===                                      ===
 ============================================
 
+20130308
+--------
+- work on CS2 Task2
+-- created use case diagram
+-- made 2 detailed use case scenarios: Blutzuckergehalt messen, Blutzuckergehaltmessung auswerten
+
 20130306
 --------
 - work on CS2 Task1
