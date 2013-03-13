@@ -1,15 +1,11 @@
-
 ============================================
 ===                                      ===
-===             2 - Research             ===
+===             1 - Scoping              ===
 ===                                      ===
 ============================================
-http://www.santesuisse.ch/de/dyn_output.html?content.vcid=6&content.cdid=10624&detail=yes&navid=2
-http://csvm.ch/de/dienstleistungen/medikamentenabgabe.html
-http://www.documed.ch/wAssetsDocumed/bin/de/clinicum.pdf
 
-
-
+Interview im Spital
+#############################
 
 Wer darf Medikamente in der Apotheke beziehen?
 
@@ -25,6 +21,8 @@ Wenn nein:
 Wie wird kontrolliert, dass die Patienten immer die gleiche oder die richtige Menge bekommt?
 Wie wird es Spitalübergreifend gehandhabt?
 
+Mischt der Apotheker auch selbst einige Medikamente?
+
 Wie funktioniert die Lagerbewirtschaftung bei Euch?
 
 Betreibt ihr Medikamentenstudie?
@@ -37,3 +35,38 @@ Betreibt ihr Medikamentenstudie?
 
     nein:
         warum nicht?
+
+Der Arzt verschreibt ein Medi. Das Medi wird daraufhin zurückgerufen. Was geschieht nun?
+
+Gehen die Patienten in die Ferien?
+    Wenn ja, wie wird das mit der Medikamentenausgabe gehandelt?
+
+In welchen Dosen bekommt ein psychisch kranker, bspw. ein Suizidgefährdeter, damit die Gefahr an einer absichtlichen Überdosis vermieden wird?
+Wie wird kontrolliert, ob er auch die richtige Menge des verschr. Medikamentes einnimmt?
+
+Wird von der Seite der Apotheke überprüft, ob die vom Arzt verschriebene Dosis dem Betäubungsmittelgesetz entspricht?
+
+
+============================================
+===                                      ===
+===             2 - Research             ===
+===                                      ===
+============================================
+
+
+User:                   Apotheker
+Environment:            Patienten, Ärzte, Medikamente, (Chemikalien)
+Interact with users:    Interview (Inselspital, UPD am 15.03.2013)
+Research sources:       Online Sources:
+                            http://www.santesuisse.ch/de/dyn_output.html?content.vcid=6&content.cdid=10624&detail=yes&navid=2
+                            http://csvm.ch/de/dienstleistungen/medikamentenabgabe.html
+                            http://www.documed.ch/wAssetsDocumed/bin/de/clinicum.pdf
+insights from different disciplines:
+Detail your project constraints (budget, time, people):
+
+============================================
+===                                      ===
+===             3 - Synthesize           ===
+===                                      ===
+============================================
+
