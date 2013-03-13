@@ -4,6 +4,12 @@
 ===                                      ===
 ============================================
 
+20130313
+--------
+- work on CS1 Task3 - Design Thinking
+-- 1 - Scoping
+-- 2 - Began witch researches, noted unclear questions so we can ask them in the interview.
+
 20130308
 --------
 - work on CS2 Task2
