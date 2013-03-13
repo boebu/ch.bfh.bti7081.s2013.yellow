@@ -4,8 +4,35 @@
 ===                                      ===
 ============================================
 
-Interview im Spital
-#############################
+TODO: how to measure success (for later validation)
+
+TODO: which problems not to solve (out of scope)
+
+Project restrictions:
+---------------------
+
+    Nr  |   team members        |   skills
+    ------------------------------------------
+    1   |   Christoph Brönimann |
+    ------------------------------------------
+    2   |   Janosch Rohdewald   |
+    ------------------------------------------
+    3   |   Boban Glisovic      |
+    ------------------------------------------
+    4   |   Fabian Hutzli       |
+    ------------------------------------------
+    5   |   Andy Pollari        |
+
+timeline and modus operandi:
+----------------------------
+    timeline:   start:             13.03.2013
+                interview & work:  15.03.2013
+                presentation    :  20.03.2013
+    operandi:   iterativ
+
+
+Interview im Spital:
+--------------------
 
 Wer darf Medikamente in der Apotheke beziehen?
 
