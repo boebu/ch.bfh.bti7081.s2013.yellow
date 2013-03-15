@@ -13,7 +13,7 @@ Project restrictions:
 
     Nr  |   team members        |   skills
     ------------------------------------------
-    1   |   Christoph Br��nimann |
+    1   |   Christoph Brönnimann |
     ------------------------------------------
     2   |   Janosch Rohdewald   |
     ------------------------------------------
@@ -36,17 +36,17 @@ Interview im Spital:
 
 Wer darf Medikamente in der Apotheke beziehen?
 
-Setzt ihr bereits mobile Ger��te ein?
+Setzt ihr bereits mobile Geräte ein?
 
 Wenn ja:
     Was  bringen diese?
     Wie haben Sie es vorher gemacht?
 
 Wenn nein:
-    Wie k��nnten mobile Ger��te hier die Arbeit erleichtern?
+    Wie könnten mobile Geräte hier die Arbeit erleichtern?
 
 Wie wird kontrolliert, dass die Patienten immer die gleiche oder die richtige Menge bekommt?
-Wie wird es Spital��bergreifend gehandhabt?
+Wie wird es Spitalübergreifend gehandhabt?
 
 Mischt der Apotheker auch selbst einige Medikamente?
 
@@ -56,22 +56,22 @@ Betreibt ihr Medikamentenstudie?
 
     ja:
         wie wertet Ihr diese aus?
-        Welche Daten werden f��r die Studie verwendet?
+        Welche Daten werden für die Studie verwendet?
         Sind die Daten anonym?
-        Gibt der Arzt R��ckmeldung, wenn ein Medikament nicht wie gew��nscht anschl��gt?
+        Gibt der Arzt Rückmeldung, wenn ein Medikament nicht wie gewünscht anschlägt?
 
     nein:
         warum nicht?
 
-Der Arzt verschreibt ein Medi. Das Medi wird daraufhin zur��ckgerufen. Was geschieht nun?
+Der Arzt verschreibt ein Medi. Das Medi wird daraufhin zurückgerufen. Was geschieht nun?
 
 Gehen die Patienten in die Ferien?
     Wenn ja, wie wird das mit der Medikamentenausgabe gehandelt?
 
-In welchen Dosen bekommt ein psychisch kranker, bspw. ein Suizidgef��hrdeter, damit die Gefahr an einer absichtlichen ��berdosis vermieden wird?
+In welchen Dosen bekommt ein psychisch kranker, bspw. ein Suizidgefährdeter, damit die Gefahr an einer absichtlichen ��berdosis vermieden wird?
 Wie wird kontrolliert, ob er auch die richtige Menge des verschr. Medikamentes einnimmt?
 
-Wird von der Seite der Apotheke ��berpr��ft, ob die vom Arzt verschriebene Dosis dem Bet��ubungsmittelgesetz entspricht?
+Wird von der Seite der Apotheke überprüft, ob die vom Arzt verschriebene Dosis dem Betäubungsmittelgesetz entspricht?
 
 
 ============================================
@@ -82,7 +82,7 @@ Wird von der Seite der Apotheke ��berpr��ft, ob die vom Arzt verschriebe
 
 
 User:                   Apotheker
-Environment:            Patienten, ��rzte, Medikamente, (Chemikalien)
+Environment:            Patienten, ärzte, Medikamente, (Chemikalien)
 Interact with users:    Interview (Inselspital, UPD am 15.03.2013)
 Research sources:       Online Sources:
                             http://www.santesuisse.ch/de/dyn_output.html?content.vcid=6&content.cdid=10624&detail=yes&navid=2
@@ -104,4 +104,13 @@ Studien zu Medikamenten werden an der Klinik nicht durchgeführt.
 ===             3 - Synthesize           ===
 ===                                      ===
 ============================================
+
+Target Users:
+---------------
+Wir haben nur ein Target User.
+
+Target User Persona:
+Simona ist eine Pharma Assistentin und arbeitet in der Spitalapotheke.
+Sie nimmt schriftliche Medikamentenbestellung entgegen und macht diese für die Zustellung oder Abholung bereit.
+Sie führt Inventar und bestellt bei Bedarf die Medikamente nach. Zudem prüft sie die Verfallsdaten der Medikamente.
 
