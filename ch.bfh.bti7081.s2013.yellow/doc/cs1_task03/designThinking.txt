@@ -114,3 +114,21 @@ Simona ist eine Pharma Assistentin und arbeitet in der Spitalapotheke.
 Sie nimmt schriftliche Medikamentenbestellung entgegen und macht diese für die Zustellung oder Abholung bereit.
 Sie führt Inventar und bestellt bei Bedarf die Medikamente nach. Zudem prüft sie die Verfallsdaten der Medikamente.
 
+============================================
+===                                      ===
+===             4 - Design               ===
+===                                      ===
+============================================
+
+Ideen ( vom Team als gut empfunden mit einem + gekennzeichnet, die anderen mit einem - gekennzeichnet )
+---------------
++ - Barcadescanner
++   - Elektronische Bestellung
++ - Automatische Bestellung (Bestätigung durch PA)
+- - Automatische Erkennung der Verfallsdaten
++ - Inventar acktualisierung bei erhaltener Lieferung
++ - Private Bestellung auch elektronisch abwickeln
++ - Privater Bezug persönlich abwickeln
+
+-> storyboard: designStoryBoard.jpg
+
