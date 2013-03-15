@@ -105,3 +105,12 @@ Studien zu Medikamenten werden an der Klinik nicht durchgeführt.
 ===                                      ===
 ============================================
 
+Target Users:
+---------------
+Wir haben nur ein Target User.
+
+Target User Persona:
+Simona ist eine Pharma Assistentin und arbeitet in der Spitalapotheke.
+Sie nimmt schriftliche Medikamentenbestellung entgegen und macht diese für die Zustellung oder Abholung bereit.
+Sie führt Inventar und bestellt bei Bedarf die Medikamente nach. Zudem prüft sie die Verfallsdaten der Medikamente.
+
