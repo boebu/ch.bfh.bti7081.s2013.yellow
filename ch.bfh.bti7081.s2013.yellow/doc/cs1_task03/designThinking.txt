@@ -132,3 +132,25 @@ Ideen ( vom Team als gut empfunden mit einem + gekennzeichnet, die anderen mit e
 
 -> storyboard: designStoryBoard.jpg
 
+============================================
+===                                      ===
+===             5 - Prototype            ===
+===                                      ===
+============================================
+
+View prototype
+
+
+============================================
+===                                      ===
+===             6 - Validate             ===
+===                                      ===
+============================================
+
+
+Feedback von Simona:
+ - Anzahl Medikamente beim Abscannen
+ - Autocompletion bei Erfassung des Medikamentes
+ - Due date der Bestellung
+ - Welche Person hat bestellt?
+ - PA muss Bestellung editieren können
