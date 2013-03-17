@@ -4,6 +4,20 @@
 ===                                      ===
 ============================================
 
+20130315
+--------
+- work on CS1 Task3 - Design Thinking
+       Interview with Spitalzentrum Biel, Zieglerspital Bern
+       Synthesis
+       Design
+       Prototype
+
+20130314
+--------
+- work on CS1 Task3 - Design Thinking
+       Researches
+       Interview with UPD, Inselspital Bern
+
 20130313
 --------
 - work on CS1 Task3 - Design Thinking
