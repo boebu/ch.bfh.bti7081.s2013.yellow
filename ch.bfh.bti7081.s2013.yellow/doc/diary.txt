@@ -4,6 +4,13 @@
 ===                                      ===
 ============================================
 
+20130318
+--------
+- work on CS1 Task3 - Design Thinking
+       Validate
+           Validated prototype with staff in Zieglerspital
+           discussed next step based on Zieglerspital feedback
+
 20130315
 --------
 - work on CS1 Task3 - Design Thinking
