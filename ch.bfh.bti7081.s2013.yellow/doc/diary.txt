@@ -20,6 +20,7 @@
            Dies gilt auch für Rezeptpflichtige Medikamente. Das Rezept, das ihnen vom der Psychiatrie ausgestellt wird, ist dann aber aus
            Überwachungsgründen nur in den internen Apotheken gültig.
            -> Die Anforderung, dass die Patienten die Medikamente selbst holen können, erfordert Anpassungen in der Applikation
+       Alle Design Thinking Prozess Schritte bis und mit Prototyp nochmals durchgelaufen und aktualisiert.
 
 
 20130315
