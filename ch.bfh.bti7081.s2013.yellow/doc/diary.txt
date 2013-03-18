@@ -10,6 +10,17 @@
        Validate
            Validated prototype with staff in Zieglerspital
            discussed next step based on Zieglerspital feedback
+           -> Probleme in der Usability. Sieht zu fest aus wie eine Desktop Anwendung.
+
+           Rücksprache mit UPD
+           Wir schlugen vor, dass auch Patienten Medikamente in ihrer Apotheke holen könnten.
+           Sie fanden die Idee gut, aber nur für die nicht stationären Patienten.
+           Die stationären Patienten bekämen ohnehin ihre Medikamente nur vom Pflegepersonal oder vom Arzt und werden streng überwacht.
+           Es könnte also möglich sein, dass Patienten (nur nicht stationäre) ihre Medikamente in der internen Apotheke ihre Medikamente holen.
+           Dies gilt auch für Rezeptpflichtige Medikamente. Das Rezept, das ihnen vom der Psychiatrie ausgestellt wird, ist dann aber aus
+           Überwachungsgründen nur in den internen Apotheken gültig.
+           -> Die Anforderung, dass die Patienten die Medikamente selbst holen können, erfordert Anpassungen in der Applikation
+
 
 20130315
 --------
