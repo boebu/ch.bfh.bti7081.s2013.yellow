@@ -4,24 +4,35 @@
 ===                                      ===
 ============================================
 
-TODO: how to measure success (for later validation)
+how to measure success (for later validation)
+---------------------------------------------
+    -   Nicht stationäre Patienten können die Medikamente in der internen Apotheke holen
+    -   Die Spital Stationen können
+        -   die Medikamente elektronisch bestellen
+        -   Auftragstatus verfolgen
+    -   Apotheke: Elektronisch erfasster Lagerbestand
+    -   Patient kann nur verschriebene Medikamente abholen, unter letzte Abgaben werden berücksichtigt
 
-TODO: which problems not to solve (out of scope)
+which problems not to solve (out of scope)
+---------------------------------------------
+    -   Patientenverwaltung
+    -   Medikamentenabrechnung
+    -   Abholung der Medikamente von stationären Patienten
 
 Project restrictions:
 ---------------------
 
-    Nr  |   team members        |   skills
+    Nr  |   team members            |   skills
     ------------------------------------------
-    1   |   Christoph Brönnimann |
+    1   |   Christoph Brönnimann    |   ITIL, Netzwerk
     ------------------------------------------
-    2   |   Janosch Rohdewald   |
+    2   |   Janosch Rohdewald       |   Linux, Storage
     ------------------------------------------
-    3   |   Boban Glisovic      |
+    3   |   Boban Glisovic          |   Linux
     ------------------------------------------
-    4   |   Fabian Hutzli       |
+    4   |   Fabian Hutzli           |   Netzwerk, Linux
     ------------------------------------------
-    5   |   Andy Pollari        |
+    5   |   Andy Pollari            |   Java, Grails
 
 timeline and modus operandi:
 ----------------------------
@@ -29,6 +40,7 @@ timeline and modus operandi:
                 interview & work:  15.03.2013
                 presentation    :  20.03.2013
     operandi:   iterativ
+    budget:     0 Fr.
 
 
 Interview im Spital:
@@ -88,7 +100,7 @@ Research sources:       Online Sources:
                             http://www.santesuisse.ch/de/dyn_output.html?content.vcid=6&content.cdid=10624&detail=yes&navid=2
                             http://csvm.ch/de/dienstleistungen/medikamentenabgabe.html
                             http://www.documed.ch/wAssetsDocumed/bin/de/clinicum.pdf
-insights from different disciplines:
+
 Detail your project constraints (budget, time, people):
 
 Interview Results #1:
@@ -98,6 +110,12 @@ Rezeptpflichtige Medikamente (stark!) werden nur gegen Rezept und Unterschrift (
 Der Apotheker kümmert sich ausschliesslich um den Medikamentenbestand (Lagerbewirtschaftung)
 und gibt gegen Rezept Medikamente an Ärtze und Schwestern ab.
 Studien zu Medikamenten werden an der Klinik nicht durchgeführt.
+
+Interview Results #2:
+Es ist denkbar, dass nicht stationäre Patienten ihre Medikamente in Zukunft auch selbst in der Apotheke holen könnten.
+Somit müssten Sie sich nicht immer an den Arzt wenden, um die Medikamente einzuholen.
+Der Arzt muss für die Patienten erfassen, welche Medikamente der Patient braucht in welchem Intervall (z.B. Zavedos Lyophilisat, 10mg, alle 7 Tage 1x).
+Somit kann der Apotheker auch die Rezeptpflichtigen Medikamente rausgeben.
 
 ============================================
 ===                                      ===
@@ -113,6 +131,8 @@ Target User Persona:
 Simona ist eine Pharma Assistentin und arbeitet in der Spitalapotheke.
 Sie nimmt schriftliche Medikamentenbestellung entgegen und macht diese für die Zustellung oder Abholung bereit.
 Sie führt Inventar und bestellt bei Bedarf die Medikamente nach. Zudem prüft sie die Verfallsdaten der Medikamente.
+Nicht stationäre Patienten komen in die Apotheke und holen Medikamente ab. Simona gibt die Medikamente den Patienten raus
+( Auch rezeptpflichtige, sofern der Arzt diese dem Patienten verschrieben hat. )
 
 ============================================
 ===                                      ===
@@ -122,13 +142,14 @@ Sie führt Inventar und bestellt bei Bedarf die Medikamente nach. Zudem prüft s
 
 Ideen ( vom Team als gut empfunden mit einem + gekennzeichnet, die anderen mit einem - gekennzeichnet )
 ---------------
-+ - Barcadescanner
++ - Barcodescanner
 +   - Elektronische Bestellung
 + - Automatische Bestellung (Bestätigung durch PA)
 - - Automatische Erkennung der Verfallsdaten
 + - Inventar acktualisierung bei erhaltener Lieferung
 + - Private Bestellung auch elektronisch abwickeln
 + - Privater Bezug persönlich abwickeln
++ - Prüfung ob der Patient zum Zeitpunkt an entsprechenden Patienten rausgeben darf oder nicht. Meldung, wenn der Patient das Medikament (noch) nicht beziehen darf.
 
 -> storyboard: designStoryBoard.jpg
 
