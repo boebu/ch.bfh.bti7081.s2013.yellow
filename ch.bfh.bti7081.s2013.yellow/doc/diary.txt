@@ -4,9 +4,13 @@
 ===                                      ===
 ============================================
 
+20130320
+- Erstellung der design thinking Präsentation
+--------
 20130319
 --------
-- work on presentation (design, content)
+- Übertragen der Storyboards von Fotos auf Mobile screens
+- Erstellung des Storyboards für Patienteninteraktion
 
 20130318
 --------
@@ -26,6 +30,11 @@
            -> Die Anforderung, dass die Patienten die Medikamente selbst holen können, erfordert Anpassungen in der Applikation
        Alle Design Thinking Prozess Schritte bis und mit Prototyp nochmals durchgelaufen und aktualisiert.
 
+
+20130317
+--------
+- Übertragen der Prototypen von Fotos auf Mobile screens
+- Erstellung der Prototypen für Patienteninteraktion
 
 20130315
 --------
