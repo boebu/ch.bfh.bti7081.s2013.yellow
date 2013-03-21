@@ -4,6 +4,10 @@
 ===                                      ===
 ============================================
 
+20130321
+--------
+- Erstellung Dokument Benutzer- Systemanforderung, erfassen Kapitel Einleitung
+
 20130320
 - Erstellung der design thinking Präsentation
 --------
