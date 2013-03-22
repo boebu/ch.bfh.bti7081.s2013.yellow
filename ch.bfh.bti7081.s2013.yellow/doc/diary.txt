@@ -22,8 +22,9 @@
     - Besprechung mit Herrn Künzel bezüglich Use Case-Diagramm -> Anschliessend Neugestaltung (rohdj1)
     - Besprechung fehlender Teile, Ergänzungen
     - Feedback zu Design-Thinking-Process erhalten
-    - Präsentation zu Task04 gehalten (glisb1, bronc1, polla2)
+- Präsentation zu Task04 gehalten (glisb1, bronc1, polla2)
 - Journal aktualisiert, ergänzt nach Feedback (polla2)
+- Dokument Version V01.00 freigegeben: CS1T4_UserSystemRequirements_V01.00.pdf (polla2)
 
 20130321
 --------
