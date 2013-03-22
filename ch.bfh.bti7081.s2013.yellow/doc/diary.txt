@@ -8,6 +8,8 @@
 --------
 - Erstellung Dokument Benutzer- Systemanforderung, erfassen Kapitel Einleitung
 - Erstellung use cases
+- Entwurf des Datenmodells
+
 
 20130320
 - Erstellung der design thinking Präsentation
