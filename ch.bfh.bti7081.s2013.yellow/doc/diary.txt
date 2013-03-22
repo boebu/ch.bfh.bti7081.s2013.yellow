@@ -4,6 +4,22 @@
 ===                                      ===
 ============================================
 
+== Tasks ==
+- Review of group black - CS1Task05
+-- detail see presentation 03.07
+-- result: review-report-table, recommondations
+-- due date: TBD
+
+
+== Diary ==
+
+20130322
+--------
+- Zusammenstellung der verschiedenen Teile in ein Dokument
+- Besprechung mit Herrn Künzel bezüglich Use Case-Diagramm -> Anschliessend Neugestaltung
+- Feedback zu Design-Thinking-Process erhalten
+- Präsentation zu Task04 gehalten
+
 20130321
 --------
 - Erstellung Dokument Benutzer- Systemanforderung, erfassen Kapitel Einleitung
@@ -13,14 +29,12 @@
 
 --------
 20130320
---------
 - Erstellung&Präsentation der Design-Thinking Präsentation
 - Review des Task 4 von CS1
 - Aufteilen der verschiedenen Themen zur Bearbeitung bis Freitag
 
 --------
 20130319
---------
 - Übertragen der Storyboards von Fotos auf Mobile screens
 - Erstellung des Storyboards für Patienteninteraktion
 
