@@ -3,7 +3,7 @@ Non-Functional system requirements
 + Die Applikation sollte Plattformunabhängig sein.
 + Die Applikation sollte End-Gerät unabhängig sein.
 + Eine rollenbasierte Zugriffkontrolle stellt sicher, dass ausschliesslich berechtige 
-  Personen (Ärzte, Oberschwestern) Rezepte digital ausstellen können.
+  Personen Rezepte digital ausstellen können.
 + Alle Workflows(Bestellenungen, Abholungen, etc) müssen historisiert abgelegt werden. (Nachvollziehung)
 + Datenschutzbestimmungen und Legal Health Act müssen eingehalten werden.
 + Eine Verfügbarkeit von über 99% muss erreicht werden
