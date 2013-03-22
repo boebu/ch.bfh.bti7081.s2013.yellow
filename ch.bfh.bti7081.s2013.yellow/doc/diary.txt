@@ -15,26 +15,38 @@
 
 20130322
 --------
-- Zusammenstellung der verschiedenen Teile in ein Dokument
-- Besprechung mit Herrn Künzel bezüglich Use Case-Diagramm -> Anschliessend Neugestaltung
-- Feedback zu Design-Thinking-Process erhalten
-- Präsentation zu Task04 gehalten
+- Anwesend: glisb1, bronc1, rohdj1, polla2
+- Alle gemeinsam:
+    - einzelne Teile in ein Dokument zusammengefügt: CS1T4_UserSystemRequirements.docx
+    - Zusammenstellung der verschiedenen Teile in ein Dokument
+    - Besprechung mit Herrn Künzel bezüglich Use Case-Diagramm -> Anschliessend Neugestaltung (rohdj1)
+    - Besprechung fehlender Teile, Ergänzungen
+    - Feedback zu Design-Thinking-Process erhalten
+    - Präsentation zu Task04 gehalten (glisb1, bronc1, polla2)
+- Journal aktualisiert, ergänzt nach Feedback (polla2)
 
 20130321
 --------
-- Erstellung Dokument Benutzer- Systemanforderung, erfassen Kapitel Einleitung
-- Erstellung use cases
-- Entwurf des Datenmodells
-- Entwurf der Systemarchitektur
+- Erstellung Dokument Benutzer- Systemanforderung, erfassen Kapitel Einleitung (hutzf1)
+- Erstellung use cases (rohdj1)
+- Entwurf des Datenmodells (polla2)
+- Entwurf der Systemarchitektur (polla2)
+- Systemanforderungen (glisb1)
 
---------
 20130320
+--------
+- Anwesend:  bronc1, rohdj1, polla2
 - Erstellung&Präsentation der Design-Thinking Präsentation
 - Review des Task 4 von CS1
-- Aufteilen der verschiedenen Themen zur Bearbeitung bis Freitag
+- Aufteilen der verschiedenen Themen zur Bearbeitung bis Freitag (bronc1)
+    -> hutzf1: Preface, Introduction
+    -> rohdj1: User Requirements
+    -> polla2: System Architecture, System Models, System Evolution
+    -> bronc1: Testing
+    -> glisb1: System Requirements
 
---------
 20130319
+--------
 - Übertragen der Storyboards von Fotos auf Mobile screens
 - Erstellung des Storyboards für Patienteninteraktion
 
