@@ -9,7 +9,7 @@
 - Erstellung Dokument Benutzer- Systemanforderung, erfassen Kapitel Einleitung
 - Erstellung use cases
 - Entwurf des Datenmodells
-
+- Entwurf der Systemarchitektur
 
 20130320
 - Erstellung der design thinking Präsentation
