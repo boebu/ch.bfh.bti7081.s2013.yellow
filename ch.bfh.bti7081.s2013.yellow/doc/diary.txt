@@ -11,8 +11,13 @@
 - Entwurf des Datenmodells
 - Entwurf der Systemarchitektur
 
+--------
 20130320
-- Erstellung der design thinking Präsentation
+--------
+- Erstellung&Präsentation der Design-Thinking Präsentation
+- Review des Task 4 von CS1
+- Aufteilen der verschiedenen Themen zur Bearbeitung bis Freitag
+
 --------
 20130319
 --------
