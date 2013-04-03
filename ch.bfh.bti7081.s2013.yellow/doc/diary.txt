@@ -4,14 +4,22 @@
 ===                                      ===
 ============================================
 
-== Tasks ==
-- Review of group black - CS1Task05
--- detail see presentation 03.07
--- result: review-report-table, recommondations
--- due date: TBD
-
-
 == Diary ==
+
+20130403
+--------
+- Anwesend: glisb1, bronc1, rohdj1, polla2, hutzf1
+    - CS1 Task05 erledigt:
+                    - Alle gemeinsam:
+                      Wir haben das Requirements Dokument der Gruppe black gereviewed.
+                      Das Dokument gefiel uns sehr gut.
+                      Die Kritik-Punkte haben wir im Dokument Requirements_CheckingGroupBlack.docs festgehalten.
+                    - glisb1, bronc1:
+                      Präsentation des Reviews
+    - polla2: Habe gemerkt, dass das im Journal Eintrag vom 22.03.2013 erwähnte Dokument CS1T4_UserSystemRequirements_V01.00.pdf
+      nicht gepushed wurde, da es nicht automatisch dem Source Control von git hinzugefügt wurde und ich es nicht merkte.
+      -> das pdf nachträglich als CS1T4_UserSystemRequirements.pdf hinzugefügt und nun in der Version 1.3,
+         wobei es sich inhaltlich nicht von der Version 1.0 unterscheidet.
 
 20130322
 --------
