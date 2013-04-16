@@ -8,14 +8,20 @@
 
 20130412
 --------
-- Anwesend: glisb1, bronc1, rohdj1, polla2, hutzf1
+- Anwesend: glisb1, rohdj1, hutzf1
   Abwesend (Grund: Jugend + Sport): polla2, bronc1
+- Exercises 5 – Sequence Diagram
+- CS1 Task07
+    - Erstellen UML Domain Model
+    - Überlegeungn für UML Sequence Diagram
+    - Weitere Tätigkeiten am 20130415 > Aufteilen und Besprechen der Arbeiten
 
 
 20130410
 --------
 - Anwesend: glisb1, rohdj1, hutzf1
   Abwesend (Grund: Jugend + Sport): polla2, bronc1
+- Exercises 4 – Class Diagram, Object Diagram
 
 20130405
 --------
