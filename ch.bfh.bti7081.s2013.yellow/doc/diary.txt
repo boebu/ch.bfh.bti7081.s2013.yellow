@@ -6,6 +6,17 @@
 
 == Diary ==
 
+30130317
+--------
+- Anwesend: glisb1, hutzf1, polla2, bronc1
+  Abwesend: rohdj1 (Grund: geschäftlich)
+- CS1 Task07
+    - Überlegungen zu Domain Model (alle)
+    - Erstellen der CRC-Cards (bronc1, polla2)
+    - Beginn mit Sequence Diagram (glisb1, hutzf1)
+    --> TODO: Domain Model gemäss CRC-Cards und Seq. Diagram fertigstellen, Präsentation vorbereiten
+
+
 20130412
 --------
 - Anwesend: glisb1, rohdj1, hutzf1
