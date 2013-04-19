@@ -13,13 +13,13 @@
 
 - Exercise 6 (alle gemeinsam)
     - Aufgabe 1: Objektdiagramm
-    - AUfgabe 2: Klassendiagramm
+    - Aufgabe 2: Klassendiagramm
 - CS1 Task07
     - Vervollständigung Klassendiagramm (rohdj1, polla2)
     - Vervollständigung Sequenzdiagramm (hutzf1, glisb1)
     - Präsentation erstellen, zusammenführen aller Tastk Elemente Inhalte (bronc1)
     - Konsistenz über Sequenzdiagramm, Klassendiagramm, CRC Cards (polla2, bronc1)
-    - Präsentation halten (hutzf1, polla2, bronc1)
+    - Präsentation halten (glisb1, polla2, bronc1)
 
 
 20130317
