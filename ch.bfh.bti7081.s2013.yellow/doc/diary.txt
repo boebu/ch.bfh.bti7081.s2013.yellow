@@ -15,7 +15,7 @@
     - Aufgabe 1: Objektdiagramm
     - AUfgabe 2: Klassendiagramm
 - CS1 Task07
-	- Vervollständigung Domainmodel (rohdj1)
+    - Vervollständigung Domainmodel (rohdj1)
     - Vervollständigung Klassendiagramm (rohdj1, polla2)
     - Vervollständigung Sequenzdiagramm (hutzf1, glisb1)
     - Präsentation erstellen, zusammenführen aller Tastk Elemente Inhalte (bronc1)
