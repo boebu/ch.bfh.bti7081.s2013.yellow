@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="796" version="1.1" width="952" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="334" y="447"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="334" y="447"/>
+<text font-family="Dialog" font-size="12" x="348" y="459">
+Pickup</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="542" y="311"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="542" y="311"/>
+<text font-family="Dialog" font-size="12" x="557" y="323">
+Doctor</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="84" x="702" y="695"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="84" x="702" y="695"/>
+<text font-family="Dialog" font-size="12" x="707" y="707">
+AnalysisState</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="414" y="167"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="414" y="167"/>
+<text font-family="Dialog" font-size="12" x="434" y="179">
+User</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="694" y="375"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="694" y="375"/>
+<text font-family="Dialog" font-size="12" x="699" y="387">
+Reminder</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="574" y="679"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="574" y="679"/>
+<text font-family="Dialog" font-size="12" x="584" y="691">
+Analysis</text>
+<rect fill="#ffffff" height="41" stroke="#ffffff" stroke-width="1" width="106" x="590" y="567"/>
+<rect fill="none" height="41" stroke="#000000" stroke-width="1" width="106" x="590" y="567"/>
+<text font-family="Dialog" font-size="12" x="595" y="597">
+AnalysisCategory</text>
+<text font-family="Dialog" font-size="12" x="594" y="580">
+&lt;&lt;enumeration&gt;&gt;</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="22" y="55"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="22" y="55"/>
+<text font-family="Dialog" font-size="12" x="32" y="67">
+Hospital</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="75" x="510" y="511"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="75" x="510" y="511"/>
+<text font-family="Dialog" font-size="12" x="515" y="523">
+Prescription</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="105" x="574" y="759"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="105" x="574" y="759"/>
+<text font-family="Dialog" font-size="12" x="579" y="771">
+AnalysisQuestion</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="97" x="174" y="119"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="97" x="174" y="119"/>
+<text font-family="Dialog" font-size="12" x="178" y="131">
+HealthInsurance</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="382" y="39"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="382" y="39"/>
+<text font-family="Dialog" font-size="12" x="395" y="51">
+Person</text>
+<polyline fill="none" points="447,167 447,61" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="447,61 454,73 440,73" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="447,61 454,73 440,73" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffffff" height="24" stroke="#ffffff" stroke-width="1" width="75" x="734" y="503"/>
+<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="75" x="734" y="503"/>
+<text font-family="Dialog" font-size="12" x="738" y="515">
+Medicament</text>
+<rect fill="#ffffff" height="41" stroke="#ffffff" stroke-width="1" width="106" x="566" y="71"/>
+<rect fill="none" height="41" stroke="#000000" stroke-width="1" width="106" x="566" y="71"/>
+<text font-family="Dialog" font-size="12" x="589" y="101">
+OrderState</text>
+<text font-family="Dialog" font-size="12" x="570" y="84">
+&lt;&lt;enumeration&gt;&gt;</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="166" y="47"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="166" y="47"/>
+<text font-family="Dialog" font-size="12" x="176" y="59">
+Address</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="14" y="143"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="14" y="143"/>
+<text font-family="Dialog" font-size="12" x="20" y="155">
+Drugstore</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="72" x="286" y="311"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="72" x="286" y="311"/>
+<text font-family="Dialog" font-size="12" x="291" y="323">
+Pharmacist</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="742" y="71"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="742" y="71"/>
+<text font-family="Dialog" font-size="12" x="759" y="83">
+Order</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="462" y="311"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="462" y="311"/>
+<text font-family="Dialog" font-size="12" x="478" y="323">
+Nurse</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="374" y="311"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="374" y="311"/>
+<text font-family="Dialog" font-size="12" x="388" y="323">
+Patient</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="66" x="518" y="424"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="66" x="518" y="424"/>
+<text font-family="Dialog" font-size="12" x="525" y="436">
+Schedule</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="110" x="398" y="687"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="110" x="398" y="687"/>
+<text font-family="Dialog" font-size="12" x="403" y="699">
+AnalysisExecution</text>
+<polyline fill="none" points="558,511 558,446" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="558,511 553,501 558,491 563,501" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="558,511 553,501 558,491 563,501" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="565" x2="558" y1="458" y2="446"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="551" x2="558" y1="458" y2="446"/>
+<text font-family="Dialog" font-size="12" x="573" y="483">
+*</text>
+<text font-family="Dialog" font-size="12" x="565" y="463">
+0..1</text>
+<polyline fill="none" points="584,511 734,511" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="584,511 594,506 604,511 594,516" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="584,511 594,506 604,511 594,516" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="722" x2="734" y1="518" y2="511"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="722" x2="734" y1="504" y2="511"/>
+<text font-family="Dialog" font-size="12" x="602" y="524">
+*</text>
+<text font-family="Dialog" font-size="12" x="707" y="524">
+1</text>
+<polyline fill="none" points="510,511 510,367 574,367 574,333" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="510,511 505,501 510,491 515,501" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="510,511 505,501 510,491 515,501" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="581" x2="574" y1="345" y2="333"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="567" x2="574" y1="345" y2="333"/>
+<text font-family="Dialog" font-size="12" x="525" y="483">
+*</text>
+<text font-family="Dialog" font-size="12" x="588" y="353">
+1</text>
+<polyline fill="none" points="382,47 231,47" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="382,47 372,52 362,47 372,42" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="382,47 372,52 362,47 372,42" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="243" x2="231" y1="40" y2="47"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="243" x2="231" y1="54" y2="47"/>
+<text font-family="Dialog" font-size="12" x="349" y="60">
+0..1</text>
+<text font-family="Dialog" font-size="12" x="248" y="60">
+1</text>
+<polyline fill="none" points="398,333 398,391 246,391 246,141" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="398,333 403,343 398,353 393,343" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="398,333 403,343 398,353 393,343" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="253" x2="246" y1="153" y2="141"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="239" x2="246" y1="153" y2="141"/>
+<text font-family="Dialog" font-size="12" x="375" y="353">
+*</text>
+<text font-family="Dialog" font-size="12" x="260" y="161">
+1</text>
+<polyline fill="none" points="231,119 231,69" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="231,119 226,109 231,99 236,109" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="231,119 226,109 231,99 236,109" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="238" x2="231" y1="81" y2="69"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="224" x2="231" y1="81" y2="69"/>
+<text font-family="Dialog" font-size="12" x="239" y="91">
+0..1</text>
+<text font-family="Dialog" font-size="12" x="245" y="89">
+1</text>
+<polyline fill="none" points="87,55 166,55" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="87,55 97,50 107,55 97,60" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="87,55 97,50 107,55 97,60" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="154" x2="166" y1="62" y2="55"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="154" x2="166" y1="48" y2="55"/>
+<text font-family="Dialog" font-size="12" x="98" y="68">
+0..1</text>
+<text font-family="Dialog" font-size="12" x="139" y="68">
+1</text>
+<polyline fill="none" points="62,165 62,319 286,319" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="62,165 67,175 62,185 57,175" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="62,165 67,175 62,185 57,175" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="274" x2="286" y1="326" y2="319"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="274" x2="286" y1="312" y2="319"/>
+<text font-family="Dialog" font-size="12" x="38" y="185">
+1</text>
+<text font-family="Dialog" font-size="12" x="263" y="333">
+*</text>
+<polyline fill="none" points="349,447 349,333" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="349,447 344,437 349,427 354,437" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="349,447 344,437 349,427 354,437" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="356" x2="349" y1="345" y2="333"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="342" x2="349" y1="345" y2="333"/>
+<text font-family="Dialog" font-size="12" x="364" y="419">
+*</text>
+<text font-family="Dialog" font-size="12" x="363" y="353">
+1</text>
+<polyline fill="none" points="399,455 422,455 422,333" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="399,455 409,450 419,455 409,460" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="399,455 409,450 419,455 409,460" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="429" x2="422" y1="345" y2="333"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="415" x2="422" y1="345" y2="333"/>
+<text font-family="Dialog" font-size="12" x="436" y="456">
+*</text>
+<text font-family="Dialog" font-size="12" x="436" y="353">
+1</text>
+<polyline fill="none" points="382,469 382,527 510,527" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="382,469 387,479 382,489 377,479" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="382,469 387,479 382,489 377,479" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="498" x2="510" y1="534" y2="527"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="498" x2="510" y1="520" y2="527"/>
+<text font-family="Dialog" font-size="12" x="352" y="489">
+0..1</text>
+<text font-family="Dialog" font-size="12" x="484" y="540">
+*</text>
+<polyline fill="none" points="782,93 782,175 479,175" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="782,93 787,103 782,113 777,103" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="782,93 787,103 782,113 777,103" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="491" x2="479" y1="168" y2="175"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="491" x2="479" y1="182" y2="175"/>
+<text font-family="Dialog" font-size="12" x="759" y="113">
+*</text>
+<text font-family="Dialog" font-size="12" x="496" y="188">
+1</text>
+<polyline fill="none" points="807,79 846,79 846,511 808,511" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="807,79 817,74 827,79 817,84" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="807,79 817,74 827,79 817,84" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="820" x2="808" y1="504" y2="511"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="820" x2="808" y1="518" y2="511"/>
+<text font-family="Dialog" font-size="12" x="838" y="107">
+*</text>
+<text font-family="Dialog" font-size="12" x="820" y="524">
+1..*</text>
+<polyline fill="none" points="742,85 671,85" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="742,85 732,90 722,85 732,80" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="742,85 732,90 722,85 732,80" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="683" x2="671" y1="78" y2="85"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="683" x2="671" y1="92" y2="85"/>
+<text font-family="Dialog" font-size="12" x="716" y="98">
+*</text>
+<text font-family="Dialog" font-size="12" x="688" y="98">
+1</text>
+<polyline fill="none" points="582,679 582,533" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="582,679 577,669 582,659 587,669" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="582,679 577,669 582,659 587,669" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="589" x2="582" y1="545" y2="533"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="575" x2="582" y1="545" y2="533"/>
+<text font-family="Dialog" font-size="12" x="597" y="651">
+*</text>
+<text font-family="Dialog" font-size="12" x="591" y="553">
+1..*</text>
+<polyline fill="none" points="639,701 702,701" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="639,701 649,696 659,701 649,706" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="639,701 649,696 659,701 649,706" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="690" x2="702" y1="708" y2="701"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="690" x2="702" y1="694" y2="701"/>
+<text font-family="Dialog" font-size="12" x="657" y="714">
+*</text>
+<text font-family="Dialog" font-size="12" x="675" y="714">
+1</text>
+<polyline fill="none" points="631,701 631,759" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="631,701 636,711 631,721 626,711" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="631,701 636,711 631,721 626,711" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="624" x2="631" y1="747" y2="759"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="638" x2="631" y1="747" y2="759"/>
+<text font-family="Dialog" font-size="12" x="608" y="721">
+*</text>
+<text font-family="Dialog" font-size="12" x="602" y="747">
+1..*</text>
+<polyline fill="none" points="507,695 574,695" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="507,695 517,690 527,695 517,700" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="507,695 517,690 527,695 517,700" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="562" x2="574" y1="702" y2="695"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="562" x2="574" y1="688" y2="695"/>
+<text font-family="Dialog" font-size="12" x="525" y="708">
+*</text>
+<text font-family="Dialog" font-size="12" x="547" y="708">
+1</text>
+<polyline fill="none" points="631,679 631,607" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="631,679 626,669 631,659 636,669" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="631,679 626,669 631,659 636,669" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="638" x2="631" y1="619" y2="607"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="624" x2="631" y1="619" y2="607"/>
+<text font-family="Dialog" font-size="12" x="646" y="651">
+*</text>
+<text font-family="Dialog" font-size="12" x="645" y="627">
+1</text>
+<polyline fill="none" points="79,77 79,143" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="79,77 84,87 79,97 74,87" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="79,77 84,87 79,97 74,87" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="72" x2="79" y1="131" y2="143"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="86" x2="79" y1="131" y2="143"/>
+<text font-family="Dialog" font-size="12" x="55" y="97">
+1</text>
+<text font-family="Dialog" font-size="12" x="56" y="115">
+*</text>
+<polyline fill="none" points="694,383 422,383 422,333" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="694,383 684,388 674,383 684,378" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="694,383 684,388 674,383 684,378" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="429" x2="422" y1="345" y2="333"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="415" x2="422" y1="345" y2="333"/>
+<text font-family="Dialog" font-size="12" x="668" y="396">
+*</text>
+<text font-family="Dialog" font-size="12" x="436" y="353">
+1</text>
+<polyline fill="none" points="758,375 758,319 607,319" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="758,375 753,365 758,355 763,365" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="758,375 753,365 758,355 763,365" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="619" x2="607" y1="312" y2="319"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="619" x2="607" y1="326" y2="319"/>
+<text font-family="Dialog" font-size="12" x="773" y="347">
+*</text>
+<text font-family="Dialog" font-size="12" x="624" y="332">
+1</text>
+<polyline fill="none" points="742,397 742,503" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="742,397 747,407 742,417 737,407" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="742,397 747,407 742,417 737,407" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="735" x2="742" y1="491" y2="503"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="749" x2="742" y1="491" y2="503"/>
+<text font-family="Dialog" font-size="12" x="719" y="417">
+*</text>
+<text font-family="Dialog" font-size="12" x="718" y="475">
+1</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="72" x="94" y="439"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="72" x="94" y="439"/>
+<text font-family="Dialog" font-size="12" x="98" y="451">
+TimeRange</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="125" x="182" y="439"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="125" x="182" y="439"/>
+<text font-family="Dialog" font-size="12" x="185" y="451">
+PrescriptionController</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="129" x="182" y="487"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="129" x="182" y="487"/>
+<text font-family="Dialog" font-size="12" x="186" y="499">
+OrderQueueController</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="121" x="46" y="487"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="121" x="46" y="487"/>
+<text font-family="Dialog" font-size="12" x="49" y="499">
+NotificationController</text>
+<rect fill="#ffffff" height="23" stroke="#ffffff" stroke-width="1" width="69" x="574" y="183"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="69" x="574" y="183"/>
+<text font-family="Dialog" font-size="12" x="578" y="195">
+Notification</text>
+<rect fill="#ffffff" height="41" stroke="#ffffff" stroke-width="1" width="82" x="134" y="559"/>
+<rect fill="none" height="41" stroke="#000000" stroke-width="1" width="82" x="134" y="559"/>
+<text font-family="Dialog" font-size="12" x="156" y="589">
+Queue</text>
+<text font-family="Dialog" font-size="12" x="138" y="572">
+&lt;&lt;interface&gt;&gt;</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="150" x2="150" y1="509" y2="514"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="150" x2="150" y1="519" y2="524"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="150" x2="150" y1="529" y2="534"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="150" x2="150" y1="539" y2="544"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="150" x2="150" y1="549" y2="554"/>
+<polygon fill="#ffffff" points="150,559 143,547 157,547" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="150,559 143,547 157,547" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="164" y="545">
+&lt;&lt;realize&gt;&gt;</text>
+<polyline fill="none" points="582,189 487,189" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="582,189 572,194 562,189 572,184" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="582,189 572,194 562,189 572,184" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="499" x2="487" y1="182" y2="189"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="499" x2="487" y1="196" y2="189"/>
+<text font-family="Dialog" font-size="12" x="556" y="202">
+*</text>
+<text font-family="Dialog" font-size="12" x="504" y="202">
+1</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="207" x2="207" y1="509" y2="514"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="207" x2="207" y1="519" y2="524"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="207" x2="207" y1="529" y2="534"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="207" x2="207" y1="539" y2="544"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="207" x2="207" y1="549" y2="554"/>
+<polygon fill="#ffffff" points="207,559 200,547 214,547" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="207,559 200,547 214,547" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="221" y="545">
+&lt;&lt;realize&gt;&gt;</text>
+<polyline fill="none" points="318,311 318,263 446,263 446,189" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="446,189 453,201 439,201" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="446,189 453,201 439,201" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="406,311 406,263 446,263 446,189" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="446,189 453,201 439,201" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="446,189 453,201 439,201" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="494,311 494,263 446,263 446,189" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="446,189 453,201 439,201" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="446,189 453,201 439,201" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="574,311 574,263 446,263 446,189" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="446,189 453,201 439,201" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="446,189 453,201 439,201" stroke="#000000" stroke-width="1"/>
+</svg>
