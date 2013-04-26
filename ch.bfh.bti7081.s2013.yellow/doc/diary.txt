@@ -6,6 +6,29 @@
 
 == Diary ==
 
+20130326
+--------
+
+- Anwesend: alle
+  
+- Exercise 7 (alle)
+    - Layer Architectural Pattern -> Überlegungen zu Fluginfos
+- CS1 Task08 (hutzf1, polla2, bronc1, rohdj1)
+    - Verbesserungen an Package Diagram
+    - Diskussionen über "Genauigkeit" -> Klassen in Package-Diagram? -> Nein!
+    - Umsetzen in Visio
+    - Präsentation der Ergebnisse
+
+20130324
+--------
+
+- Anwesend: alle
+
+- CS1 Task08
+    - Überlegungen zu Package-Diagram
+    - Aufzeichnen zu Use-Case Analysis an Wandtafel
+
+
 20130319
 --------
 - Anwesend: glisb1, hutzf1, polla2, bronc1, rohdj1
