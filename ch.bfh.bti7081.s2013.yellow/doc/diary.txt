@@ -8,21 +8,21 @@
 
 20130326
 --------
+- Anwesend: glisb1, hutzf1, polla2, bronc1, rohdj1
+  Abwesend: -
 
-- Anwesend: alle
-  
 - Exercise 7 (alle)
     - Layer Architectural Pattern -> Überlegungen zu Fluginfos
-- CS1 Task08 (hutzf1, polla2, bronc1, rohdj1)
+- CS1 Task08 (alle, wo keine andere Angabe)
     - Verbesserungen an Package Diagram
     - Diskussionen über "Genauigkeit" -> Klassen in Package-Diagram? -> Nein!
-    - Umsetzen in Visio
-    - Präsentation der Ergebnisse
+    - Umsetzen in Visio (bronc1)
+    - Präsentation der Ergebnisse inkl. 2x Bluescreen ~.~ (polla2, rohdj1)
 
 20130324
 --------
-
-- Anwesend: alle
+- Anwesend: glisb1, hutzf1, polla2, bronc1, rohdj1
+  Abwesend: -
 
 - CS1 Task08
     - Überlegungen zu Package-Diagram
@@ -50,6 +50,7 @@
 --------
 - Anwesend: glisb1, hutzf1, polla2, bronc1
   Abwesend: rohdj1 (Grund: geschäftlich)
+
 - CS1 Task07
     - Überlegungen zu Domain Model (alle)
     - Erstellen der CRC-Cards (bronc1, polla2)
@@ -61,6 +62,7 @@
 --------
 - Anwesend: glisb1, rohdj1, hutzf1
   Abwesend (Grund: Jugend + Sport): polla2, bronc1
+
 - Exercises 5 – Sequence Diagram
 - CS1 Task07
     - Erstellen UML Domain Model
@@ -72,11 +74,14 @@
 --------
 - Anwesend: glisb1, rohdj1, hutzf1
   Abwesend (Grund: Jugend + Sport): polla2, bronc1
+
 - Exercises 4 – Class Diagram, Object Diagram
 
 20130405
 --------
 - Anwesend: glisb1, bronc1, rohdj1, polla2, hutzf1
+  Abwesend: -
+
 - Alle gemeinsam:
     - CS1 Task06 erledigt
         - Aktivitätsdiagramm (cs1_task06_activity_model.pdf)
@@ -87,6 +92,8 @@
 20130403
 --------
 - Anwesend: glisb1, bronc1, rohdj1, polla2, hutzf1
+  Abwesend: -
+
 - CS1 Task05 erledigt:
     - Alle gemeinsam:
       Wir haben das Requirements Dokument der Gruppe black gereviewed.
@@ -102,6 +109,8 @@
 20130322
 --------
 - Anwesend: glisb1, bronc1, rohdj1, polla2
+  Abwesend: -
+
 - Alle gemeinsam:
     - einzelne Teile in ein Dokument zusammengefügt: CS1T4_UserSystemRequirements.docx
     - Zusammenstellung der verschiedenen Teile in ein Dokument
