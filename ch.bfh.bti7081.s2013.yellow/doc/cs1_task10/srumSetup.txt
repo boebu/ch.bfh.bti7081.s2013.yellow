@@ -1,0 +1,13 @@
+
+# Scrum setup
+
+Developers:     Janosch Rohdewald
+				Andy Pollari
+				Christoph Brönnimann
+				Fabian Hutzli
+				Boban Glisovic
+
+Scrum master:   Andy Pollari
+
+Product owner:  Jürgen Vogel
+
