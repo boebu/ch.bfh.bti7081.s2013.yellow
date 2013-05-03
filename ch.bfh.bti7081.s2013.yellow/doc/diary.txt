@@ -15,7 +15,17 @@
   - CS1 task 9
     - Systemarchtektur wurde in Hinblick auf Vaadin, persistenter Datenspeicher und Design Patterns hin angeschaut und für noch immer gültig befunden.
   - CS1 task 10
-    - Die Rollenverteilung innerhalb von Scrum wurde festgelegt.
+    - Die Rollenverteilung innerhalb von Scrum wurde festgelegt. Siehe Datei scrumSetup.txt
+	- Product Backlog erstellt mit Prioritäten
+	- Mit Product Owner definiert, welche Story als erstes umgesetzt werden muss: Notification
+	- Aufteilung wer welche Stories definiert, damit wir diese am Montag besprechen können:
+		- Prescription Bereich:     Andy
+		- System Trigger:           Boban
+		- Notification Handling:    Fabian
+		- Kommunikation zum Server: Christoph
+		- Kommunikation zum Client: Janosch
+
+
 
 20130426
 --------
