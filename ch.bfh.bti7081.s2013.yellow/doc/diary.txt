@@ -6,7 +6,18 @@
 
 == Diary ==
 
-20130326
+
+20130503
+--------
+- Anwesend: glisb1, hutzf1, polla2, bronc1, rohdj1
+  Abwesend: -
+
+  - CS1 task 9
+    - Systemarchtektur wurde in Hinblick auf Vaadin, persistenter Datenspeicher und Design Patterns hin angeschaut und für noch immer gültig befunden.
+  - CS1 task 10
+    - Die Rollenverteilung innerhalb von Scrum wurde festgelegt.
+
+20130426
 --------
 - Anwesend: glisb1, hutzf1, polla2, bronc1, rohdj1
   Abwesend: -
@@ -19,7 +30,7 @@
     - Umsetzen in Visio (bronc1)
     - Präsentation der Ergebnisse inkl. 2x Bluescreen ~.~ (polla2, rohdj1)
 
-20130324
+20130424
 --------
 - Anwesend: glisb1, hutzf1, polla2, bronc1, rohdj1
   Abwesend: -
@@ -29,7 +40,7 @@
     - Aufzeichnen zu Use-Case Analysis an Wandtafel
 
 
-20130319
+20130419
 --------
 - Anwesend: glisb1, hutzf1, polla2, bronc1, rohdj1
   Abwesend: -
@@ -46,7 +57,7 @@
     - Präsentation halten (glisb1, polla2, bronc1)
 
 
-20130317
+20130417
 --------
 - Anwesend: glisb1, hutzf1, polla2, bronc1
   Abwesend: rohdj1 (Grund: geschäftlich)
