@@ -6,6 +6,23 @@
 
 == Diary ==
 
+20130508
+--------
+- Anwesend: alle
+
+  - Erstellen der Sprint-Backlogs, Priorisierung und Zuteilung
+    -> State & Strategy Pattern sind eingeplant, müssen aber noch
+       genau angeschaut werden!
+  
+  TODOs Sprint1: 
+    Task: 3.4	hutzf1
+    Task: 3.7	rohdj1
+    Task: 3.9	bronc1
+    Task: 3.10	glisb1
+    Task: 3.13	polla2
+    Task: 3.14	polla2
+    
+
 
 20130503
 --------
