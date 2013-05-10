@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * This is the superclass for all entities of linia life.
+ * This is the superclass for all entities of the yellow-project.
  *
  * @param <T> Inherited entity class.
  */

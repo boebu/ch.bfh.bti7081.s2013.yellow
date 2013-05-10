@@ -6,12 +6,39 @@
 
 == Diary ==
 
+20130510
+--------
+  - CS1 task 10 - Sprint 1 (polla2)
+    - Setup von Spring inkl. Hibernate
+    - Datenbankanbindung
+        DB-Konfigurationsfile: persistence.xml
+        Wie am Mittwoch Abend gemeinsam besprochen, nutzen wir MySQL.
+        Entsprechend habe ich Hibernate konfiguriert.
+        Standardwerte in der Konfig:
+            username:   root
+            password:
+            DB-Name:    db_yellow_dev
+        Die Werte können für die lokale Entwicklungsumgebung geändert werden.
+        Die Änderungen jedoch bitte nicht committen.
+    - jetty
+        Die Testapplikation mit dem Adressbuch läuft.
+        Um die Applikation zu starten mit maven im root des Projektes jetty:run ausführen
+            Befehl: mvn jetty:run
+        Konfigurierter Port für unsere Webapp: 8080
+        Die Applikation ist also erreichbar unter http://localhost:8080.
+        Der Port kann bei Bedarf im pom.xml unter dem Jetty Plugin geändert werden.
+    - generische Klassen für CRUD erstellt (DAO Layer, Service Layer)
+
+
+
+
 20130508
 --------
 - Anwesend: alle
+  Abwesend: -
 
   - Erstellen der Sprint-Backlogs, Priorisierung und Zuteilung
-    -> State & Strategy Pattern sind eingeplant, m�ssen aber noch
+    -> State & Strategy Pattern sind eingeplant, müssen aber noch
        genau angeschaut werden!
   
   TODOs Sprint1: 
@@ -22,7 +49,6 @@
     Task: 3.13	polla2
     Task: 3.14	polla2
     
-
 
 20130503
 --------
