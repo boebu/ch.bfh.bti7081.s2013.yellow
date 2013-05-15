@@ -1,7 +1,7 @@
 package ch.bfh.bti7081.s2013.yellow.dao.generic;
 
 import ch.bfh.bti7081.s2013.yellow.model.generic.YellowEntity;
-import ch.bfh.bti7081.s2013.yellow.service.UserService;
+import ch.bfh.bti7081.s2013.yellow.service.person.UserService;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Criterion;
@@ -175,13 +175,13 @@ public class GenericDAOImpl<T> implements GenericDAO<T> {
             a.setVersion(a.getVersion() + 1);
             if (userService.getLoggedInUser() != null)
                 a.setUpdatedBy(userService.getLoggedInUser());
-            T prev = findById(a.getId());
-            if (prev == null) {
-                getEntityManager().persist(a);
-                return entity;
-            } else {
+//            T prev = findById(a.getId());
+//            if (prev == null) {
+//	            getEntityManager().persist(a);
+//                return entity;
+//            } else {
                 return getEntityManager().merge(entity);
-            }
+//            }
 
         }
         return null;

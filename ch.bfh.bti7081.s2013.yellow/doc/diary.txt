@@ -6,6 +6,33 @@
 
 == Diary ==
 
+20130515
+--------
+  - CS1 task 10 - Sprint 1 (rohdj1) Task 3.7 done
+    - Integration von Spring in Vaadin
+        Vaadin hat (noch?) nicht vollen Spring Support, deswegen funktioniert in Vaadin-Beans @Autowired nicht
+        Dafür kann man das Bean wie folgt injecten (Bsp. PatientService):
+          patientService = (PatientService)springHelper.getBean("patientService");
+
+        Habe mit div. Integrationsaddons und sonstigen Sachen herumprobiert,
+        kam aber nicht auf ein befriedigerendes Ergebnis als mit dem SpringHelper Util
+
+    - VOs, DAOs, Services für Medicament, Prescription und Patient gemacht
+
+    - Dummy-Daten für Medikamente und Patienten unter src/main/resources/init.sql
+        Das Script muss auf der lokalen DB ausgeführt werden, bevor mit Patienten/Medikamenten gearbeitet werden kann
+
+    - Integration von hibernate validator (@Min, @Max, @Regexp, @NotNull,...)
+        Für jedes UI Feld, das via Bean validation (JSR 303/hibernate validator) muss folgendes gemacht werden (Bsp. validUntil):
+          validUntil.addValidator(new BeanValidator(Prescription.class, "validUntil"));
+
+    - Erstellung des PrescriptionUI
+        Neue Prescriptions können erfasst werden
+        Prescriptions können mit dem GET Parameter "prescId" bearbeitet werden
+        Und mit delete wird deren Status aus deactived gesetzt
+
+
+
 20130510
 --------
   - CS1 task 10 - Sprint 1 (polla2)

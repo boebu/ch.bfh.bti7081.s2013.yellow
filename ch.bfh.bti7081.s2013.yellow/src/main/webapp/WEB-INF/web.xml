@@ -5,30 +5,31 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
             http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
-    <display-name>yellow application</display-name>
+	<display-name>yellow application</display-name>
 
-    <servlet>
-        <servlet-name>Vaadin</servlet-name>
-        <servlet-class>com.vaadin.server.VaadinServlet</servlet-class>
-        <init-param>
-            <description>Vaadin UI to display</description>
-            <param-name>UI</param-name>
-            <param-value>ch.bfh.bti7081.s2013.cs1_task4.AddressbookUI</param-value>
-        </init-param>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Vaadin</servlet-name>
-        <url-pattern>/*</url-pattern>
-    </servlet-mapping>
+	<servlet>
+	<servlet-name>Vaadin</servlet-name>
+	<servlet-class>com.vaadin.server.VaadinServlet</servlet-class>
+	<init-param>
+	<description>Vaadin UI to display</description>
+	<param-name>UI</param-name>
+	<param-value>ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionUI</param-value>
+	</init-param>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>Vaadin</servlet-name>
+	<url-pattern>/*</url-pattern>
+	</servlet-mapping>
 
-    <!-- spring configuration -->
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/applicationContext.xml</param-value>
-    </context-param>
 
-    <!-- Bootstraps the root web application context before servlet initialization -->
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+	<!-- spring configuration -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+
+	<!-- Bootstraps the root web application context before servlet initialization -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 </web-app>

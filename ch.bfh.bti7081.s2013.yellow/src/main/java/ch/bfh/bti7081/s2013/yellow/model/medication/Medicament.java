@@ -5,6 +5,9 @@ import ch.bfh.bti7081.s2013.yellow.model.generic.YellowEntity;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * This Class represents a medicament.
@@ -24,6 +27,9 @@ public class Medicament extends YellowEntity<Medicament>{
 
     @Basic(optional = true)
     Byte[] img;
+
+	@OneToMany(mappedBy = "medicament")
+	private List<Prescription> prescriptions;
 
     public String getName() {
         return name;
@@ -48,4 +54,13 @@ public class Medicament extends YellowEntity<Medicament>{
     public void setImg(Byte[] img) {
         this.img = img;
     }
+
+
+	public List<Prescription> getPrescriptions() {
+		return prescriptions;
+	}
+
+	public void setPrescriptions(List<Prescription> prescriptions) {
+		this.prescriptions = prescriptions;
+	}
 }

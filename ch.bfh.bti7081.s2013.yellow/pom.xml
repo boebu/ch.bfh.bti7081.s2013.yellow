@@ -40,6 +40,10 @@
             <artifactId>vaadin-themes</artifactId>
             <version>${vaadin.version}</version>
         </dependency>
+
+
+	    <!-- vaadin addons-->
+
         <!-- spring stuff -->
 
         <!-- Spring Integration -->
@@ -109,7 +113,15 @@
             <version>${hibernate-version}</version>
         </dependency>
 
-        <!-- mysql -->
+	    <!-- hibernate validator-->
+	    <dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>4.2.0.Final</version>
+	    </dependency>
+
+
+	    <!-- mysql -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -132,6 +144,12 @@
         </dependency>
     </dependencies>
 
+	<repositories>
+		<repository>
+			<id>vaadin-addons</id>
+			<url>http://maven.vaadin.com/vaadin-addons</url>
+		</repository>
+	</repositories>
 
     <build>
         <plugins>
