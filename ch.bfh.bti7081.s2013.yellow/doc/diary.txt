@@ -6,6 +6,25 @@
 
 == Diary ==
 
+20130517
+--------
+
+  - Anwesend: polla2, glisb1, bronc1, hutzf1
+  - Abwesend: rohdj1 (Grund: Krankheit)
+  - CS1 Task 12
+    - Diskussion zur Art des Implementation des State Patterns in unseren Use Case
+    - Definition der Zustände
+    - Implementation (polla2)
+    - Zusammenfassender Bericht (hutzf1)
+  - CS1 Task 13
+    - Präsentation erstellt (polla2)
+    - Implementation (plla2)
+    
+  TODO in Sprint 1:
+    Task: 3.9	bronc1
+    Task: 3.10	glisb1 
+
+
 20130515
 --------
   - CS1 task 10 - Sprint 1 (rohdj1) Task 3.7 done
