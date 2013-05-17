@@ -1,6 +1,8 @@
-package ch.bfh.bti7081.s2013.cs1_task4;
+package ch.bfh.bti7081.s2013.yellow.model.notification;
 
-import ch.bfh.bti7081.s2013.yellow.model.NotificationType;
+import ch.bfh.bti7081.s2013.cs1_task4.User;
+import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
+import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationStateNew;
 
 /**
  * This class represents a notification
@@ -8,14 +10,24 @@ import ch.bfh.bti7081.s2013.yellow.model.NotificationType;
 public class Notification {
 
     public NotificationType getNotificationType;
+    private User receiver;
+    private String message;
+    private NotificationState state;
+    private NotificationStateMachine stateMachine;
 
     public Notification(User receiver, String message) {
         this.receiver = receiver;
         this.message = message;
+        this.state = new NotificationStateNew();
     }
+    
+    public void send()
+    {
+    	state = state.send();
+    }
+    
+    
 
-    User receiver;
-    String message;
 
     public NotificationType getGetNotificationType() {
         return getNotificationType;

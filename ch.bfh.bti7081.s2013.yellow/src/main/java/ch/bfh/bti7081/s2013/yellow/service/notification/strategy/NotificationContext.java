@@ -1,6 +1,7 @@
 package ch.bfh.bti7081.s2013.yellow.service.notification.strategy;
 
-import ch.bfh.bti7081.s2013.cs1_task4.Notification;
+import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
+
 
 /**
  * In The NotificationContext the sendStrategy is defined.

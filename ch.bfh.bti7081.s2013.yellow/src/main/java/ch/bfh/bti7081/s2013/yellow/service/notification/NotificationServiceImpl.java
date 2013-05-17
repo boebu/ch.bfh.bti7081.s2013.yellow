@@ -1,7 +1,7 @@
 package ch.bfh.bti7081.s2013.yellow.service.notification;
 
-import ch.bfh.bti7081.s2013.cs1_task4.Notification;
 import ch.bfh.bti7081.s2013.yellow.dao.notification.NotificationDAO;
+import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 import ch.bfh.bti7081.s2013.yellow.service.generic.GenericServiceImpl;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.NotificationContext;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.SendAlarmNotifaction;
