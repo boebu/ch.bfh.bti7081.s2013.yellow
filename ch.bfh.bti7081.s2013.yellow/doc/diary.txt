@@ -13,6 +13,7 @@
       - Umstieg von Jetty auf Tomcat -> Task 3.15
       - Task 3.9 offen
       - Rest in Scrum-Backlog
+      - Javadoc nachträglich führen
     - Arbeit an Tasks -> siehe Scrum-Backlog
 
 20130517
