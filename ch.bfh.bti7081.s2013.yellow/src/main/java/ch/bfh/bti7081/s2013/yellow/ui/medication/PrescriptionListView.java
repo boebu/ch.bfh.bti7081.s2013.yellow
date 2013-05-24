@@ -1,6 +1,7 @@
 package ch.bfh.bti7081.s2013.yellow.ui.medication;
 
 import java.io.File;
+import java.sql.Timestamp;
 
 import ch.bfh.bti7081.s2013.yellow.model.medication.Medicament;
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
@@ -40,39 +41,49 @@ public class PrescriptionListView extends CustomComponent implements View {
 
 	public PrescriptionListView() {
 		SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
-		prescriptionService = (PrescriptionService)springHelper.getBean("prescriptionService");
+		prescriptionService = (PrescriptionService) springHelper.getBean("prescriptionService");
 
 
 		// Find the application directory
 		String basepath = VaadinService.getCurrent()
-		                  .getBaseDirectory().getAbsolutePath();
+				.getBaseDirectory().getAbsolutePath();
 
 		// Image as a file resource
 		FileResource resourceEdit = new FileResource(new File(basepath +
 				"/WEB-INF/images/edit.png"));
-		
+
 		//Table with its columns
 		Table prescrTable = new Table("");
 		prescrTable.addContainerProperty("Patient", String.class, null);
 		prescrTable.addContainerProperty("Medicament", String.class, null);
+		prescrTable.addContainerProperty("Date created", Timestamp.class, null);
+		prescrTable.addContainerProperty("Last update date", Timestamp.class, null);
+		prescrTable.addContainerProperty("Last update from", String.class, null);
+		prescrTable.addContainerProperty("Valid from", Timestamp.class, null);
+		prescrTable.addContainerProperty("Valid until", Timestamp.class, null);
 		prescrTable.addContainerProperty("Interval in h", Integer.class, null);
 		prescrTable.addContainerProperty("Edit", Link.class, null);
 
 		//For every prescription, there's a row in the table
-		for (Prescription prescriptions : prescriptionService.findAll()){
+		for (Prescription prescriptions : prescriptionService.findAll()) {
 
 			// Edit-Link -> Prescription-Site with id
 			Link linkEdit = new Link(null,
-					        new ExternalResource("http://localhost:8080?prescid=" + prescriptions.getId()));
+					new ExternalResource("http://localhost:8080?prescid=" + prescriptions.getId()));
 			linkEdit.setIcon(resourceEdit);
-			
+
 			// Delete-Link -> To delete a prescription, click on edit then delete from there
-			
 			//Reads the data from the prescription and fills it in the rows
-			prescrTable.addItem(new Object[] {
-					prescriptions.getPatient().getName() + " " + 
-							prescriptions.getPatient().getVorname(), prescriptions.getMedicament().getName(), 
-							prescriptions.getIntervallInHours(), linkEdit
+			prescrTable.addItem(new Object[]{
+					prescriptions.getPatient().getName() + " " +
+							prescriptions.getPatient().getVorname(),
+					prescriptions.getMedicament().getName(),
+					prescriptions.getCreation(),
+					prescriptions.getLastUpdated(),
+					"TODO",//TODO: Link to Username
+					prescriptions.getValidFrom(),
+					prescriptions.getValidUntil(),
+					prescriptions.getIntervallInHours(), linkEdit
 			}, prescriptions.getId());
 		}
 
