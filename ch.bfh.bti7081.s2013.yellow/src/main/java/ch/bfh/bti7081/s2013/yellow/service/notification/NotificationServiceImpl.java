@@ -12,6 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 
+/**
+ * @author Andy Pollari
+ * This is the implementation for the Notification service
+ */
 @Transactional
 @Service("notificationService")
 public class NotificationServiceImpl extends GenericServiceImpl<Notification> implements NotificationService {

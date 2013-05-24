@@ -4,6 +4,7 @@ import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 
 
 /**
+ * @author Andy Pollari
  * In The NotificationContext the sendStrategy is defined.
  * The context provides to send the notification
  */
