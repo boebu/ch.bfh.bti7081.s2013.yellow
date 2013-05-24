@@ -12,6 +12,7 @@ import com.vaadin.data.fieldgroup.FieldGroup;
 import com.vaadin.data.util.BeanItem;
 import com.vaadin.data.util.BeanItemContainer;
 import com.vaadin.data.validator.BeanValidator;
+import com.vaadin.server.BrowserWindowOpener;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
@@ -132,5 +133,21 @@ public class PrescriptionUI extends UI {
 			}
 		});
 		form.addComponent(delBtn);
+				
+		// Popup with all prescriptions
+		final Button testBtn = new Button("See all prescriptions");
+		testBtn.addListener(new Button.ClickListener() {
+			public void buttonClick(Button.ClickEvent event) {
+				// Create an opener extension
+				BrowserWindowOpener opener =
+				    new BrowserWindowOpener(MyPopupUI.class);
+				opener.setFeatures("height=200,width=300,resizable");
+				
+				opener.extend(testBtn);
+			}
+		});
+		form.addComponent(testBtn);
+		
+	    
 	}
 }

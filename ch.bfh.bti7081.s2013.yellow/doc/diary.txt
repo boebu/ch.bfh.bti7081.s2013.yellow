@@ -5,24 +5,33 @@
 ============================================
 
 == Diary ==
+20130522
+--------
+  - Anwesend: alle
+  - Definition Sprint 2
+    - offene Tasks:
+      - Umstieg von Jetty auf Tomcat -> Task 3.15
+      - Task 3.9 offen
+      - Rest in Scrum-Backlog
+      - Javadoc nachträglich führen
+    - Arbeit an Tasks -> siehe Scrum-Backlog
 
 20130517
 --------
-
   - Anwesend: polla2, glisb1, bronc1, hutzf1
   - Abwesend: rohdj1 (Grund: Krankheit)
   - CS1 Task 12
     - Diskussion zur Art des Implementation des State Patterns in unseren Use Case
-    - Definition der Zust�nde
-    - Implementation (polla2)
+    - Definition der Zustände
+    - Implementation (polla2) -> Task 3.4
     - Zusammenfassender Bericht (hutzf1)
   - CS1 Task 13
-    - Pr�sentation erstellt (polla2)
-    - Implementation (plla2)
-    
-  TODO in Sprint 1:
-    Task: 3.9	bronc1
-    Task: 3.10	glisb1 
+    - Präsentation erstellt (polla2)
+    - Implementation (polla2)
+  - Task 3.10 (glisb1)
+    - Entscheid: Externe Steuerung via JMX/MBean
+  - Sprint 1 - Abschluss
+    - Task 3.9 in Sprint 2 verschoben
 
 
 20130515
@@ -54,7 +63,7 @@
 
 20130510
 --------
-  - CS1 task 10 - Sprint 1 (polla2)
+  - CS1 task 10 - Sprint 1 (polla2) done
     - Setup von Spring inkl. Hibernate
     - Datenbankanbindung
         DB-Konfigurationsfile: persistence.xml
@@ -65,7 +74,7 @@
             password:
             DB-Name:    db_yellow_dev
         Die Werte können für die lokale Entwicklungsumgebung geändert werden.
-        Die Änderungen jedoch bitte nicht committen.
+        Die Ã„nderungen jedoch bitte nicht committen.
     - jetty
         Die Testapplikation mit dem Adressbuch läuft.
         Um die Applikation zu starten mit maven im root des Projektes jetty:run ausführen
@@ -122,7 +131,7 @@
   Abwesend: -
 
 - Exercise 7 (alle)
-    - Layer Architectural Pattern -> Überlegungen zu Fluginfos
+    - Layer Architectural Pattern -> Ãœberlegungen zu Fluginfos
 - CS1 Task08 (alle, wo keine andere Angabe)
     - Verbesserungen an Package Diagram
     - Diskussionen über "Genauigkeit" -> Klassen in Package-Diagram? -> Nein!
@@ -135,7 +144,7 @@
   Abwesend: -
 
 - CS1 Task08
-    - Überlegungen zu Package-Diagram
+    - Ãœberlegungen zu Package-Diagram
     - Aufzeichnen zu Use-Case Analysis an Wandtafel
 
 
@@ -162,7 +171,7 @@
   Abwesend: rohdj1 (Grund: geschäftlich)
 
 - CS1 Task07
-    - Überlegungen zu Domain Model (alle)
+    - Ãœberlegungen zu Domain Model (alle)
     - Erstellen der CRC-Cards (bronc1, polla2)
     - Beginn mit Sequence Diagram (glisb1, hutzf1)
     --> TODO: Domain Model gemäss CRC-Cards und Seq. Diagram fertigstellen, Präsentation vorbereiten
@@ -173,10 +182,10 @@
 - Anwesend: glisb1, rohdj1, hutzf1
   Abwesend (Grund: Jugend + Sport): polla2, bronc1
 
-- Exercises 5 – Sequence Diagram
+- Exercises 5 â€“ Sequence Diagram
 - CS1 Task07
     - Erstellen UML Domain Model
-    - Überlegeungn für UML Sequence Diagram
+    - Ãœberlegeungn für UML Sequence Diagram
     - Weitere Tätigkeiten am 20130415 > Aufteilen und Besprechen der Arbeiten
 
 
@@ -185,7 +194,7 @@
 - Anwesend: glisb1, rohdj1, hutzf1
   Abwesend (Grund: Jugend + Sport): polla2, bronc1
 
-- Exercises 4 – Class Diagram, Object Diagram
+- Exercises 4 â€“ Class Diagram, Object Diagram
 
 20130405
 --------
@@ -196,7 +205,7 @@
     - CS1 Task06 erledigt
         - Aktivitätsdiagramm (cs1_task06_activity_model.pdf)
         - Kontextdiagramm (cs1_task06_context.pdf)
-    - Exercises 3 – UML State Diagram (uml_stateDiagram.pdf)
+    - Exercises 3 â€“ UML State Diagram (uml_stateDiagram.pdf)
 
 
 20130403
@@ -253,7 +262,7 @@
 
 20130319
 --------
-- Übertragen der Storyboards von Fotos auf Mobile screens
+- Ãœbertragen der Storyboards von Fotos auf Mobile screens
 - Erstellung des Storyboards für Patienteninteraktion
 
 20130318
@@ -270,14 +279,14 @@
            Die stationären Patienten bekämen ohnehin ihre Medikamente nur vom Pflegepersonal oder vom Arzt und werden streng überwacht.
            Es könnte also möglich sein, dass Patienten (nur nicht stationäre) ihre Medikamente in der internen Apotheke ihre Medikamente holen.
            Dies gilt auch für Rezeptpflichtige Medikamente. Das Rezept, das ihnen vom der Psychiatrie ausgestellt wird, ist dann aber aus
-           Überwachungsgründen nur in den internen Apotheken gültig.
+           Ãœberwachungsgründen nur in den internen Apotheken gültig.
            -> Die Anforderung, dass die Patienten die Medikamente selbst holen können, erfordert Anpassungen in der Applikation
        Alle Design Thinking Prozess Schritte bis und mit Prototyp nochmals durchgelaufen und aktualisiert.
 
 
 20130317
 --------
-- Übertragen der Prototypen von Fotos auf Mobile screens
+- Ãœbertragen der Prototypen von Fotos auf Mobile screens
 - Erstellung der Prototypen für Patienteninteraktion
 
 20130315
