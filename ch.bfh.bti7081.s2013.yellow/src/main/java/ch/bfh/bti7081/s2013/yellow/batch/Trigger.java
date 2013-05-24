@@ -7,6 +7,7 @@ import javax.management.ObjectName;
 
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
+import ch.bfh.bti7081.s2013.yellow.model.person.User;
 import ch.bfh.bti7081.s2013.yellow.service.medication.MedicamentService;
 import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
 import ch.bfh.bti7081.s2013.yellow.service.notification.NotificationService;
@@ -17,8 +18,8 @@ import com.vaadin.server.VaadinServlet;
 import java.util.ArrayList;
 
 public class Trigger implements TriggerMBean {
-  private int _logLevel = 1;
-  private long _startTime = 0L;
+  
+
 
   public Trigger() {
     MBeanServer server = getServer();
@@ -30,8 +31,6 @@ public class Trigger implements TriggerMBean {
     } catch (Exception e) {
       e.printStackTrace();
     }
-
-    _startTime = System.currentTimeMillis();
   }
 
 
@@ -55,16 +54,15 @@ public class Trigger implements TriggerMBean {
 
 
   // interface method implementations
-  public void setLoggingLevel(int level) { _logLevel = level; }
-  public long getUptime() { return System.currentTimeMillis() - _startTime; }
+
   public void createNotifications(int interval) {
 	    SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
-		PrescriptionService prescriptionService = (PrescriptionService)springHelper.getBean("prescriptionService");
+//		PrescriptionService prescriptionService = (PrescriptionService)springHelper.getBean("prescriptionService");
 		NotificationService notificationService = (NotificationService)springHelper.getBean("notificationService");
-	for(Prescription prescription : prescriptionService.findByCriteria()) {
-		Notification notification = new Notification(null, null);
+//	for(Prescription prescription : prescriptionService.findByCriteria()) {
+		Notification notification = new Notification(new User(), "bla");
 		notificationService.save(notification);
-	}
+//	}
   }
 		
 }
