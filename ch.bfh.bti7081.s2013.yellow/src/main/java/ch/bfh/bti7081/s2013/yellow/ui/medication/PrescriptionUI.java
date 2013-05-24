@@ -12,37 +12,37 @@ import com.vaadin.data.fieldgroup.FieldGroup;
 import com.vaadin.data.util.BeanItem;
 import com.vaadin.data.util.BeanItemContainer;
 import com.vaadin.data.validator.BeanValidator;
-import com.vaadin.server.BrowserWindowOpener;
-import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 
+
+/**
+ * @author Janosch Rohdewald
+ * UI component for creating and editing prescriptions
+ */
 @Title("Prescription")
-public class PrescriptionUI extends UI {
+public class PrescriptionUI extends FormLayout {
 	PrescriptionService prescriptionService;
 	MedicamentService medicamentService;
 	PatientService patientService;
 
 	private FieldGroup fields = new FieldGroup();
-	private FormLayout form = new FormLayout();
 	private BeanItem<Prescription> item;
 	Prescription prescription;
 
-	@Override
-	protected void init(VaadinRequest vaadinRequest) {
+	public PrescriptionUI() {
+		this(-1);
+	}
+	public PrescriptionUI(int prescriptionId) {
 		SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
-		prescriptionService = (PrescriptionService)springHelper.getBean("prescriptionService");
-		medicamentService = (MedicamentService)springHelper.getBean("medicamentService");
-		patientService = (PatientService)springHelper.getBean("patientService");
+		prescriptionService = (PrescriptionService) springHelper.getBean("prescriptionService");
+		medicamentService = (MedicamentService) springHelper.getBean("medicamentService");
+		patientService = (PatientService) springHelper.getBean("patientService");
 
-
-		setContent(form);   // Set the form as the whole page content
-			prescription = prescriptionService.findById(0);
+		prescription = null;
 
 		// Search for the prescription
-//			prescription = prescriptionService.findById(0);
 		try {
-			int prescriptionId = Integer.valueOf(vaadinRequest.getParameter("prescId"));
 			prescription = prescriptionService.findById(prescriptionId);
 		} catch (NumberFormatException e) {
 		}
@@ -63,7 +63,7 @@ public class PrescriptionUI extends UI {
 		for (Patient patient : patientService.findAll())
 			patientCombo.setItemCaption(patient, patient.getName() + " " + patient.getVorname());
 		fields.bind(patientCombo, "patient");
-		form.addComponent(patientCombo);
+		addComponent(patientCombo);
 
 		// Dropdown for the medicament selection
 		ComboBox medicamentCombo = new ComboBox("Medicament");
@@ -72,37 +72,37 @@ public class PrescriptionUI extends UI {
 		medicamentCombo.setContainerDataSource(medicaments);
 		medicamentCombo.setItemCaptionPropertyId("name");
 		fields.bind(medicamentCombo, "medicament");
-		form.addComponent(medicamentCombo);
+		addComponent(medicamentCombo);
 		medicamentCombo.addValidator(new BeanValidator(Prescription.class, "medicament"));
 
 		// Quantity
 		TextField qnt = new TextField("Quantity");
-		form.addComponent(qnt);
+		addComponent(qnt);
 		fields.bind(qnt, "quantity");
 		qnt.addValidator(new BeanValidator(Prescription.class, "quantity"));
 
 		// Valid from
 		DateField validFrom = new DateField("Valid from");
-		form.addComponent(validFrom);
+		addComponent(validFrom);
 		fields.bind(validFrom, "validFrom");
 		validFrom.addValidator(new BeanValidator(Prescription.class, "validFrom"));
 
 		// Valid until
 		DateField validUntil = new DateField("Valid until");
-		form.addComponent(validUntil);
+		addComponent(validUntil);
 		fields.bind(validUntil, "validUntil");
 		validUntil.addValidator(new BeanValidator(Prescription.class, "validUntil"));
 
 		// Intervall in hours
 		TextField intervallInHours = new TextField("Interval (h)");
-		form.addComponent(intervallInHours);
+		addComponent(intervallInHours);
 		fields.bind(intervallInHours, "intervallInHours");
 		intervallInHours.addValidator(new BeanValidator(Prescription.class, "intervallInHours"));
 
 		// Comment
 		TextArea comment = new TextArea("Comment");
 		comment.setNullRepresentation("");
-		form.addComponent(comment);
+		addComponent(comment);
 		fields.bind(comment, "comment");
 		comment.addValidator(new BeanValidator(Prescription.class, "comment"));
 
@@ -120,7 +120,7 @@ public class PrescriptionUI extends UI {
 				}
 			}
 		});
-		form.addComponent(saveBtn);
+		addComponent(saveBtn);
 
 		// Delete the prescription
 		Button delBtn = new Button("delete");
@@ -132,22 +132,6 @@ public class PrescriptionUI extends UI {
 				fields.setItemDataSource(item);
 			}
 		});
-		form.addComponent(delBtn);
-				
-		// Popup with all prescriptions
-		final Button testBtn = new Button("See all prescriptions");
-		testBtn.addListener(new Button.ClickListener() {
-			public void buttonClick(Button.ClickEvent event) {
-				// Create an opener extension
-				BrowserWindowOpener opener =
-				    new BrowserWindowOpener(MyPopupUI.class);
-				opener.setFeatures("height=200,width=300,resizable");
-				
-				opener.extend(testBtn);
-			}
-		});
-		form.addComponent(testBtn);
-		
-	    
+		addComponent(delBtn);
 	}
 }

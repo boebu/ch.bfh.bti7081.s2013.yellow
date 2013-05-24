@@ -8,17 +8,17 @@
 	<display-name>yellow application</display-name>
 
 	<servlet>
-	<servlet-name>Vaadin</servlet-name>
-	<servlet-class>com.vaadin.server.VaadinServlet</servlet-class>
-	<init-param>
-	<description>Vaadin UI to display</description>
-	<param-name>UI</param-name>
-	<param-value>ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionUI</param-value>
-	</init-param>
+		<servlet-name>Vaadin</servlet-name>
+		<servlet-class>com.vaadin.server.VaadinServlet</servlet-class>
+		<init-param>
+			<description>Vaadin UI to display</description>
+			<param-name>UI</param-name>
+			<param-value>ch.bfh.bti7081.s2013.yellow.ui.medication.MainUI</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
-	<servlet-name>Vaadin</servlet-name>
-	<url-pattern>/*</url-pattern>
+		<servlet-name>Vaadin</servlet-name>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 
 
