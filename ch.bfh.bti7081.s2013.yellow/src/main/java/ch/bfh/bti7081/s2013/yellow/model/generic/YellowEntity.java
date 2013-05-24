@@ -8,6 +8,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
+ * @author Andy Pollari
+ * @author Janosch Rohdewald
  * This is the superclass for all entities of the yellow-project.
  *
  * @param <T> Inherited entity class.

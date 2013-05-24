@@ -130,11 +130,20 @@ public class GenericDAOImpl<T> implements GenericDAO<T> {
         return result;
     }
 
+    /**
+     * Refresh the state of the instance from the database
+     * @param entity
+     */
     @Override
     public void refresh(T entity) {
         getEntityManager().refresh(entity);
     }
 
+    /**
+     *
+     * @param criterion
+     * @return number of found objects
+     */
     @Override
     public long countByCriteria(Criterion... criterion) {
         Session session = (Session) getEntityManager().getDelegate();
@@ -148,16 +157,29 @@ public class GenericDAOImpl<T> implements GenericDAO<T> {
         return (Long) crit.list().get(0);
     }
 
+    /**
+     *
+     * @param entity the object you want to delete
+     */
     @Override
     public void delete(T entity) {
         getEntityManager().remove(entity);
     }
-    
+
+    /**
+     *
+     * @param entity detaches the entity
+     */
     @Override
     public void detach(T entity){
         getEntityManager().detach(entity);
     }
 
+    /**
+     *
+     * @param entity
+     * @return persisted entity
+     */
     @Override
     public T save(T entity) {
 
@@ -175,13 +197,13 @@ public class GenericDAOImpl<T> implements GenericDAO<T> {
             a.setVersion(a.getVersion() + 1);
             if (userService.getLoggedInUser() != null)
                 a.setUpdatedBy(userService.getLoggedInUser());
-//            T prev = findById(a.getId());
-//            if (prev == null) {
-//	            getEntityManager().persist(a);
-//                return entity;
-//            } else {
+            T prev = findById(a.getId());
+            if (prev == null) {
+	            getEntityManager().persist(a);
+                return entity;
+            } else {
                 return getEntityManager().merge(entity);
-//            }
+            }
 
         }
         return null;

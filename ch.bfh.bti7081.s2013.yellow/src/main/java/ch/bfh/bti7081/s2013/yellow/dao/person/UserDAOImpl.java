@@ -7,6 +7,10 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
+/**
+ * @author Andy Pollari
+ * Implementation of PatientDAOImpl
+ */
 @Repository
 public class UserDAOImpl extends GenericDAOImpl<User> implements UserDAO {
 

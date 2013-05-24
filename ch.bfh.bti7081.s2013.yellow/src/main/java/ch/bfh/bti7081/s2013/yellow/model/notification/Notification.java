@@ -7,10 +7,9 @@ import javax.validation.constraints.NotNull;
 
 import ch.bfh.bti7081.s2013.yellow.model.generic.YellowEntity;
 import ch.bfh.bti7081.s2013.yellow.model.person.User;
-import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
-import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationStateNew;
 
 /**
+ * @author Andy Pollari
  * This class represents a notification
  */
 @Entity

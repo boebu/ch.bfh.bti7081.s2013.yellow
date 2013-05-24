@@ -6,6 +6,7 @@ import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 import org.springframework.stereotype.Repository;
 
 /**
+ * @author Andy Pollari
  * Implementation of NotificationDAO
  */
 @Repository

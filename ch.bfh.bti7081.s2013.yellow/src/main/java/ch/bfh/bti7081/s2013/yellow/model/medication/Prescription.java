@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
+ * @author Andy Pollari
  * This Class represents a presciption.
  */
 @Entity
