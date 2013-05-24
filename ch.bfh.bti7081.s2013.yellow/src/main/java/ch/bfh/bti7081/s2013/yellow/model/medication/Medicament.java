@@ -6,10 +6,10 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import java.util.Collection;
 import java.util.List;
 
 /**
+ * @author Andy Pollari
  * This Class represents a medicament.
  */
 @Entity

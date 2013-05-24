@@ -2,14 +2,14 @@ package ch.bfh.bti7081.s2013.yellow.model.person;
 
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 
-import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.List;
 
 /**
- * represends a patient
+ * @author Andy Pollari
+ * represents a patient
  */
 @Entity
 @Table(name="Patient")

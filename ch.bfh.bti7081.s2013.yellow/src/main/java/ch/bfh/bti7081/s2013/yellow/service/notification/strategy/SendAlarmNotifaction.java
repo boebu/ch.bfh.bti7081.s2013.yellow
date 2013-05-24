@@ -4,11 +4,8 @@ import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 
 
 /**
- * Created with IntelliJ IDEA.
- * User: Polandy
- * Date: 17.05.13
- * Time: 11:33
- * To change this template use File | Settings | File Templates.
+ * @author Andy Pollari
+ * Concrete sendstrategy. Sends an notification as an alarm
  */
 public class SendAlarmNotifaction implements SendNotificationStrategy{
     

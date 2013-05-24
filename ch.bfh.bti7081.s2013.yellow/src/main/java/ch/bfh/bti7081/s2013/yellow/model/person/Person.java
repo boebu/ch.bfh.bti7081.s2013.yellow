@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import java.util.Date;
 
 /**
+ * @author Andy Pollari
  * This entity represents a basic person. Each person must inherit from this abstract class.
  * @param <T> Inherited person class
  */

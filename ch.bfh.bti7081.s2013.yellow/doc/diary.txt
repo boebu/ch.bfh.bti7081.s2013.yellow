@@ -5,6 +5,21 @@
 ============================================
 
 == Diary ==
+
+20130424
+--------
+  - Anwesend: polla2, glisb1, bronc1, rohdj1
+  - Abwesend: hutzf1 (Grund: Weiterbildung geschäftlich)
+  - Sprint 2
+    - Daily
+    - Entscheide:
+        - Applikation auf Jetty laufen lassen
+          Dass die Applikation auf dem Tomcat läuft, ist nicht mehr prioritär.
+          JMX wird auch von Jetty unterstützt.
+        - State Pattern umbauen
+          Die momentane Implementierung des State Patterns ist nicht ideal bei Verwendung mit Hibernate.
+          Der Lösungsansatz mit Hibernate (mit Hibernate UserType etc.) scheint uns etwas zu aufwändig und kompliziert.
+
 20130522
 --------
   - Anwesend: alle

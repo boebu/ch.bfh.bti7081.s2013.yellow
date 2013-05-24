@@ -4,11 +4,8 @@ import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 
 
 /**
- * Created with IntelliJ IDEA.
- * User: Polandy
- * Date: 17.05.13
- * Time: 11:35
- * To change this template use File | Settings | File Templates.
+ * @author Andy Pollari
+ * Concrete sendstrategy. Sends a notification as a reminder.
  */
 public class SendReminderNotification implements SendNotificationStrategy {
     @Override

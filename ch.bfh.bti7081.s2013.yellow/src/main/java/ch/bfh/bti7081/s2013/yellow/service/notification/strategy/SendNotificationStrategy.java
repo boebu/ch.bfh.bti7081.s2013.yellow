@@ -4,7 +4,8 @@ import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 
 
 /**
- *
+ * @author Andy Pollari
+ * Interface for Strategy Pattern
  */
 public interface SendNotificationStrategy {
 

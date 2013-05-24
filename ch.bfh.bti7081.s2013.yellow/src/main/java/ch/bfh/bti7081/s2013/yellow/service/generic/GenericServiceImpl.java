@@ -6,6 +6,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * @author Andy Pollari
+ * Implementation of the generic service
+ * @param <T> entity class
+ */
 @Transactional
 public class GenericServiceImpl<T> implements GenericService<T> {
 

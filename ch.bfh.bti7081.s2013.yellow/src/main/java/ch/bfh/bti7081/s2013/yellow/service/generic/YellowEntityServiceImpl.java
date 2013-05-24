@@ -8,6 +8,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 
+/**
+ * @author Andy Pollari
+ * Implementation of the YellowEntityService
+ */
 @Transactional
 @Service
 public class YellowEntityServiceImpl extends GenericServiceImpl<YellowEntity> implements YellowEntityService {

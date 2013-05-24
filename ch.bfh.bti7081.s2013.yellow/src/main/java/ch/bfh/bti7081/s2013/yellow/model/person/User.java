@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * represends a user of the system
+ * @author Andy Pollari
+ * represents a user of the system
  */
 @Entity
 @Table(name="User")
