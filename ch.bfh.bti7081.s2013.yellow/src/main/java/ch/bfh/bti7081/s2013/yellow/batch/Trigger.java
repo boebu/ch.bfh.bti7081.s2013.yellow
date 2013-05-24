@@ -57,7 +57,7 @@ public class Trigger implements TriggerMBean {
 
   public void createNotifications(int interval) {
 	    SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
-//		PrescriptionService prescriptionService = (PrescriptionService)springHelper.getBean("prescriptionService");
+		PrescriptionService prescriptionService = (PrescriptionService)springHelper.getBean("prescriptionService");
 		NotificationService notificationService = (NotificationService)springHelper.getBean("notificationService");
 //	for(Prescription prescription : prescriptionService.findByCriteria()) {
 		Notification notification = new Notification(new User(), "bla");

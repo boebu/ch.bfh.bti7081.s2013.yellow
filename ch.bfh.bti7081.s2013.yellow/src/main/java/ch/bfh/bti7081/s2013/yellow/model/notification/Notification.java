@@ -21,21 +21,20 @@ public class Notification extends YellowEntity<Notification> {
 	@NotNull
     private User receiver;
     private String message;
-    @ManyToOne(optional = false)
-	@NotNull
-    private NotificationState state;
+    
+    //private NotificationState state;
     //private NotificationStateMachine stateMachine;
 
     public Notification(User receiver, String message) {
         super(Notification.class);
     	this.receiver = receiver;
         this.message = message;
-        this.state = new NotificationStateNew();
+        //this.state = new NotificationStateNew();
     }
     
     public void send()
     {
-    	state = state.send();
+    	//state = state.send();
     }
     
     
