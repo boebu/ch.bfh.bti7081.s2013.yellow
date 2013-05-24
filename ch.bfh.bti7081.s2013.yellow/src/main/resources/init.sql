@@ -1,9 +1,9 @@
 
 # Some sample medicaments
 INSERT INTO Medicament (id, name, category) VALUES
-(1000, "A1CNow","Blutzuckermessger√§te"),
+(1000, "A1CNow","Blutzuckermessger‰te"),
 (1001, "Acclaim Polyol","Lack-, Kleb- & Dichtstoffrohstoffe"),
-(1002, "Adalat","H√§matologie/ Kardiologie"),
+(1002, "Adalat","H‰matologie/ Kardiologie"),
 (1003, "Admire","Insektizide/ Saatgutbehandlung"),
 (1004, "Advantage","Hobbytierbereich"),
 (1005, "Advantix","Hobbytierbereich"),
@@ -13,7 +13,7 @@ INSERT INTO Medicament (id, name, category) VALUES
 (1009, "Alka-Seltzer","Gastrointestinal"),
 (1010, "Apec","Polycarbonate"),
 (1011, "Arcol","Polyurethane"),
-(1012, "Artwalk","Bodenbel√§ge"),
+(1012, "Artwalk","Bodenbel‰ge"),
 (1013, "Aspirin","Schmerzen"),
 (1014, "Aspirin protect","Medikament zur Herzinfarktprophylaxe"),
 (1015, "Atlantis","Herbizide"),
@@ -47,12 +47,12 @@ INSERT INTO Medicament (id, name, category) VALUES
 (1043, "Berocca","Vitamine"),
 (1044, "Betaferon/Betaseron","Specialty Medicine"),
 (1045, "Betanal","Herbizide"),
-(1046, "Breeze 2","Blutzuckermessger√§te"),
+(1046, "Breeze 2","Blutzuckermessger‰te"),
 (1047, "Canesten","Dermatologika"),
 (1048, "Catosal","Nutztierbereich"),
 (1049, "Ciprobay/Cipro","General Medicine"),
 (1050, "Confidor","Insektizide"),
-(1051, "Contour/Contour TS/Contour Link","Blutzuckermessger√§te"),
+(1051, "Contour/Contour TS/Contour Link","Blutzuckermessger‰te"),
 (1052, "CreKat","Lack-, Kleb- & Dichtstoffrohstoffe"),
 (1053, "Crelan","Lack-, Kleb- & Dichtstoffrohstoffe"),
 (1054, "Decis","Insektizide"),
@@ -90,7 +90,7 @@ INSERT INTO Medicament (id, name, category) VALUES
 (1086, "Impraperm","Lack-, Kleb- & Dichtstoffrohstoffe"),
 (1087, "Input","Fungizide"),
 (1088, "K-Othrine","Insektizide"),
-(1089, "Kogenate","H√§matologie/Kardiologie"),
+(1089, "Kogenate","H‰matologie/Kardiologie"),
 (1090, "Lefax","Gastrointestinal"),
 (1091, "Levitra","General Medicine / Mens HealthCare"),
 (1092, "Liberty","Herbizide"),
@@ -144,6 +144,11 @@ INSERT INTO Medicament (id, name, category) VALUES
 (1140, "Yaz","Women's HealthCare"),
 (1141, "3.0T Prostate eCoil","Injektionssysteme / Magnetresonanz-Tomografie");
 
+# sample prescriptions
+INSERT INTO `prescription` (`id`, `creation`, `lastUpdated`, `version`, `updatedBy`, `comment`, `deactivated`, `intervallInHours`, `lastTaken`, `quantity`, `validFrom`, `validUntil`, `medicament_id`, `patient_id`) VALUES
+(32768, '2013-05-22 19:14:42', '2013-05-22 19:14:42', 1, NULL, 'bliblablubb', 0, 8, NULL, 8, '2013-05-08 00:00:00', NULL, 1088, 2001),
+(32769, '2013-05-22 19:15:36', '2013-05-22 19:15:36', 1, NULL, NULL, 0, 14, NULL, 3, '2013-05-14 00:00:00', NULL, 1091, 2072),
+(32770, '2013-05-22 19:16:04', '2013-05-22 19:16:04', 1, NULL, NULL, 0, 1, NULL, 5, '2013-05-15 00:00:00', NULL, 1138, 2043);
 
 # sample patients
 INSERT INTO Patient (id, vorname, name, phoneNr, birthday) VALUES
@@ -197,11 +202,11 @@ INSERT INTO Patient (id, vorname, name, phoneNr, birthday) VALUES
 (2047, "Alexander", "Schroder", "044 374 12 79", "1964-3-13"),
 (2048, "Anja", "Hoch", "031 680 64 55", "1988-3-1"),
 (2049, "Swen", "Bieber", "052 441 57 40", "1953-4-6"),
-(2050, "Mandy", "G√§rtner", "052 566 87 82", "1971-4-3"),
+(2050, "Mandy", "G‰rtner", "052 566 87 82", "1971-4-3"),
 (2051, "Stefan", "Kortig", "041 218 48 68", "1944-9-10"),
 (2052, "Andreas", "Zimmermann", "035 571 80 11", "1984-3-6"),
 (2053, "Tom", "Propst", "027 702 13 97", "1958-7-6"),
-(2054, "J√ºrgen", "Holtzmann", "061 454 37 86", "1993-5-19"),
+(2054, "J¸rgen", "Holtzmann", "061 454 37 86", "1993-5-19"),
 (2055, "Alexander", "Schultheiss", "026 895 10 15", "1981-8-14"),
 (2056, "Anne", "Schultz", "032 415 94 45", "1942-6-14"),
 (2057, "Brigitte", "Goldschmidt", "044 256 35 16", "1983-3-31"),
