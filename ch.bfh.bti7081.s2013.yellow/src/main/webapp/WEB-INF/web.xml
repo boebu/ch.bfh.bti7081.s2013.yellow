@@ -13,7 +13,7 @@
 		<init-param>
 			<description>Vaadin UI to display</description>
 			<param-name>UI</param-name>
-			<param-value>ch.bfh.bti7081.s2013.yellow.ui.medication.MainUI</param-value>
+			<param-value>ch.bfh.bti7081.s2013.yellow.ui.MainUI</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>

@@ -15,6 +15,8 @@ import com.vaadin.data.util.BeanItem;
 import com.vaadin.data.util.BeanItemContainer;
 import com.vaadin.data.validator.BeanValidator;
 import com.vaadin.event.MouseEvents.ClickListener;
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.BrowserWindowOpener;
 import com.vaadin.server.ExternalResource;
 import com.vaadin.server.FileResource;
@@ -24,45 +26,22 @@ import com.vaadin.server.VaadinService;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickEvent;
+import com.vaadin.ui.themes.Reindeer;
 
 /* List of all prescriptions
  * 
  * @author bronc1
 */
 @Title("Prescription-List")
-public class PrescriptionListUI extends UI {
+public class PrescriptionListView extends CustomComponent implements View {
 	PrescriptionService prescriptionService;
-	MedicamentService medicamentService;
-	PatientService patientService;
 
-	private FieldGroup fields = new FieldGroup();
-	private FormLayout form = new FormLayout();
-	private BeanItem<Prescription> item;
-	Prescription prescription;
+	public static final String NAME = "prescriptionList";
 
-	@Override
-	protected void init(VaadinRequest vaadinRequest) {
+	public PrescriptionListView() {
 		SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
 		prescriptionService = (PrescriptionService)springHelper.getBean("prescriptionService");
-		medicamentService = (MedicamentService)springHelper.getBean("medicamentService");
-		patientService = (PatientService)springHelper.getBean("patientService");
 
-
-		setContent(form);   // Set the form as the whole page content
-			prescription = prescriptionService.findById(0);
-
-		// Search for the prescription
-		try {
-			int prescriptionId = Integer.valueOf(vaadinRequest.getParameter("prescId"));
-			prescription = prescriptionService.findById(prescriptionId);
-		} catch (NumberFormatException e) {
-		}
-		if (prescription == null)
-			prescription = new Prescription();
-
-		// Set the prescription as the data source
-		item = new BeanItem(prescription);
-		fields.setItemDataSource(item);
 
 		// Find the application directory
 		String basepath = VaadinService.getCurrent()
@@ -96,8 +75,17 @@ public class PrescriptionListUI extends UI {
 							prescriptions.getIntervallInHours(), linkEdit
 			}, prescriptions.getId());
 		}
-			
-		
-		form.addComponent(prescrTable);
+
+		// The view root layout
+		setSizeFull();
+		VerticalLayout viewLayout = new VerticalLayout(prescrTable);
+		viewLayout.setSizeFull();
+		viewLayout.setComponentAlignment(prescrTable, Alignment.MIDDLE_CENTER);
+		viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
+		setCompositionRoot(viewLayout);
+	}
+
+	@Override
+	public void enter(ViewChangeListener.ViewChangeEvent event) {
 	}
 }

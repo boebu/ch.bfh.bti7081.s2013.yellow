@@ -12,6 +12,8 @@ import com.vaadin.data.fieldgroup.FieldGroup;
 import com.vaadin.data.util.BeanItem;
 import com.vaadin.data.util.BeanItemContainer;
 import com.vaadin.data.validator.BeanValidator;
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 
@@ -21,7 +23,7 @@ import com.vaadin.ui.*;
  * UI component for creating and editing prescriptions
  */
 @Title("Prescription")
-public class PrescriptionUI extends FormLayout {
+public class PrescriptionUI extends FormLayout{
 	PrescriptionService prescriptionService;
 	MedicamentService medicamentService;
 	PatientService patientService;
