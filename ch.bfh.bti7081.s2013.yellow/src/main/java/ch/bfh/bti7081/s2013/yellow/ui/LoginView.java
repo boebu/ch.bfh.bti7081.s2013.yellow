@@ -2,13 +2,16 @@ package ch.bfh.bti7081.s2013.yellow.ui;
 
 import com.vaadin.data.Validator;
 import com.vaadin.data.validator.AbstractValidator;
-import com.vaadin.data.validator.EmailValidator;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.shared.ui.MarginInfo;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.Reindeer;
 
+/**
+ * @author Vaadin sample / rohdj1
+ *         This is a simple view to login into the application. Currently it's just checking if username and password are admin/admin.
+ */
 public class LoginView extends CustomComponent implements View,
 		Button.ClickListener {
 
@@ -20,6 +23,9 @@ public class LoginView extends CustomComponent implements View,
 
 	private final Button loginButton;
 
+	/**
+	 * Add the components to the login view
+	 */
 	public LoginView() {
 		setSizeFull();
 
@@ -55,15 +61,18 @@ public class LoginView extends CustomComponent implements View,
 		setCompositionRoot(viewLayout);
 	}
 
+	/**
+	 * @see com.vaadin.navigator.ViewChangeListener.ViewChangeEvent
+	 */
 	@Override
 	public void enter(ViewChangeListener.ViewChangeEvent event) {
 		// focus the username field when user arrives to the login view
 		user.focus();
 	}
 
-	//
-	// Validator for validating the passwords
-	//
+	/**
+	 * Validator for validating the passwords
+	 */
 	private static final class PasswordValidator extends
 			AbstractValidator<String> implements Validator {
 
@@ -90,14 +99,15 @@ public class LoginView extends CustomComponent implements View,
 		}
 	}
 
+	/**
+	 * Validate the fields using the navigator.
+	 *
+	 * @see com.vaadin.ui.Button.ClickEvent
+	 */
 	@Override
 	public void buttonClick(Button.ClickEvent event) {
-
-		//
-		// Validate the fields using the navigator. By using validors for the
-		// fields we reduce the amount of queries we have to use to the database
+		// By using validors for the fields we reduce the amount of queries we have to use to the database
 		// for wrongly entered passwords
-		//
 		if (!user.isValid() || !password.isValid()) {
 			return;
 		}
@@ -112,7 +122,7 @@ public class LoginView extends CustomComponent implements View,
 		boolean isValid = username.equals("admin")
 				&& password.equals("admin");
 
-		if(isValid){
+		if (isValid) {
 			// Store the current user in the service session
 			getSession().setAttribute("user", username);
 

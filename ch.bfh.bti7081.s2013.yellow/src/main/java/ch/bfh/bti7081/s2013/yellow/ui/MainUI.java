@@ -1,19 +1,22 @@
 package ch.bfh.bti7081.s2013.yellow.ui;
 
 import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionListView;
-import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionUI;
+import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionView;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.UI;
 
 /**
  * @author Janosch Rohdewald
- * Main UI class with the tabs
+ * Main Main UI class with the navigator
  */
 public class MainUI extends UI {
 
+	/**
+	 * Init the main Vaadin UI, including navigator and logged checking
+	 * @see UI
+	 */
 	@Override
 	protected void init(VaadinRequest request) {
 
@@ -35,6 +38,7 @@ public class MainUI extends UI {
 
 
 		getNavigator().addView(PrescriptionListView.NAME, PrescriptionListView.class);
+		getNavigator().addView(PrescriptionView.NAME, PrescriptionView.class);
 
 		//
 		// We use a view change handler to ensure the user is always redirected

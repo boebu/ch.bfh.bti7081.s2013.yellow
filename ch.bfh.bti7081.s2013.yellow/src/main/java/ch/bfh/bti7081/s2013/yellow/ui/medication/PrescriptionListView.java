@@ -65,11 +65,11 @@ public class PrescriptionListView extends CustomComponent implements View {
 		prescrTable.addContainerProperty("Edit", Link.class, null);
 
 		//For every prescription, there's a row in the table
-		for (Prescription prescriptions : prescriptionService.findAll()) {
+		for (Prescription prescriptions : prescriptionService.findActive()) {
 
 			// Edit-Link -> Prescription-Site with id
 			Link linkEdit = new Link(null,
-					new ExternalResource("http://localhost:8080?prescid=" + prescriptions.getId()));
+					new ExternalResource("#!"+ PrescriptionView.NAME +"/"+prescriptions.getId()));
 			linkEdit.setIcon(resourceEdit);
 
 			// Delete-Link -> To delete a prescription, click on edit then delete from there
