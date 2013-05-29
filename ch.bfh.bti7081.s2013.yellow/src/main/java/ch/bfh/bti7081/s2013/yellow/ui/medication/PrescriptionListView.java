@@ -25,24 +25,27 @@ import com.vaadin.server.ThemeResource;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinService;
 import com.vaadin.server.VaadinServlet;
+import com.vaadin.shared.ui.AlignmentInfo;
 import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.themes.Reindeer;
 
-/* List of all prescriptions
- * 
+/* 
  * @author bronc1
+ * List of all prescriptions
+ * 
 */
 @Title("Prescription-List")
 public class PrescriptionListView extends CustomComponent implements View {
 	PrescriptionService prescriptionService;
 
 	public static final String NAME = "prescriptionList";
+	public static final int VISIBLE_ROWS = 10;
 
 	public PrescriptionListView() {
+		// Vaadin & Spring stuff
 		SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
 		prescriptionService = (PrescriptionService) springHelper.getBean("prescriptionService");
-
 
 		// Find the application directory
 		String basepath = VaadinService.getCurrent()
@@ -51,11 +54,14 @@ public class PrescriptionListView extends CustomComponent implements View {
 		// Image as a file resource
 		FileResource resourceEdit = new FileResource(new File(basepath +
 				"/WEB-INF/images/edit.png"));
+		FileResource resourceAdd = new FileResource(new File(basepath +
+				"/WEB-INF/images/add.png"));
 
-		//Table with its columns
+		//Table with its columns, you have to give the correct object for every column!
 		Table prescrTable = new Table("");
 		prescrTable.addContainerProperty("Patient", String.class, null);
 		prescrTable.addContainerProperty("Medicament", String.class, null);
+		prescrTable.addContainerProperty("Quantity", Integer.class, null);
 		prescrTable.addContainerProperty("Date created", Timestamp.class, null);
 		prescrTable.addContainerProperty("Last update date", Timestamp.class, null);
 		prescrTable.addContainerProperty("Last update from", String.class, null);
@@ -63,6 +69,9 @@ public class PrescriptionListView extends CustomComponent implements View {
 		prescrTable.addContainerProperty("Valid until", Timestamp.class, null);
 		prescrTable.addContainerProperty("Interval in h", Integer.class, null);
 		prescrTable.addContainerProperty("Edit", Link.class, null);
+		
+		//Set the number of visible rows, if more, scrollbar will appear
+		prescrTable.setPageLength(VISIBLE_ROWS);
 
 		//For every prescription, there's a row in the table
 		for (Prescription prescriptions : prescriptionService.findActive()) {
@@ -73,25 +82,36 @@ public class PrescriptionListView extends CustomComponent implements View {
 			linkEdit.setIcon(resourceEdit);
 
 			// Delete-Link -> To delete a prescription, click on edit then delete from there
+			
 			//Reads the data from the prescription and fills it in the rows
 			prescrTable.addItem(new Object[]{
 					prescriptions.getPatient().getName() + " " +
 							prescriptions.getPatient().getVorname(),
 					prescriptions.getMedicament().getName(),
+					prescriptions.getQuantity(),
 					prescriptions.getCreation(),
 					prescriptions.getLastUpdated(),
 					"TODO",//TODO: Link to Username
 					prescriptions.getValidFrom(),
 					prescriptions.getValidUntil(),
-					prescriptions.getIntervallInHours(), linkEdit
+					prescriptions.getIntervallInHours(), 
+					linkEdit
 			}, prescriptions.getId());
 		}
 
-		// The view root layout
+		// New prescription-Link
+		Link linkNewPresc = new Link(null,
+				new ExternalResource("#!"+ PrescriptionView.NAME));
+		linkNewPresc.setIcon(resourceAdd);
+		linkNewPresc.setCaption(" Add a new prescription");
+		
+				// The view root layout
 		setSizeFull();
 		VerticalLayout viewLayout = new VerticalLayout(prescrTable);
 		viewLayout.setSizeFull();
 		viewLayout.setComponentAlignment(prescrTable, Alignment.MIDDLE_CENTER);
+		viewLayout.addComponent(linkNewPresc);
+		viewLayout.setComponentAlignment(linkNewPresc, Alignment.MIDDLE_CENTER);
 		viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
 		setCompositionRoot(viewLayout);
 	}

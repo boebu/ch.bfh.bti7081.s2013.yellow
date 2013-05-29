@@ -43,6 +43,11 @@
 
 
 	    <!-- vaadin addons-->
+	    <dependency>
+		    <groupId>org.vaadin.addons</groupId>
+		    <artifactId>filteringtable</artifactId>
+		    <version>0.8.8.v7</version>
+	    </dependency>
 
         <!-- spring stuff -->
 
