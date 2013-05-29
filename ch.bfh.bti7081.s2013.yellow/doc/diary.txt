@@ -6,7 +6,14 @@
 
 == Diary ==
 
-20130424
+20130529
+--------
+  - Anwesend: polla2, hutzf1, bronc1
+  - Abwesend: glisb1 (Grund: ), rohdj (Grund:)
+  - Sprint 2:
+    Arbeiten an den Tasks im Backlog.
+
+20130524
 --------
   - Anwesend: polla2, glisb1, bronc1, rohdj1
   - Abwesend: hutzf1 (Grund: Weiterbildung geschäftlich)
