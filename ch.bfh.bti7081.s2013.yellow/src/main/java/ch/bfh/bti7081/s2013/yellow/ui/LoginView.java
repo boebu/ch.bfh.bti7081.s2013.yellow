@@ -2,6 +2,7 @@ package ch.bfh.bti7081.s2013.yellow.ui;
 
 import com.vaadin.data.Validator;
 import com.vaadin.data.validator.AbstractValidator;
+import com.vaadin.event.ShortcutAction;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.shared.ui.MarginInfo;
@@ -45,6 +46,7 @@ public class LoginView extends CustomComponent implements View,
 
 		// Create login button
 		loginButton = new Button("Login", this);
+		loginButton.setClickShortcut(ShortcutAction.KeyCode.ENTER);
 
 		// Add both to a panel
 		VerticalLayout fields = new VerticalLayout(user, password, loginButton);
@@ -127,7 +129,7 @@ public class LoginView extends CustomComponent implements View,
 			getSession().setAttribute("user", username);
 
 			// Navigate to main view
-			getUI().getNavigator().navigateTo(MainView.NAME);
+			getUI().getNavigator().navigateTo(HomeView.NAME);
 
 		} else {
 

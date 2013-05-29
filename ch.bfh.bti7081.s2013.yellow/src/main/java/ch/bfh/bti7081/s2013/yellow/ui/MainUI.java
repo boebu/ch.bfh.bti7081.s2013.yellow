@@ -34,7 +34,7 @@ public class MainUI extends UI {
 		//
 		// Add the main view of the application
 		//
-		getNavigator().addView(MainView.NAME, MainView.class);
+		getNavigator().addView(HomeView.NAME, HomeView.class);
 
 
 		getNavigator().addView(PrescriptionListView.NAME, PrescriptionListView.class);

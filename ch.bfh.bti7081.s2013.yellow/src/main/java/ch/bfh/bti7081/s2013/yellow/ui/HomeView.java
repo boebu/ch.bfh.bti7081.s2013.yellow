@@ -3,30 +3,29 @@ package ch.bfh.bti7081.s2013.yellow.ui;
 import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionListView;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
+import com.vaadin.server.ExternalResource;
+import com.vaadin.server.FileResource;
+import com.vaadin.server.VaadinService;
 import com.vaadin.shared.ui.MarginInfo;
+import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.Reindeer;
 
+import java.io.File;
+
 /**
  * @author rohdj1
- * This is the main view that is displayed once a user has successfully logged in.
+ *         This is the main view that is displayed once a user has successfully logged in.
  */
-public class MainView extends CustomComponent implements View {
+public class HomeView extends CustomComponent implements View {
 	public static final String NAME = "";
 
-	Label text = new Label();
+	Label text = new Label("",ContentMode.HTML);
 
 	// go to the prescription list
-	Button prescList = new Button("Prescriptions", new Button.ClickListener() {
-
-		@Override
-		public void buttonClick(Button.ClickEvent event) {
-			// Refresh this view, should redirect to login view
-			getUI().getNavigator().navigateTo(PrescriptionListView.NAME);
-		}
-	});
+	Link prescList = new Link(" Prescription list", new ExternalResource("#!" + PrescriptionListView.NAME));
 	// Logout button
-	Button logout = new Button("Logout", new Button.ClickListener() {
+	Button logout = new Button(" Logout", new Button.ClickListener() {
 
 		@Override
 		public void buttonClick(Button.ClickEvent event) {
@@ -42,8 +41,11 @@ public class MainView extends CustomComponent implements View {
 	/**
 	 * Init the main view
 	 */
-	public MainView() {
+	public HomeView() {
 		setSizeFull();
+
+		String basePath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
+		prescList.setIcon(new FileResource(new File(basePath+"/WEB-INF/images/prescriptions.png")));
 
 		// Layout with welcome text, goto presc. and logout button
 		VerticalLayout fields = new VerticalLayout(text, prescList, logout);
@@ -62,6 +64,7 @@ public class MainView extends CustomComponent implements View {
 
 	/**
 	 * Update the currently logged in user
+	 *
 	 * @see View
 	 */
 	@Override
@@ -70,6 +73,6 @@ public class MainView extends CustomComponent implements View {
 		String username = String.valueOf(getSession().getAttribute("user"));
 
 		// And show the username
-		text.setValue("Hello " + username);
+		text.setValue("<b>Hello " + username+"</b>");
 	}
 }
