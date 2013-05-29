@@ -1,0 +1,26 @@
+Installation manual
+-------------------
+
+Dieses Dokument beschreibt die Einrichtung der Entwicklungsumgebung.
+Voraussetzungen:
+    - Java 7
+    - Maven 2 installiert
+    - Ausgechecktes Projekt
+      Projekt von Github auschecken: https://github.com/boebu/ch.bfh.bti7081.s2013.yellow.git
+    - MySQL Server
+
+Schritte:
+    # Projekt auschecken von Github auschecken
+    # MySQL Datenbank Konfiguration
+        Standardkonfiguration
+            username:   root
+            password:
+            DB-Name:    db_yellow_dev
+        Konfiguration überschreiben
+            Die Konfiguration kann in der Datei persistence.xml überschrieben werden.
+    # Datenbanktabellen erstellen, Applikation starten
+        - Im Root des Projektes jetty:run ausführen
+    # Datenbank Initialscripts ausführen
+        - <Project root>\src\main\resources\init.sql
+    # Applikation im Browser öffnen
+        - http://localhost:8080

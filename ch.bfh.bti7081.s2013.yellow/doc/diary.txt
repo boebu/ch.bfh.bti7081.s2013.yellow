@@ -9,7 +9,7 @@
 20130529
 --------
   - Anwesend: polla2, hutzf1, bronc1, rohdj
-  - Abwesend: glisb1 (Grund: Arbeit)
+  - Abwesend: glisb1 (Grund: Arbeit )
   - Sprint 2:
     Arbeiten an den Tasks im Backlog.
 
