@@ -151,13 +151,16 @@ public class PrescriptionView extends CustomComponent implements View {
 		});
 		formLayout.addComponent(cnlBtn);
 
-		setSizeFull();
 		// Center the layout and add a theme
+		setSizeFull();
 		VerticalLayout viewLayout = new VerticalLayout(formLayout);
 		viewLayout.setSizeFull();
 		viewLayout.setComponentAlignment(formLayout, Alignment.MIDDLE_CENTER);
 		viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
 		setCompositionRoot(viewLayout);
+
+		// Unset size, otherwise width is 100% and form is not centered
+		formLayout.setSizeUndefined();
 	}
 
 	/**
