@@ -12,6 +12,7 @@
   - Abwesend: glisb1 (Grund: Arbeit )
   - Sprint 2:
     Arbeiten an den Tasks im Backlog.
+  - Installation manual erstellt, abgelegt in doc/cs1_task10/installation_manual.txt
 
 20130524
 --------

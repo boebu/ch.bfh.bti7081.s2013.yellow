@@ -17,11 +17,15 @@ Schritte:
             DB-Name:    db_yellow_dev
         Konfiguration überschreiben:
             Die Konfiguration kann in der Datei persistence.xml überschrieben werden.
+
     - Datenbank (db_yellow_dev) ohne Tabellen auf MySQL Server erstellen
+
     - Applikation starten
           Dafür im Root des Projektes "mvn jetty:run" ausführen
+
     - Datenbank Initialscripts ausführen
           <Project root>\src\main\resources\init.sql
+
     - Applikation im Browser öffnen
           http://localhost:8080
 
