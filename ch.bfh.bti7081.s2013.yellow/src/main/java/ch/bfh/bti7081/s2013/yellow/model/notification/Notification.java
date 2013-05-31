@@ -6,6 +6,7 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import ch.bfh.bti7081.s2013.yellow.model.generic.YellowEntity;
+import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 import ch.bfh.bti7081.s2013.yellow.model.person.User;
 
 /**
@@ -15,7 +16,7 @@ import ch.bfh.bti7081.s2013.yellow.model.person.User;
 @Entity
 public class Notification extends YellowEntity<Notification> {
 
-    public NotificationType getNotificationType;
+    public NotificationType notificationType;
     @ManyToOne(optional = false)
 	@NotNull
     private User receiver;
@@ -23,7 +24,9 @@ public class Notification extends YellowEntity<Notification> {
     
     //private NotificationState state;
     //private NotificationStateMachine stateMachine;
-
+    public Notification() {
+        super(Notification.class);
+    }
     public Notification(User receiver, String message) {
         super(Notification.class);
     	this.receiver = receiver;
@@ -40,11 +43,11 @@ public class Notification extends YellowEntity<Notification> {
 
 
     public NotificationType getGetNotificationType() {
-        return getNotificationType;
+        return notificationType;
     }
 
     public void setGetNotificationType(NotificationType getNotificationType) {
-        this.getNotificationType = getNotificationType;
+        this.notificationType = getNotificationType;
     }
 
     public User getReceiver() {

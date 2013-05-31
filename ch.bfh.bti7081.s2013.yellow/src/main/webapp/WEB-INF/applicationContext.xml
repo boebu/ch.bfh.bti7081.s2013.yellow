@@ -36,4 +36,18 @@
     <!-- persistence exception translation -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
 
+<bean id="testMgrBean" class="ch.bfh.bti7081.s2013.yellow.batch.SystemTrigger">
+   <constructor-arg><ref bean="notificationService"/></constructor-arg>
+  <constructor-arg><ref bean="prescriptionService"/></constructor-arg>
+</bean>
+
+<bean id="exporter" class="org.springframework.jmx.export.MBeanExporter"
+                                                      lazy-init="false">
+   <property name="beans">
+      <map>
+         <entry key="yellow.batch :name=SystemTrigger" value-ref="testMgrBean"/>
+      </map>
+   </property>
+</bean>
+
 </beans>

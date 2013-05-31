@@ -32,7 +32,7 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
     public void send(Notification notification)
     {
         NotificationContext context = new NotificationContext();
-        switch (notification.getNotificationType){
+        switch (notification.notificationType){
             case REMINDER:
                 context.setSendStrategy(new SendReminderNotification());
                 break;

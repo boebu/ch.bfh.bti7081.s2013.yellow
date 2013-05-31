@@ -18,7 +18,9 @@ import com.vaadin.server.VaadinServlet;
 import java.util.ArrayList;
 
 public class Trigger implements TriggerMBean {
-  
+//    SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
+//	PrescriptionService prescriptionService = (PrescriptionService)springHelper.getBean("prescriptionService");
+//	NotificationService notificationService = (NotificationService)springHelper.getBean("notificationService");	
 
 
   public Trigger() {
@@ -54,14 +56,13 @@ public class Trigger implements TriggerMBean {
 
 
   // interface method implementations
-
+  public void createNotifications() {
+	  createNotifications(2);
+  }
   public void createNotifications(int interval) {
-	    SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
-		PrescriptionService prescriptionService = (PrescriptionService)springHelper.getBean("prescriptionService");
-		NotificationService notificationService = (NotificationService)springHelper.getBean("notificationService");
-//	for(Prescription prescription : prescriptionService.findByCriteria()) {
-		Notification notification = new Notification(new User(), "bla");
-		notificationService.save(notification);
+//	  for(Prescription prescription : prescriptionService.findByCriteria()) {
+//		Notification notification = new Notification(new User(), "bla");
+//		notificationService.save(notification);
 //	}
   }
 		

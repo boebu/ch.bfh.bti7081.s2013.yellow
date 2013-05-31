@@ -1,6 +1,8 @@
 package ch.bfh.bti7081.s2013.yellow.ui;
 
 import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionListView;
+import ch.bfh.bti7081.s2013.yellow.ui.notification.NotificationListView;
+
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.ExternalResource;
@@ -24,6 +26,7 @@ public class HomeView extends CustomComponent implements View {
 
 	// go to the prescription list
 	Link prescList = new Link(" Prescription list", new ExternalResource("#!" + PrescriptionListView.NAME));
+	Link ntfyList = new Link(" Notification list", new ExternalResource("#!" + NotificationListView.NAME));
 	// Logout button
 	Button logout = new Button(" Logout", new Button.ClickListener() {
 
@@ -48,7 +51,7 @@ public class HomeView extends CustomComponent implements View {
 		prescList.setIcon(new FileResource(new File(basePath+"/WEB-INF/images/prescriptions.png")));
 
 		// Layout with welcome text, goto presc. and logout button
-		VerticalLayout fields = new VerticalLayout(text, prescList, logout);
+		VerticalLayout fields = new VerticalLayout(text, prescList, ntfyList, logout);
 		fields.setCaption("Main navigation");
 		fields.setSpacing(true);
 		fields.setMargin(new MarginInfo(true, true, true, false));

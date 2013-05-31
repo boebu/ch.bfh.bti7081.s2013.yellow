@@ -1,9 +1,9 @@
 
 # Some sample medicaments
 INSERT INTO Medicament (id, name, category) VALUES
-(1000, "A1CNow","Blutzuckermessgeräte"),
+(1000, "A1CNow","Blutzuckermessgerï¿½te"),
 (1001, "Acclaim Polyol","Lack-, Kleb- & Dichtstoffrohstoffe"),
-(1002, "Adalat","Hämatologie/ Kardiologie"),
+(1002, "Adalat","Hï¿½matologie/ Kardiologie"),
 (1003, "Admire","Insektizide/ Saatgutbehandlung"),
 (1004, "Advantage","Hobbytierbereich"),
 (1005, "Advantix","Hobbytierbereich"),
@@ -13,7 +13,7 @@ INSERT INTO Medicament (id, name, category) VALUES
 (1009, "Alka-Seltzer","Gastrointestinal"),
 (1010, "Apec","Polycarbonate"),
 (1011, "Arcol","Polyurethane"),
-(1012, "Artwalk","Bodenbeläge"),
+(1012, "Artwalk","Bodenbelï¿½ge"),
 (1013, "Aspirin","Schmerzen"),
 (1014, "Aspirin protect","Medikament zur Herzinfarktprophylaxe"),
 (1015, "Atlantis","Herbizide"),
@@ -47,12 +47,12 @@ INSERT INTO Medicament (id, name, category) VALUES
 (1043, "Berocca","Vitamine"),
 (1044, "Betaferon/Betaseron","Specialty Medicine"),
 (1045, "Betanal","Herbizide"),
-(1046, "Breeze 2","Blutzuckermessgeräte"),
+(1046, "Breeze 2","Blutzuckermessgerï¿½te"),
 (1047, "Canesten","Dermatologika"),
 (1048, "Catosal","Nutztierbereich"),
 (1049, "Ciprobay/Cipro","General Medicine"),
 (1050, "Confidor","Insektizide"),
-(1051, "Contour/Contour TS/Contour Link","Blutzuckermessgeräte"),
+(1051, "Contour/Contour TS/Contour Link","Blutzuckermessgerï¿½te"),
 (1052, "CreKat","Lack-, Kleb- & Dichtstoffrohstoffe"),
 (1053, "Crelan","Lack-, Kleb- & Dichtstoffrohstoffe"),
 (1054, "Decis","Insektizide"),
@@ -90,7 +90,7 @@ INSERT INTO Medicament (id, name, category) VALUES
 (1086, "Impraperm","Lack-, Kleb- & Dichtstoffrohstoffe"),
 (1087, "Input","Fungizide"),
 (1088, "K-Othrine","Insektizide"),
-(1089, "Kogenate","Hämatologie/Kardiologie"),
+(1089, "Kogenate","Hï¿½matologie/Kardiologie"),
 (1090, "Lefax","Gastrointestinal"),
 (1091, "Levitra","General Medicine / Mens HealthCare"),
 (1092, "Liberty","Herbizide"),
@@ -202,11 +202,11 @@ INSERT INTO Patient (id, vorname, name, phoneNr, birthday) VALUES
 (2047, "Alexander", "Schroder", "044 374 12 79", "1964-3-13"),
 (2048, "Anja", "Hoch", "031 680 64 55", "1988-3-1"),
 (2049, "Swen", "Bieber", "052 441 57 40", "1953-4-6"),
-(2050, "Mandy", "Gärtner", "052 566 87 82", "1971-4-3"),
+(2050, "Mandy", "Gï¿½rtner", "052 566 87 82", "1971-4-3"),
 (2051, "Stefan", "Kortig", "041 218 48 68", "1944-9-10"),
 (2052, "Andreas", "Zimmermann", "035 571 80 11", "1984-3-6"),
 (2053, "Tom", "Propst", "027 702 13 97", "1958-7-6"),
-(2054, "Jürgen", "Holtzmann", "061 454 37 86", "1993-5-19"),
+(2054, "Jï¿½rgen", "Holtzmann", "061 454 37 86", "1993-5-19"),
 (2055, "Alexander", "Schultheiss", "026 895 10 15", "1981-8-14"),
 (2056, "Anne", "Schultz", "032 415 94 45", "1942-6-14"),
 (2057, "Brigitte", "Goldschmidt", "044 256 35 16", "1983-3-31"),
@@ -252,3 +252,7 @@ INSERT INTO Patient (id, vorname, name, phoneNr, birthday) VALUES
 (2097, "Franziska", "Lehrer", "027 856 19 64", "1939-7-20"),
 (2098, "Julia", "Faust", "027 756 73 24", "1938-1-25"),
 (2099, "Monika", "Reiniger", "081 997 83 24", "1967-3-25");
+
+INSERT INTO User(id,version,name,phoneNr,vorname,email,username) VALUES(10,1,"Dummy","12345","User","dummy@mail.me","dummyuser");
+
+UPDATE Patient SET linkeduser_id = 10;
