@@ -4,6 +4,10 @@ import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
 import ch.bfh.bti7081.s2013.yellow.service.notification.NotificationService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jmx.export.MBeanExporter;
+import org.springframework.jmx.export.annotation.ManagedResource;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Boban Glisovic
@@ -12,15 +16,12 @@ import ch.bfh.bti7081.s2013.yellow.service.notification.NotificationService;
  */
 
 public class SystemTrigger {
+	@Autowired
 	private NotificationService notificationService;
+	@Autowired
 	private PrescriptionService presriptionService;
 
 	
-	public SystemTrigger(NotificationService notificationService, PrescriptionService presriptionService) {
-		this.notificationService = notificationService;
-		this.presriptionService = presriptionService;
-	}
-    
 	public long countPrescrptions() {
 		return this.presriptionService.countAll();
 	}
