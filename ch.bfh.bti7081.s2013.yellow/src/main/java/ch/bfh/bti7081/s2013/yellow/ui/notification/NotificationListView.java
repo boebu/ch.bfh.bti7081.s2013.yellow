@@ -30,6 +30,7 @@ public class NotificationListView extends CustomComponent implements View {
 
 		//Table with its columns, you have to give the correct object for every column!
 		Table prescrTable = new Table("");
+		prescrTable.setHeight(400, Unit.PIXELS);
 		prescrTable.addContainerProperty("id", Integer.class, null);
 		prescrTable.addContainerProperty("Receiver", String.class, null);
 		prescrTable.addContainerProperty("Message", String.class, null);
