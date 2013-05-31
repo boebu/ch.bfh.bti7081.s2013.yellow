@@ -51,11 +51,15 @@ public class PrescriptionListView extends CustomComponent implements View {
 		String basepath = VaadinService.getCurrent()
 				.getBaseDirectory().getAbsolutePath();
 
-		// Image as a file resource
+		// Images as a file resource
 		FileResource resourceEdit = new FileResource(new File(basepath +
 				"/WEB-INF/images/edit.png"));
 		FileResource resourceAdd = new FileResource(new File(basepath +
 				"/WEB-INF/images/add.png"));
+		FileResource resourceBack = new FileResource(new File(basepath +
+				"/WEB-INF/images/back.png"));
+		FileResource resourceComment = new FileResource(new File(basepath +
+				"/WEB-INF/images/comment.png"));
 
 		//Table with its columns, you have to give the correct object for every column!
 		Table prescrTable = new Table("");
@@ -68,6 +72,7 @@ public class PrescriptionListView extends CustomComponent implements View {
 		prescrTable.addContainerProperty("Valid from", Timestamp.class, null);
 		prescrTable.addContainerProperty("Valid until", Timestamp.class, null);
 		prescrTable.addContainerProperty("Interval in h", Integer.class, null);
+		prescrTable.addContainerProperty("Hover for comment", Link.class, null);
 		prescrTable.addContainerProperty("Edit", Link.class, null);
 		
 		//Set the number of visible rows, if more, scrollbar will appear
@@ -80,6 +85,13 @@ public class PrescriptionListView extends CustomComponent implements View {
 			Link linkEdit = new Link(null,
 					new ExternalResource("#!"+ PrescriptionView.NAME +"/"+prescriptions.getId()));
 			linkEdit.setIcon(resourceEdit);
+			
+			// Comment -> Handled as hover-text
+			// ...unfortunately not useful for tablets/smartphones -> Maybe leaving out later -> visible via "edit"
+			Link linkComment = new Link(null,
+					new ExternalResource("#!"+ PrescriptionView.NAME +"/"+prescriptions.getId()));
+			linkComment.setIcon(resourceComment);
+			linkComment.setDescription(prescriptions.getComment());
 
 			// Delete-Link -> To delete a prescription, click on edit then delete from there
 			
@@ -94,7 +106,8 @@ public class PrescriptionListView extends CustomComponent implements View {
 					"TODO",//TODO: Link to Username
 					prescriptions.getValidFrom(),
 					prescriptions.getValidUntil(),
-					prescriptions.getIntervallInHours(), 
+					prescriptions.getIntervallInHours(),
+					linkComment,
 					linkEdit
 			}, prescriptions.getId());
 		}
@@ -105,13 +118,24 @@ public class PrescriptionListView extends CustomComponent implements View {
 		linkNewPresc.setIcon(resourceAdd);
 		linkNewPresc.setCaption(" Add a new prescription");
 		
+		// Back to homepage-Link
+		Link linkBack = new Link(null,
+				new ExternalResource("#!"));
+		linkBack.setIcon(resourceBack);
+		linkBack.setCaption(" Back to homepage");
+		
 				// The view root layout
 		setSizeFull();
 		VerticalLayout viewLayout = new VerticalLayout(prescrTable);
+		VerticalLayout btnLayout = new VerticalLayout();
 		viewLayout.setSizeFull();
 		viewLayout.setComponentAlignment(prescrTable, Alignment.MIDDLE_CENTER);
-		viewLayout.addComponent(linkNewPresc);
-		viewLayout.setComponentAlignment(linkNewPresc, Alignment.MIDDLE_CENTER);
+		btnLayout.addComponent(linkNewPresc);
+		btnLayout.setComponentAlignment(linkNewPresc, Alignment.MIDDLE_CENTER);
+		btnLayout.addComponent(linkBack);
+		btnLayout.setComponentAlignment(linkBack, Alignment.MIDDLE_CENTER);
+		viewLayout.addComponent(btnLayout);
+		viewLayout.setComponentAlignment(btnLayout, Alignment.MIDDLE_CENTER);
 		viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
 		setCompositionRoot(viewLayout);
 	}
