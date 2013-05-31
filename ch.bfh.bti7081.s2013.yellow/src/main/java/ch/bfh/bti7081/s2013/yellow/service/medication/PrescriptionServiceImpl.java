@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
+
+
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -30,6 +33,11 @@ public class PrescriptionServiceImpl extends GenericServiceImpl<Prescription> im
 	@Override
 	public List<Prescription> findActive() {
 		return prescriptionDAO.findByCriteria(Restrictions.eq("deactivated", false));
+	}
+
+	@Override
+	public List<Prescription> findTBD() {
+		return prescriptionDAO.findByCriteria(Restrictions.and(Restrictions.le("validFrom", new Date()),Restrictions.ge("validUntil", new Date())));
 	}
 
 }
