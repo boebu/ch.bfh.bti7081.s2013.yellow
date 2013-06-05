@@ -147,6 +147,19 @@
             <version>2.4</version>
             <scope>provided</scope>
         </dependency>
+
+	    <!-- Sending Mails -->
+	    <dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.5</version>
+	    </dependency>
+	    <!-- for sending Email with Spring -->
+	    <dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context-support</artifactId>
+		    <version>${springframework-version}</version>
+	    </dependency>
     </dependencies>
 
 	<repositories>

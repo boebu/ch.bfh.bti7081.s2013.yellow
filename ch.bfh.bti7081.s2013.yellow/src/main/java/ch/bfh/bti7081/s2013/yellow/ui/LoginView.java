@@ -68,6 +68,7 @@ public class LoginView extends CustomComponent implements View,
 	 */
 	@Override
 	public void enter(ViewChangeListener.ViewChangeEvent event) {
+
 		// focus the username field when user arrives to the login view
 		user.focus();
 	}

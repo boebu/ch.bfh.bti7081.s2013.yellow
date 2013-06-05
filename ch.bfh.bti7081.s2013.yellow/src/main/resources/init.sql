@@ -253,6 +253,6 @@ INSERT INTO Patient (id, vorname, name, phoneNr, birthday) VALUES
 (2098, "Julia", "Faust", "027 756 73 24", "1938-1-25"),
 (2099, "Monika", "Reiniger", "081 997 83 24", "1967-3-25");
 
-INSERT INTO User(id,version,name,phoneNr,vorname,email,username) VALUES(10,1,"Dummy","12345","User","dummy@mail.me","dummyuser");
+INSERT INTO User(id,version,name,phoneNr,vorname,email,username) VALUES(10,1,"Dummy","12345","User","P9NIU1JbVmyk3oYlL6OR0PenO6PYAe@api.pushover.net","dummyuser");
 
 UPDATE Patient SET linkeduser_id = 10;
