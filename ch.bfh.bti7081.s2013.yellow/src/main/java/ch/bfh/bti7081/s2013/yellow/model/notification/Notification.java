@@ -1,12 +1,15 @@
 package ch.bfh.bti7081.s2013.yellow.model.notification;
 
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import ch.bfh.bti7081.s2013.yellow.model.generic.YellowEntity;
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
+import ch.bfh.bti7081.s2013.yellow.model.person.Person;
 import ch.bfh.bti7081.s2013.yellow.model.person.User;
 
 /**
@@ -19,18 +22,20 @@ public class Notification extends YellowEntity<Notification> {
     public NotificationType notificationType;
     @ManyToOne(optional = false)
 	@NotNull
-    private User receiver;
+    private Person receiver;
     private String message;
+    private Date sendat;
     
     //private NotificationState state;
     //private NotificationStateMachine stateMachine;
     public Notification() {
         super(Notification.class);
     }
-    public Notification(User receiver, String message) {
+    public Notification(Person receiver, String message, Date sendat) {
         super(Notification.class);
     	this.receiver = receiver;
         this.message = message;
+        this.sendat = sendat;
         //this.state = new NotificationStateNew();
     }
     
@@ -50,11 +55,15 @@ public class Notification extends YellowEntity<Notification> {
         this.notificationType = getNotificationType;
     }
 
-    public User getReceiver() {
+    public Person getReceiver() {
         return receiver;
     }
+    
+    public Date getSendDate() {
+    	return sendat;
+    }
 
-    public void setReceiver(User receiver) {
+    public void setReceiver(Person receiver) {
         this.receiver = receiver;
     }
 

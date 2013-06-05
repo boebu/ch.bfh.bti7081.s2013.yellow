@@ -20,8 +20,7 @@ public class Patient extends Person<Patient> {
     }
 	@OneToMany(mappedBy = "patient")
 	private List<Prescription> prescriptions;
-	@ManyToOne(optional = true)
-	private User linkedUser;
+
 
 	public List<Prescription> getPrescriptions() {
 		return prescriptions;
@@ -31,8 +30,6 @@ public class Patient extends Person<Patient> {
 		this.prescriptions = prescriptions;
 	}
 	
-	public User getLinkedUser() {
-		return this.linkedUser;
-	}
+
 	
 }
