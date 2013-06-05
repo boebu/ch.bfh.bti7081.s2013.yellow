@@ -6,6 +6,14 @@
 
 == Diary ==
 
+20130531
+--------
+  - Anwesend: polla2, hutzf1, bronc1, rohdj
+  - Abwesend: glisb1 (Grund: Arbeit )
+  - Sprint 2 abgeschlossen
+  - Sprint 3 definiert -> siehe scrum-backlog
+    - JUnit-Testing hinzugefügt
+
 20130529
 --------
   - Anwesend: polla2, hutzf1, bronc1, rohdj

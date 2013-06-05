@@ -124,7 +124,7 @@ public class PrescriptionListView extends CustomComponent implements View {
 		linkBack.setIcon(resourceBack);
 		linkBack.setCaption(" Back to homepage");
 		
-				// The view root layout
+		// The view root layout
 		setSizeFull();
 		VerticalLayout viewLayout = new VerticalLayout(prescrTable);
 		VerticalLayout btnLayout = new VerticalLayout();
