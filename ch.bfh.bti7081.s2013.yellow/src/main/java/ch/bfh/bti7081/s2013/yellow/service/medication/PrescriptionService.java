@@ -21,5 +21,5 @@ public interface PrescriptionService extends GenericService<Prescription> {
 	 * Finds the active prescriptions (disabled == true)
 	 * @return The active prescriptions.
 	 */
-	List<Prescription> findTBD();
+	List<Prescription> findActiveandInRange();
 }

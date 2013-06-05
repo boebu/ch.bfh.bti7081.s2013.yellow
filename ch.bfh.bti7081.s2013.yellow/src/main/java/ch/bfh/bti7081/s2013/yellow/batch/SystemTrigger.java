@@ -1,5 +1,8 @@
 package ch.bfh.bti7081.s2013.yellow.batch;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
@@ -33,8 +36,17 @@ public class SystemTrigger {
 	
 	// create notification based on valid prescriptions
 	public void createNotifications(int interval) {
-		for(Prescription p :this.presriptionService.findTBD()) {
-			notificationService.save(new Notification(p.getPatient().getLinkedUser(),"take this: " + p.getMedicament().getName()));
+		Date today = new Date();
+		
+		
+		for(Prescription p :this.presriptionService.findActiveandInRange()) {
+			today.setHours(0);
+			today.setMinutes(0);
+			for(int i=1;i<=(24/p.getIntervallInHours());i++) {
+				today.setHours(i*p.getIntervallInHours());
+				notificationService.save(new Notification(p.getPatient(),"take this: " + p.getMedicament().getName(),today));
+			}
+			
 		}
 	}
 	
