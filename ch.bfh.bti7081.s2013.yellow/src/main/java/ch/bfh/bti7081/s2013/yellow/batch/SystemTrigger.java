@@ -20,12 +20,6 @@ public class SystemTrigger {
 	private NotificationService notificationService;
 	@Autowired
 	private PrescriptionService presriptionService;
-
-	// Constructer passing the bean-reference for need services (hibernate)
-	public SystemTrigger(NotificationService notificationService, PrescriptionService presriptionService) {
-		this.notificationService = notificationService;
-		this.presriptionService = presriptionService;
-	}
     
 	// dummy method to test connection to dao
 	public long countPrescrptions() {
