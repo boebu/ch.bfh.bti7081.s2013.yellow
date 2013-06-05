@@ -5,8 +5,10 @@ import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 import ch.bfh.bti7081.s2013.yellow.service.generic.GenericServiceImpl;
 
 import org.hibernate.criterion.Conjunction;
+import ch.bfh.bti7081.s2013.yellow.service.mail.MailService;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AutoProxyRegistrar;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,6 +28,9 @@ public class PrescriptionServiceImpl extends GenericServiceImpl<Prescription> im
 
     @Autowired
     PrescriptionDAO prescriptionDAO;
+
+	@Autowired
+	MailService mailService;
 
 	@PostConstruct
 	public void init(){

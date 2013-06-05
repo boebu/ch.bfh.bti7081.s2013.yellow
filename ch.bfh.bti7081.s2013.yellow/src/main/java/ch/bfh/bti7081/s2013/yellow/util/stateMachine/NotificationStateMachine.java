@@ -16,9 +16,11 @@ import static ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState.*;
  */
 public class NotificationStateMachine {
 
-
 	Map<NotificationState, List<NotificationState>> mapping;
 
+    /**
+     * initializes all states
+     */
     public NotificationStateMachine() {
         mapping = new HashMap<>();
 

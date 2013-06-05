@@ -48,7 +48,8 @@ public class HomeView extends CustomComponent implements View {
 		setSizeFull();
 
 		String basePath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-		prescList.setIcon(new FileResource(new File(basePath+"/WEB-INF/images/prescriptions.png")));
+		prescList.setIcon(new FileResource(new File(basePath+"/WEB-INF/images/prescription.png")));
+		ntfyList.setIcon(new FileResource(new File(basePath+"/WEB-INF/images/notification.png")));
 
 		// Layout with welcome text, goto presc. and logout button
 		VerticalLayout fields = new VerticalLayout(text, prescList, ntfyList, logout);

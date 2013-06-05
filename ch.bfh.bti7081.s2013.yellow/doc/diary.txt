@@ -6,10 +6,25 @@
 
 == Diary ==
 
+20130605
+--------
+    - Anwesend: polla2, bronc1, rohdj, glisb1
+    - Abwesend: hutzf1 (Grund: Arbeit)
+    - Nach dem Daily Standup arbeiten an Sprint 3
+
+
+20130531
+--------
+  - Anwesend: polla2, hutzf1, bronc1, rohdj
+  - Abwesend: glisb1 (Grund: Arbeit)
+  - Sprint 2 abgeschlossen
+  - Sprint 3 definiert -> siehe scrum-backlog
+    - JUnit-Testing hinzugef�gt
+
 20130529
 --------
   - Anwesend: polla2, hutzf1, bronc1, rohdj
-  - Abwesend: glisb1 (Grund: Arbeit )
+  - Abwesend: glisb1 (Grund: Arbeit)
   - Sprint 2:
     Arbeiten an den Tasks im Backlog.
   - Installation manual erstellt, abgelegt in doc/cs1_task10/installation_manual.txt
