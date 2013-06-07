@@ -5,6 +5,23 @@
 ============================================
 
 == Diary ==
+20130607
+--------
+  - Anwesend: alle
+  - Daily Scrum Sprint 3:
+    - Link-Bestätigung: Andy
+    - Resend: Hutzli
+    - Patient erfassen: Janosch
+    - Trigger ruft resend() auf: Böbu
+    - Präsi vorbereiten: Brönni
+  - Besprechung Präsentation
+    - Use-Case & Requirements
+    - Demo -> New Patient, New Presc, Trigger, Push-over/Mail, Link, Bestätigung
+    - Code-Review -> Joschi
+    - Class-Diagramm -> generated durch Janosch/Andy
+    - Scrumrückblick
+  - Weiterfahren an Sprint 3
+
 
 20130605
 --------
