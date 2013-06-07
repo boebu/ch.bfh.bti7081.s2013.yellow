@@ -5,6 +5,38 @@
 ============================================
 
 == Diary ==
+20130607
+--------
+  - Anwesend: alle
+  - Daily Scrum Sprint 3:
+    - Link-Bestätigung: Andy
+    - Resend: Hutzli
+    - Patient erfassen: Janosch
+    - Trigger ruft resend() auf: Böbu
+    - Präsi vorbereiten: Brönni
+  - Besprechung Präsentation
+    - Use-Case & Requirements
+    - Demo -> New Patient, New Presc, Trigger, Push-over/Mail, Link, Bestätigung
+    - Code-Review -> Joschi
+    - Class-Diagramm -> generated durch Janosch/Andy
+    - Scrumrückblick
+  - Weiterfahren an Sprint 3
+
+
+20130605
+--------
+    - Anwesend: polla2, bronc1, rohdj, glisb1
+    - Abwesend: hutzf1 (Grund: Arbeit)
+    - Nach dem Daily Standup arbeiten an Sprint 3
+
+
+20130531
+--------
+  - Anwesend: polla2, hutzf1, bronc1, rohdj
+  - Abwesend: glisb1 (Grund: Arbeit)
+  - Sprint 2 abgeschlossen
+  - Sprint 3 definiert -> siehe scrum-backlog
+    - JUnit-Testing hinzugefï¿½gt
 
 20130529
 --------
@@ -12,6 +44,7 @@
   - Abwesend: glisb1 (Grund: Arbeit)
   - Sprint 2:
     Arbeiten an den Tasks im Backlog.
+  - Installation manual erstellt, abgelegt in doc/cs1_task10/installation_manual.txt
 
 20130524
 --------

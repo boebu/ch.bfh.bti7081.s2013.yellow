@@ -35,6 +35,9 @@ public abstract class Person<T> extends YellowEntity<T>{
     @Basic(optional = false)
     @Column(length = 40)
     String phoneNr;
+    
+    @Basic
+    String email;
 
 //    Address address;
 
@@ -69,5 +72,13 @@ public abstract class Person<T> extends YellowEntity<T>{
 
     public void setPhoneNr(String phoneNr) {
         this.phoneNr = phoneNr;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

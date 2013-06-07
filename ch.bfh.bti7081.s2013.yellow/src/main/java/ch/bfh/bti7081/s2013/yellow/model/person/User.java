@@ -18,8 +18,7 @@ public class User extends Person<User> {
     @Basic(optional = false)
     String username;
 
-    @Basic
-    String email;
+  
 
     public String getUsername() {
         return username;
@@ -29,11 +28,5 @@ public class User extends Person<User> {
         this.username = username;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }

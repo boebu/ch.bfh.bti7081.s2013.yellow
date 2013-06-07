@@ -2,6 +2,8 @@ package ch.bfh.bti7081.s2013.yellow.ui;
 
 import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionListView;
 import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionView;
+import ch.bfh.bti7081.s2013.yellow.ui.notification.NotificationListView;
+
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.VaadinRequest;
@@ -34,12 +36,13 @@ public class MainUI extends UI {
 		//
 		// Add the main view of the application
 		//
-		getNavigator().addView(MainView.NAME, MainView.class);
+		getNavigator().addView(HomeView.NAME, HomeView.class);
 
 
 		getNavigator().addView(PrescriptionListView.NAME, PrescriptionListView.class);
 		getNavigator().addView(PrescriptionView.NAME, PrescriptionView.class);
 
+		getNavigator().addView(NotificationListView.NAME, NotificationListView.class);
 		//
 		// We use a view change handler to ensure the user is always redirected
 		// to the login view if the user is not logged in.

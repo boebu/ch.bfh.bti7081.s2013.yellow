@@ -16,16 +16,21 @@ import static ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState.*;
  */
 public class NotificationStateMachine {
 
-
 	Map<NotificationState, List<NotificationState>> mapping;
 
+    /**
+     * initializes all states
+     */
     public NotificationStateMachine() {
         mapping = new HashMap<>();
 
         List<NotificationState> newValues = new ArrayList<>();
         List<NotificationState> sentValues = new ArrayList<>();
+        List<NotificationState> confirmedValues = new ArrayList<>();
+        List<NotificationState> missedValues = new ArrayList<>();
 
-        sentValues.add(SENT);
+
+        newValues.add(SENT);
 
         sentValues.add(CONFIRMED);
         sentValues.add(MISSED);
@@ -33,6 +38,8 @@ public class NotificationStateMachine {
         this.mapping = new HashMap<>();
 		this.mapping.put(NEW, newValues);
         this.mapping.put(SENT, sentValues);
+        this.mapping.put(CONFIRMED, confirmedValues);
+        this.mapping.put(MISSED, missedValues);
 	}
 
     /**
@@ -45,6 +52,11 @@ public class NotificationStateMachine {
     {
         List<NotificationState> validNextStates = mapping.get(before);
         return validNextStates.contains(after);
+    }
+
+    public List<NotificationState> getAllOutgoingStates(NotificationState state)
+    {
+        return this.mapping.get(state);
     }
 
 

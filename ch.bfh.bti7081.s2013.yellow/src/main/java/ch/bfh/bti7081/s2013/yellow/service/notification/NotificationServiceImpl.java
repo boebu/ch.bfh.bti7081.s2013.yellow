@@ -12,21 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.google.gwt.user.client.rpc.core.java.sql.Time_CustomFieldSerializer;
-
 import javax.annotation.PostConstruct;
-import javax.persistence.TypedQuery;
-import java.util.Date;
-import java.util.List;
 
 @Transactional
 @Service("notificationService")
 public class NotificationServiceImpl extends GenericServiceImpl<Notification> implements NotificationService {
 
-    /**
-     * in seconds
-     */
-    private static int TIME_PASSED_DEFAULT = 1800;
     @Autowired
     NotificationDAO notificationDAO;
 
@@ -38,6 +29,7 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
     @Override
     public void send(Notification notification) {
         NotificationContext context = new NotificationContext();
+        switch (notification.notificationType){
         switch (notification.getNotificationType) {
             case REMINDER:
                 context.setSendStrategy(new SendReminderNotification());

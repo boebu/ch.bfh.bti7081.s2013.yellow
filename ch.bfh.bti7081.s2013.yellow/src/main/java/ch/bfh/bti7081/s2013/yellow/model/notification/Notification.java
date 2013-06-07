@@ -2,12 +2,16 @@ package ch.bfh.bti7081.s2013.yellow.model.notification;
 
 
 import javax.persistence.Basic;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
 import ch.bfh.bti7081.s2013.yellow.model.generic.YellowEntity;
+import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
+import ch.bfh.bti7081.s2013.yellow.model.person.Person;
 import ch.bfh.bti7081.s2013.yellow.model.person.User;
 import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
 
@@ -20,10 +24,10 @@ import java.util.Date;
 @Entity
 public class Notification extends YellowEntity<Notification> {
 
-    public NotificationType getNotificationType;
+    public NotificationType notificationType;
     @ManyToOne(optional = false)
 	@NotNull
-    private User receiver;
+    private Person receiver;
     private String message;
     private NotificationState state;
     private Date sendDate;
@@ -31,12 +35,18 @@ public class Notification extends YellowEntity<Notification> {
     @OneToOne(mappedBy = "parentNotification")
     private Notification parentNotification;
 
+    private Date sendat;
+    
+    //private NotificationState state;
     //private NotificationStateMachine stateMachine;
-
-    public Notification(User receiver, String message) {
+    public Notification() {
+        super(Notification.class);
+    }
+    public Notification(Person receiver, String message, Date sendat) {
         super(Notification.class);
     	this.receiver = receiver;
         this.message = message;
+        this.sendat = sendat;
         //this.state = new NotificationStateNew();
     }
 
@@ -70,18 +80,22 @@ public class Notification extends YellowEntity<Notification> {
 
 
     public NotificationType getGetNotificationType() {
-        return getNotificationType;
+        return notificationType;
     }
 
     public void setGetNotificationType(NotificationType getNotificationType) {
-        this.getNotificationType = getNotificationType;
+        this.notificationType = getNotificationType;
     }
 
-    public User getReceiver() {
+    public Person getReceiver() {
         return receiver;
     }
+    
+    public Date getSendDate() {
+    	return sendat;
+    }
 
-    public void setReceiver(User receiver) {
+    public void setReceiver(Person receiver) {
         this.receiver = receiver;
     }
 
