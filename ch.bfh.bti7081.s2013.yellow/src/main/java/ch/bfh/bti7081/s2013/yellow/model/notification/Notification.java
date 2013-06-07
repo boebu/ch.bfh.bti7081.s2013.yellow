@@ -1,20 +1,15 @@
 package ch.bfh.bti7081.s2013.yellow.model.notification;
 
 
-import javax.persistence.Basic;
-import java.util.Date;
+import ch.bfh.bti7081.s2013.yellow.model.generic.YellowEntity;
+import ch.bfh.bti7081.s2013.yellow.model.person.Person;
+import ch.bfh.bti7081.s2013.yellow.model.person.User;
+import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
-
-import ch.bfh.bti7081.s2013.yellow.model.generic.YellowEntity;
-import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
-import ch.bfh.bti7081.s2013.yellow.model.person.Person;
-import ch.bfh.bti7081.s2013.yellow.model.person.User;
-import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
-
 import java.util.Date;
 
 /**
@@ -35,18 +30,13 @@ public class Notification extends YellowEntity<Notification> {
     @OneToOne(mappedBy = "parentNotification")
     private Notification parentNotification;
 
-    private Date sendat;
-    
     //private NotificationState state;
     //private NotificationStateMachine stateMachine;
-    public Notification() {
-        super(Notification.class);
-    }
-    public Notification(Person receiver, String message, Date sendat) {
+    public Notification(Person receiver, String message, Date sendDate) {
         super(Notification.class);
     	this.receiver = receiver;
         this.message = message;
-        this.sendat = sendat;
+        this.sendDate = sendDate;
         //this.state = new NotificationStateNew();
     }
 
@@ -61,10 +51,6 @@ public class Notification extends YellowEntity<Notification> {
 
     public Notification() {
         super(Notification.class);
-    }
-
-    public Date getSendDate() {
-        return sendDate;
     }
 
     public void setSendDate(Date sendDate) {
@@ -92,7 +78,7 @@ public class Notification extends YellowEntity<Notification> {
     }
     
     public Date getSendDate() {
-    	return sendat;
+    	return sendDate;
     }
 
     public void setReceiver(Person receiver) {
@@ -121,5 +107,13 @@ public class Notification extends YellowEntity<Notification> {
 
     public void setParentNotification(Notification parentNotification) {
         this.parentNotification = parentNotification;
+    }
+
+    public NotificationType getNotificationType() {
+        return notificationType;
+    }
+
+    public void setNotificationType(NotificationType notificationType) {
+        this.notificationType = notificationType;
     }
 }
