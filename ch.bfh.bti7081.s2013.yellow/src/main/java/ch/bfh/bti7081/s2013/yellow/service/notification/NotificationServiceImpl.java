@@ -6,33 +6,39 @@ import ch.bfh.bti7081.s2013.yellow.service.generic.GenericServiceImpl;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.NotificationContext;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.SendAlarmNotifaction;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.SendReminderNotification;
+import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.PostConstruct;
+import com.google.gwt.user.client.rpc.core.java.sql.Time_CustomFieldSerializer;
 
-/**
- * @author Andy Pollari
- * This is the implementation for the Notification service
- */
+import javax.annotation.PostConstruct;
+import javax.persistence.TypedQuery;
+import java.util.Date;
+import java.util.List;
+
 @Transactional
 @Service("notificationService")
 public class NotificationServiceImpl extends GenericServiceImpl<Notification> implements NotificationService {
 
+    /**
+     * in seconds
+     */
+    private static int TIME_PASSED_DEFAULT = 1800;
     @Autowired
-    NotificationDAO notificationDAO ;
+    NotificationDAO notificationDAO;
 
-	@PostConstruct
-	public void init(){
-		setDAO(notificationDAO);
-	}
+    @PostConstruct
+    public void init() {
+        setDAO(notificationDAO);
+    }
 
     @Override
-    public void send(Notification notification)
-    {
+    public void send(Notification notification) {
         NotificationContext context = new NotificationContext();
-        switch (notification.getNotificationType){
+        switch (notification.getNotificationType) {
             case REMINDER:
                 context.setSendStrategy(new SendReminderNotification());
                 break;
@@ -44,5 +50,39 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
                 break;
         }
         context.send(notification);
+    }
+
+    @Override
+    public void resendNotifications(Integer timePassed) {
+
+        //If timePassed not set, set it to Default Value
+        if (timePassed == null)
+            timePassed = TIME_PASSED_DEFAULT;
+
+        //todo
+
+        //Get every unconfirmed Notifications greater than a specific time passed
+        List<Notification> unconfirmedNotifications = findSentNotificationsToResend(timePassed);
+
+        //Set State of those unconfirmed Notifications to deleted
+        for (Notification deletedNotification:unconfirmedNotifications)       {
+            deletedNotification.setState(NotificationState.DELETED);
+            //Create new Notification
+
+        }
+
+
+
+    }
+
+    @Override
+    public List<Notification> findSentNotificationsToResend(Integer timePassed) {
+
+        return null;
+        //Liefert die Notifications zurück, welche den Status SENT haben und das SENTDATE + timePassed < now().
+        //return notificationDAO.findByCriteria(Restrictions.and(
+         //       Restrictions.eq("state", NotificationState.SENT), Restrictions.lt("sendDate", now - timePassed)));
+
+
     }
 }

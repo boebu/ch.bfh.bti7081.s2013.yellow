@@ -1,12 +1,13 @@
 package ch.bfh.bti7081.s2013.yellow.dao.notification;
 
+import java.util.List;
+
 import ch.bfh.bti7081.s2013.yellow.dao.generic.GenericDAOImpl;
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 
 import org.springframework.stereotype.Repository;
 
 /**
- * @author Andy Pollari
  * Implementation of NotificationDAO
  */
 @Repository
@@ -15,4 +16,6 @@ public class NotificationDAOImpl extends GenericDAOImpl<Notification> implements
     public NotificationDAOImpl() {
         super(Notification.class);
     }
+
+
 }
