@@ -1,5 +1,7 @@
 package ch.bfh.bti7081.s2013.yellow.util.stateMachine;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +16,7 @@ import static ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState.*;
  * That is why we decided to implement the StateMachine in this class.
  * @author Andy Pollari
  */
+@Service
 public class NotificationStateMachine {
 
 	Map<NotificationState, List<NotificationState>> mapping;
@@ -58,7 +61,4 @@ public class NotificationStateMachine {
     {
         return this.mapping.get(state);
     }
-
-
-
 }

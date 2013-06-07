@@ -2,7 +2,9 @@ package ch.bfh.bti7081.s2013.yellow.service.notification;
 
 import ch.bfh.bti7081.s2013.yellow.dao.notification.NotificationDAO;
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
+import ch.bfh.bti7081.s2013.yellow.model.notification.NotificationType;
 import ch.bfh.bti7081.s2013.yellow.service.generic.GenericServiceImpl;
+import ch.bfh.bti7081.s2013.yellow.service.mail.MailService;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.NotificationContext;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.SendAlarmNotifaction;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.SendReminderNotification;
@@ -13,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
-import java.util.Calendar;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -23,6 +25,9 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
     @Autowired
     NotificationDAO notificationDAO;
+
+    @Autowired
+    MailService mailService;
 
     @PostConstruct
     public void init() {
@@ -54,20 +59,22 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         //If timePassed not set, set it to Default Value
         if (timePassed == null)
             timePassed = TIME_PASSED_DEFAULT;
-
-        //todo
-
         //Get every unconfirmed Notifications greater than a specific time passed
         List<Notification> unconfirmedNotifications = findSentNotificationsToResend(timePassed);
 
         //Set State of those unconfirmed Notifications to deleted
-        for (Notification deletedNotification : unconfirmedNotifications) {
-            deletedNotification.setState(NotificationState.DELETED);
-            //Create new Notification
+        for (Notification n : unconfirmedNotifications) {
+            Notification newNotification = new Notification(n.getReceiver(), n.getMessage(), n.getSendDate());
+            newNotification.setParentNotification(n);
+            newNotification.setState(NotificationState.NEW);
+            newNotification.setNotificationType(NotificationType.REMINDER);
+            save(newNotification);
 
+            n.setState(NotificationState.DELETED);
+            save(n);
+
+            send(newNotification);
         }
-
-
     }
 
     @Override

@@ -5,6 +5,8 @@ import ch.bfh.bti7081.s2013.yellow.model.generic.YellowEntity;
 import ch.bfh.bti7081.s2013.yellow.model.person.Person;
 import ch.bfh.bti7081.s2013.yellow.model.person.User;
 import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
+import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationStateMachine;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -18,6 +20,10 @@ import java.util.Date;
  */
 @Entity
 public class Notification extends YellowEntity<Notification> {
+
+    @Autowired
+    private NotificationStateMachine notificationStateMachine;
+
 
     public NotificationType notificationType;
     @ManyToOne(optional = false)
@@ -98,6 +104,9 @@ public class Notification extends YellowEntity<Notification> {
     }
 
     public void setState(NotificationState state) {
+
+        if (!notificationStateMachine.validChangeOver(getState(), state))
+            throw new IllegalStateException("Illegal NotificationState change over");
         this.state = state;
     }
 
