@@ -7,11 +7,14 @@ import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.NotificationCon
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.SendAlarmNotifaction;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.SendReminderNotification;
 import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Transactional
@@ -69,12 +72,9 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
     @Override
     public List<Notification> findSentNotificationsToResend(Integer timePassed) {
-
-        return null;
-        //Liefert die Notifications zurück, welche den Status SENT haben und das SENTDATE + timePassed < now().
-        //return notificationDAO.findByCriteria(Restrictions.and(
-        //       Restrictions.eq("state", NotificationState.SENT), Restrictions.lt("sendDate", now - timePassed)));
-
-
+        Date cmpDate = new Date();
+        cmpDate.setTime(cmpDate.getTime()-timePassed*1000);
+        return notificationDAO.findByCriteria(Restrictions.and(
+                Restrictions.eq("state", NotificationState.SENT), Restrictions.lt("sendDate", cmpDate)));
     }
 }
