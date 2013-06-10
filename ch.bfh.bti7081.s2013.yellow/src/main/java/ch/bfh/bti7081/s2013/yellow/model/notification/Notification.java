@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * @author Andy Pollari
@@ -24,14 +25,16 @@ public class Notification extends YellowEntity<Notification> {
     @Autowired
     private NotificationStateMachine notificationStateMachine;
 
-
     public NotificationType notificationType;
+
     @ManyToOne(optional = false)
 	@NotNull
     private Person receiver;
     private String message;
     private NotificationState state;
     private Date sendDate;
+
+    private String intakeConfirmLink;
 
     @OneToOne(mappedBy = "parentNotification")
     private Notification parentNotification;
@@ -43,7 +46,7 @@ public class Notification extends YellowEntity<Notification> {
     	this.receiver = receiver;
         this.message = message;
         this.sendDate = sendDate;
-        //this.state = new NotificationStateNew();
+        this.intakeConfirmLink = UUID.randomUUID().toString();
     }
 
     public Notification(User receiver, String message, NotificationState state, Notification parent) {
@@ -52,6 +55,7 @@ public class Notification extends YellowEntity<Notification> {
         this.message = message;
         this.state = state;
         this.parentNotification = parent;
+        this.intakeConfirmLink = UUID.randomUUID().toString();
         //this.state = new NotificationStateNew();
     }
 
@@ -124,5 +128,13 @@ public class Notification extends YellowEntity<Notification> {
 
     public void setNotificationType(NotificationType notificationType) {
         this.notificationType = notificationType;
+    }
+
+    public String getIntakeConfirmLink() {
+        return intakeConfirmLink;
+    }
+
+    public void setIntakeConfirmLink(String intakeConfirmLink) {
+        this.intakeConfirmLink = intakeConfirmLink;
     }
 }
