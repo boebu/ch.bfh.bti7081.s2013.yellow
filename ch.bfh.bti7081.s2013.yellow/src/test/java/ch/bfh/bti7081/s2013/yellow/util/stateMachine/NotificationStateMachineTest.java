@@ -1,5 +1,4 @@
-import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
-import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationStateMachine;
+package ch.bfh.bti7081.s2013.yellow.util.stateMachine;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
