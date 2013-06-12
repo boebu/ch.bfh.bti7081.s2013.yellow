@@ -101,9 +101,8 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         n.setState(NotificationState.CONFIRMED);
         save(n);
     }
-    
+
     @Override
-    // Get a list of Notifications of State new and older than than current Time
     public List<Notification> findNewNotificationsToSend() {
     	Date cmpDate = new Date();
     	return notificationDAO.findByCriteria(Restrictions.and(
