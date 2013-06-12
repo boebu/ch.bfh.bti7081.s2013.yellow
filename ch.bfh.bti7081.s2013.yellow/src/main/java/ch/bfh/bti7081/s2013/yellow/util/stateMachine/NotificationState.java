@@ -11,7 +11,8 @@ public enum NotificationState {
     NEW, // Notification is new created
     SENT, // Notification has been sent
     MISSED, //
-    CONFIRMED(true); // Patient has confirmed the intake of the medicament ;
+    CONFIRMED(true), // Patient has confirmed the intake of the medicament ;
+    DELETED;
 
     // The notification has been closed (e.g. The patient has confirmed his intake)
     private boolean closed;
