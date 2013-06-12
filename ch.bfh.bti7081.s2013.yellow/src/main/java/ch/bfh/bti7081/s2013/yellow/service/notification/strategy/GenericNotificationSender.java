@@ -13,6 +13,10 @@ public abstract class GenericNotificationSender implements SendNotificationStrat
 	@Autowired
 	private MailService mailService;
 
+	/**
+	 * Send a notification, default is with receiver email, subject from subclass and message from notification
+	 * @param notification
+	 */
 	public void sendNotification(Notification notification) {
 		mailService.sendMessage(notification.getReceiver().getEmail(), getSubject(), notification.getMessage());
 	}

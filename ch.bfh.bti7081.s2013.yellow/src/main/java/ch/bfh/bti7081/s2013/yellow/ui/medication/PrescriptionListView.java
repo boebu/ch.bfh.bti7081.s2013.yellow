@@ -18,7 +18,7 @@ import java.sql.Timestamp;
 
 /* 
  * @author bronc1
- * List of all prescriptions
+ * List of all prescriptions, including the ability to edit a prescription and create a new one
  * 
 */
 @Title("Prescription-List")
@@ -28,6 +28,9 @@ public class PrescriptionListView extends CustomComponent implements View {
 	public static final String NAME = "prescriptionList";
 	public static final int VISIBLE_ROWS = 10;
 
+	/**
+	 * Creation of vaadin elements
+	 */
 	public PrescriptionListView() {
 		// Vaadin & Spring stuff
 		SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());

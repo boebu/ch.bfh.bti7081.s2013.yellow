@@ -34,10 +34,6 @@ public class MainUI extends UI {
 		//
 		getNavigator().addView(LoginView.NAME, LoginView.class);
 
-		//
-		// The initial log view where the user can login to the application
-		//
-		getNavigator().addView(IntakeConfirmView.NAME, IntakeConfirmView.class);
 
 		//
 		// Add the main view of the application
@@ -47,8 +43,8 @@ public class MainUI extends UI {
 
 		getNavigator().addView(PrescriptionListView.NAME, PrescriptionListView.class);
 		getNavigator().addView(PrescriptionView.NAME, PrescriptionView.class);
-
 		getNavigator().addView(NotificationListView.NAME, NotificationListView.class);
+		getNavigator().addView(IntakeConfirmView.NAME, IntakeConfirmView.class);
 		//
 		// We use a view change handler to ensure the user is always redirected
 		// to the login view if the user is not logged in.
