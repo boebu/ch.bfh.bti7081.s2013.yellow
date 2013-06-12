@@ -44,8 +44,6 @@ public class Notification extends YellowEntity<Notification> {
     @OneToOne
     private Notification parentNotification;
 
-    //private NotificationState state;
-    //private NotificationStateMachine stateMachine;
     public Notification(Person receiver, String message, Date sendDate) {
         super(Notification.class);
     	this.receiver = receiver;
@@ -69,18 +67,6 @@ public class Notification extends YellowEntity<Notification> {
         super(Notification.class);
     }
 
-    public void setSendDate(Date sendDate) {
-        this.sendDate = sendDate;
-    }
-
-    public void send()
-    {
-    	//state = state.send();
-    }
-    
-    
-
-
     public NotificationType getGetNotificationType() {
         return notificationType;
     }
@@ -89,12 +75,17 @@ public class Notification extends YellowEntity<Notification> {
         this.notificationType = getNotificationType;
     }
 
-    public Person getReceiver() {
-        return receiver;
+
+    public void setSendDate(Date sendDate) {
+        this.sendDate = sendDate;
     }
-    
+
     public Date getSendDate() {
     	return sendDate;
+    }
+
+    public Person getReceiver() {
+        return receiver;
     }
 
     public void setReceiver(Person receiver) {
