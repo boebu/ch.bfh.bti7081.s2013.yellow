@@ -41,7 +41,7 @@ public class Notification extends YellowEntity<Notification> {
 
     private String intakeConfirmLink;
 
-    @OneToOne(mappedBy = "parentNotification")
+    @OneToOne
     private Notification parentNotification;
 
     //private NotificationState state;
