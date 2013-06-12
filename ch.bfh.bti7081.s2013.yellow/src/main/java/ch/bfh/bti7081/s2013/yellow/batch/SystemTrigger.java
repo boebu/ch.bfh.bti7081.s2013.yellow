@@ -5,6 +5,7 @@ import java.util.Date;
 
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
+import ch.bfh.bti7081.s2013.yellow.service.mail.MailService;
 import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
 import ch.bfh.bti7081.s2013.yellow.service.notification.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,26 +17,26 @@ import org.springframework.stereotype.Component;
  * @author Boban Glisovic
  * This Class Represents a JMX-MBean
  * Create Notifications based on existing Prescriptions
+ * Send Notifications
  */
 
 public class SystemTrigger {
+	//Load required Services via autowired
 	@Autowired
 	private NotificationService notificationService;
 	@Autowired
 	private PrescriptionService presriptionService;
+	@Autowired
+	private MailService mailService;
     
 	// dummy method to test connection to dao
 	public long countPrescrptions() {
 		return this.presriptionService.countAll();
 	}
 	
-	// default method to create notifications
-	public void createNotifications() {
-		createNotifications(2);
-	}
 	
 	// create notification based on valid prescriptions
-	public void createNotifications(int interval) {
+	public void createNotifications() {
 		Date today = new Date();
 		
 		
@@ -47,6 +48,13 @@ public class SystemTrigger {
 				notificationService.save(new Notification(p.getPatient(),"take this: " + p.getMedicament().getName(),today));
 			}
 			
+		}
+	}
+	
+	// send Notifications from stored Notifications 
+	public void sendNotifications(int intervalhrs) {
+		for(Notification n: this.notificationService.findAll()) {
+			mailService.sendMessage(n.getReceiver().getEmail(), "TEST", n.getMessage());
 		}
 	}
 	
