@@ -25,9 +25,12 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
     @Autowired
     NotificationDAO notificationDAO;
-
-    @Autowired
-    MailService mailService;
+    
+	@Autowired
+	private SendAlarmNotifaction sendAlarmNotifaction;
+	@Autowired
+    
+	private SendReminderNotification sendReminderNotification;
 
     @PostConstruct
     public void init() {
@@ -41,13 +44,13 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         NotificationContext context = new NotificationContext();
         switch (notification.getNotificationType()) {
             case REMINDER:
-                context.setSendStrategy(new SendReminderNotification());
+                context.setSendStrategy(sendReminderNotification);
                 break;
             case ALARM:
-                context.setSendStrategy(new SendAlarmNotifaction());
+                context.setSendStrategy(sendAlarmNotifaction);
                 break;
             default:
-                context.setSendStrategy(new SendReminderNotification());
+                context.setSendStrategy(sendReminderNotification);
                 break;
         }
         context.send(notification);
@@ -55,7 +58,7 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
     @Override
     public void sendNotifications() {
-		for(Notification n: findNewNotificitionsToSend()) {
+		for(Notification n: findNewNotificationsToSend()) {
 			send(n);
 		}
     }
@@ -84,18 +87,31 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         }
     }
 
-    @Override
+
+    //Get a list of unconfirmed Notification with State SENT and older than the current time - timePassed (Default 1800s)
     public List<Notification> findSentNotificationsToResend(Integer timePassed) {
+        //Current Time - timepassed
         Date cmpDate = new Date();
         cmpDate.setTime(cmpDate.getTime()-timePassed*1000);
+        //Return list of Notifications
         return notificationDAO.findByCriteria(Restrictions.and(
                 Restrictions.eq("state", NotificationState.SENT), Restrictions.lt("sendDate", cmpDate)));
+    }
+
+    @Override
+    public void confirmIntake(String uuid) {
+        Notification n = findByCriteria(Restrictions.eq("uuid", uuid)).get(0);
+        n.setState(NotificationState.CONFIRMED);
+        save(n);
     }
     
     @Override
     // Get a list of Notifications of State new and older than than current Time
-    public List<Notification> findNewNotificitionsToSend() {
+
+    public List<Notification> findNewNotificationsToSend() {
+        //CurrentTime
     	Date cmpDate = new Date();
+        //Return list of Notifications
     	return notificationDAO.findByCriteria(Restrictions.and(
                 Restrictions.eq("state", NotificationState.NEW), Restrictions.lt("sendDate", cmpDate)));
     }

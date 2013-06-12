@@ -1,38 +1,24 @@
 package ch.bfh.bti7081.s2013.yellow.ui.medication;
 
+import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
+import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
+import ch.bfh.bti7081.s2013.yellow.util.SpringHelper;
+import com.vaadin.annotations.Title;
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
+import com.vaadin.server.ExternalResource;
+import com.vaadin.server.FileResource;
+import com.vaadin.server.VaadinService;
+import com.vaadin.server.VaadinServlet;
+import com.vaadin.ui.*;
+import com.vaadin.ui.themes.Reindeer;
+
 import java.io.File;
 import java.sql.Timestamp;
 
-import ch.bfh.bti7081.s2013.yellow.model.medication.Medicament;
-import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
-import ch.bfh.bti7081.s2013.yellow.model.person.Patient;
-import ch.bfh.bti7081.s2013.yellow.service.medication.MedicamentService;
-import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
-import ch.bfh.bti7081.s2013.yellow.service.person.PatientService;
-import ch.bfh.bti7081.s2013.yellow.util.SpringHelper;
-import com.vaadin.annotations.Title;
-import com.vaadin.data.fieldgroup.FieldGroup;
-import com.vaadin.data.util.BeanItem;
-import com.vaadin.data.util.BeanItemContainer;
-import com.vaadin.data.validator.BeanValidator;
-import com.vaadin.event.MouseEvents.ClickListener;
-import com.vaadin.navigator.View;
-import com.vaadin.navigator.ViewChangeListener;
-import com.vaadin.server.BrowserWindowOpener;
-import com.vaadin.server.ExternalResource;
-import com.vaadin.server.FileResource;
-import com.vaadin.server.ThemeResource;
-import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinService;
-import com.vaadin.server.VaadinServlet;
-import com.vaadin.shared.ui.AlignmentInfo;
-import com.vaadin.ui.*;
-import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.themes.Reindeer;
-
 /* 
  * @author bronc1
- * List of all prescriptions
+ * List of all prescriptions, including the ability to edit a prescription and create a new one
  * 
 */
 @Title("Prescription-List")
@@ -42,6 +28,9 @@ public class PrescriptionListView extends CustomComponent implements View {
 	public static final String NAME = "prescriptionList";
 	public static final int VISIBLE_ROWS = 10;
 
+	/**
+	 * Creation of vaadin elements
+	 */
 	public PrescriptionListView() {
 		// Vaadin & Spring stuff
 		SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
@@ -139,7 +128,7 @@ public class PrescriptionListView extends CustomComponent implements View {
 		viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
 		setCompositionRoot(viewLayout);
 	}
-
+	
 	@Override
 	public void enter(ViewChangeListener.ViewChangeEvent event) {
 	}

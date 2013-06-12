@@ -1,17 +1,12 @@
 package ch.bfh.bti7081.s2013.yellow.batch;
 
-import java.util.Calendar;
-import java.util.Date;
-
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
-import ch.bfh.bti7081.s2013.yellow.service.mail.MailService;
 import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
 import ch.bfh.bti7081.s2013.yellow.service.notification.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jmx.export.MBeanExporter;
-import org.springframework.jmx.export.annotation.ManagedResource;
-import org.springframework.stereotype.Component;
+
+import java.util.Date;
 
 /**
  * @author Boban Glisovic
@@ -26,20 +21,21 @@ public class SystemTrigger {
 	private NotificationService notificationService;
 	@Autowired
 	private PrescriptionService presriptionService;
-	@Autowired
-	private MailService mailService;
-    
-	// dummy method to test connection to dao
+
+	/**
+	 * Count all prescriptions, can be used to test the connection
+	 * @return number of all prescriptions
+	 */
 	public long countPrescrptions() {
 		return this.presriptionService.countAll();
 	}
-	
-	
-	// create notification based on valid prescriptions
+
+
+	/**
+	 *  create notification based on valid prescriptions
+	 */
 	public void createNotifications() {
 		Date today = new Date();
-		
-		
 		for(Prescription p :this.presriptionService.findActiveandInRange()) {
 			today.setHours(0);
 			today.setMinutes(0);
@@ -51,12 +47,16 @@ public class SystemTrigger {
 		}
 	}
 	
-	// send Notifications from stored Notifications 
+	/**
+	 * send Notifications from stored Notifications
+	 */
 	public void sendNotifications() {
 		notificationService.sendNotifications();
 	}
-	
-	// send Notifications from stored Notifications 
+
+	/**
+	 * resend Notifications from stored Notifications if not confirmed
+	 */
 	public void resendNotifications() {
 		notificationService.resendNotifications(1800);
 	}

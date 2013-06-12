@@ -8,12 +8,10 @@ import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
 import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationStateMachine;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * @author Andy Pollari
@@ -27,27 +25,33 @@ public class Notification extends YellowEntity<Notification> {
     private NotificationStateMachine notificationStateMachine;
 
 
+	@Enumerated(EnumType.ORDINAL)
+	@NotNull
     public NotificationType notificationType;
+
     @ManyToOne(optional = false)
 	@NotNull
     private Person receiver;
     private String message;
+
+	@NotNull
     private NotificationState state;
+
     private Date sendDate;
 
-    @ManyToOne
+    private String intakeConfirmLink;
+
+    @OneToOne
     private Notification parentNotification;
 
-    
-    //private NotificationState state;
-    //private NotificationStateMachine stateMachine;
     public Notification(Person receiver, String message, Date sendDate) {
         super(Notification.class);
     	this.receiver = receiver;
         this.message = message;
         this.sendDate = sendDate;
+        this.intakeConfirmLink = UUID.randomUUID().toString();
         this.state = NotificationState.NEW;
-        // this.state = new NotificationStateNew();
+	    this.notificationType = NotificationType.REMINDER;
     }
 
     public Notification(User receiver, String message, NotificationState state, Notification parent) {
@@ -56,24 +60,12 @@ public class Notification extends YellowEntity<Notification> {
         this.message = message;
         this.state = state;
         this.parentNotification = parent;
-        //this.state = new NotificationStateNew();
+        this.intakeConfirmLink = UUID.randomUUID().toString();
     }
 
     public Notification() {
         super(Notification.class);
     }
-
-    public void setSendDate(Date sendDate) {
-        this.sendDate = sendDate;
-    }
-
-    public void send()
-    {
-    	//state = state.send();
-    }
-    
-    
-
 
     public NotificationType getGetNotificationType() {
         return notificationType;
@@ -83,12 +75,17 @@ public class Notification extends YellowEntity<Notification> {
         this.notificationType = getNotificationType;
     }
 
-    public Person getReceiver() {
-        return receiver;
+
+    public void setSendDate(Date sendDate) {
+        this.sendDate = sendDate;
     }
-    
+
     public Date getSendDate() {
     	return sendDate;
+    }
+
+    public Person getReceiver() {
+        return receiver;
     }
 
     public void setReceiver(Person receiver) {
@@ -128,5 +125,13 @@ public class Notification extends YellowEntity<Notification> {
 
     public void setNotificationType(NotificationType notificationType) {
         this.notificationType = notificationType;
+    }
+
+    public String getIntakeConfirmLink() {
+        return intakeConfirmLink;
+    }
+
+    public void setIntakeConfirmLink(String intakeConfirmLink) {
+        this.intakeConfirmLink = intakeConfirmLink;
     }
 }
