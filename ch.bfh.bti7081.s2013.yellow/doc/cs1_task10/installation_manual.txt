@@ -21,6 +21,9 @@ Schritte:
     - Datenbank (db_yellow_dev) ohne Tabellen auf MySQL Server erstellen
 
     - Applikation starten
+    	  Beim Starten müssen folgende VM-Argumente mitgegeben werden
+    	  -Dcom.sun.management.jmxremote
+    	  
           Dafür im Root des Projektes "mvn jetty:run" ausführen
 
     - Datenbank Initialscripts ausführen
@@ -30,3 +33,8 @@ Schritte:
           http://localhost:8080
 
           Login: admin/admin
+          
+    - Batch Jobs ausführen (Trigger)
+      jconsole öffnen den entsprechenden Java Prozess auswählen
+      Unter dem Register mbean -> yellow.batch 
+      Auf dem MBean SystemTrigger können die entsprechenden Operations ausgeführt werden

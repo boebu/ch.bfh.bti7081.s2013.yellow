@@ -5,12 +5,22 @@
 ============================================
 
 == Diary ==
-
-20130610
+20130612
 --------
   - Anwesend: alle
-  - Daily Scrum Sprint 3
-
+  - Abschluss von Daily Scrum
+    - Beseitigen der Probleme mit Mailversand -> rohdj1, glisb1
+    - Testing abschliessen -> polla2
+    - Allgemein Codereview&Commenting -> alle
+    - Vorbereitung Präsentation -> bronc1
+  - Aufteilung Präsentation => TODO!
+    - Storyboard&Reqs -> bronc1
+    - Demo -> rohdj1, glisb1
+    - Classdiagram -> rohdj1
+    - Patterns used -> glisb1
+    - Scrum process -> hutzf1
+    - ==INFO==
+      - polla2 wird zwecks Zivildienst abwesend sein
 
 20130607
 --------

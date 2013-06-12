@@ -26,6 +26,7 @@ public class Prescription extends YellowEntity<Prescription>{
 	@NotNull
 	private Date validFrom;
 
+	@NotNull
 	private Date validUntil;
 
 	@Min(1)
