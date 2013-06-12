@@ -3,12 +3,16 @@ package ch.bfh.bti7081.s2013.yellow.ui.medication;
 import java.io.File;
 import java.sql.Timestamp;
 
+import org.tepi.filtertable.FilterTable;
+
 import ch.bfh.bti7081.s2013.yellow.model.medication.Medicament;
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 import ch.bfh.bti7081.s2013.yellow.model.person.Patient;
 import ch.bfh.bti7081.s2013.yellow.service.medication.MedicamentService;
 import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
 import ch.bfh.bti7081.s2013.yellow.service.person.PatientService;
+import ch.bfh.bti7081.s2013.yellow.util.FilterDecoratorUtil;
+import ch.bfh.bti7081.s2013.yellow.util.FilterGeneratorUtil;
 import ch.bfh.bti7081.s2013.yellow.util.SpringHelper;
 import com.vaadin.annotations.Title;
 import com.vaadin.data.fieldgroup.FieldGroup;
@@ -139,7 +143,7 @@ public class PrescriptionListView extends CustomComponent implements View {
 		viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
 		setCompositionRoot(viewLayout);
 	}
-
+	
 	@Override
 	public void enter(ViewChangeListener.ViewChangeEvent event) {
 	}
