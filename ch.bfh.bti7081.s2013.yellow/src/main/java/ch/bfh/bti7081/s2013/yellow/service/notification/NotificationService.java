@@ -34,7 +34,7 @@ public interface NotificationService extends GenericService<Notification> {
     
     /**
      * Notifications within time Range will be sent to receiver
-     * @param timerange in seconds
+     * @param timePassed in seconds
      */
     void resendNotifications(Integer timePassed);
 
