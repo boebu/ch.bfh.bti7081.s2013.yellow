@@ -60,14 +60,7 @@ public class MainUI extends UI {
 
 				// Always allow to navigate to intake confirm view
 				if(event.getNewView() instanceof IntakeConfirmView)
-                {
-//                    String uuid = request.getParameter("UUID");
-//                    String param = request.getParameter("UUID");
-//                    if (isValidUUID(param))
-//                        notificationService.confirmIntake(param);
-
 					return true;
-                }
 
 				// Check if a user has logged in
 				boolean isLoggedIn = getSession().getAttribute("user") != null;
