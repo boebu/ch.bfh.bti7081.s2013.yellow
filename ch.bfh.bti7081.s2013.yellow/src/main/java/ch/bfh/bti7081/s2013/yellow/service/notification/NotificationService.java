@@ -39,8 +39,10 @@ public interface NotificationService extends GenericService<Notification> {
     /**
      * searches the Notification with the given uuid and confirms the intake of it
      * @param uuid
+     *
+     * @return notification has been found
      */
-    void confirmIntake(String uuid);
+    boolean confirmIntake(String uuid);
 }
 
 

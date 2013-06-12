@@ -25,12 +25,12 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
     @Autowired
     NotificationDAO notificationDAO;
-    
-	@Autowired
-	private SendAlarmNotifaction sendAlarmNotifaction;
-	@Autowired
-    
-	private SendReminderNotification sendReminderNotification;
+
+    @Autowired
+    private SendAlarmNotifaction sendAlarmNotifaction;
+    @Autowired
+
+    private SendReminderNotification sendReminderNotification;
 
     @PostConstruct
     public void init() {
@@ -58,11 +58,11 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
     @Override
     public void sendNotifications() {
-		for(Notification n: findNewNotificationsToSend()) {
-			send(n);
-		}
+        for (Notification n : findNewNotificationsToSend()) {
+            send(n);
+        }
     }
-    
+
     @Override
     public void resendNotifications(Integer timePassed) {
 
@@ -92,27 +92,43 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
     public List<Notification> findSentNotificationsToResend(Integer timePassed) {
         //Current Time - timepassed
         Date cmpDate = new Date();
-        cmpDate.setTime(cmpDate.getTime()-timePassed*1000);
+        cmpDate.setTime(cmpDate.getTime() - timePassed * 1000);
         //Return list of Notifications
         return notificationDAO.findByCriteria(Restrictions.and(
                 Restrictions.eq("state", NotificationState.SENT), Restrictions.lt("sendDate", cmpDate)));
     }
 
     @Override
-    public void confirmIntake(String uuid) {
-        Notification n = findByCriteria(Restrictions.eq("uuid", uuid)).get(0);
-        n.setState(NotificationState.CONFIRMED);
-        save(n);
+    public boolean confirmIntake(String uuid) {
+        try {
+            if (isValidUUID(uuid)) {
+                Notification n = findByCriteria(Restrictions.eq("uuid", uuid)).get(0);
+                n.setState(NotificationState.CONFIRMED);
+                save(n);
+                return true;
+            }
+        } catch (Exception e) {
+            return false;
+        }
+        return false;
     }
-    
+
+
+    private boolean isValidUUID(String param) {
+        if (param == null)
+            return false;
+        int uuidLength = 36;
+        return uuidLength == param.length();
+    }
+
     @Override
     // Get a list of Notifications of State new and older than than current Time
 
     public List<Notification> findNewNotificationsToSend() {
         //CurrentTime
-    	Date cmpDate = new Date();
+        Date cmpDate = new Date();
         //Return list of Notifications
-    	return notificationDAO.findByCriteria(Restrictions.and(
+        return notificationDAO.findByCriteria(Restrictions.and(
                 Restrictions.eq("state", NotificationState.NEW), Restrictions.lt("sendDate", cmpDate)));
     }
 }

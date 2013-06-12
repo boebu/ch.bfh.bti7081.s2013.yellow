@@ -1,5 +1,6 @@
 package ch.bfh.bti7081.s2013.yellow.ui;
 
+import ch.bfh.bti7081.s2013.yellow.service.notification.NotificationService;
 import ch.bfh.bti7081.s2013.yellow.ui.medication.IntakeConfirmView;
 import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionListView;
 import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionView;
@@ -9,6 +10,7 @@ import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.UI;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @author Janosch Rohdewald
@@ -16,12 +18,14 @@ import com.vaadin.ui.UI;
  */
 public class MainUI extends UI {
 
+    @Autowired
+    NotificationService notificationService;
 	/**
 	 * Init the main Vaadin UI, including navigator and logged checking
 	 * @see UI
 	 */
 	@Override
-	protected void init(VaadinRequest request) {
+	protected void init(final VaadinRequest request) {
 
 		//
 		// Create a new instance of the navigator. The navigator will attach
@@ -56,7 +60,14 @@ public class MainUI extends UI {
 
 				// Always allow to navigate to intake confirm view
 				if(event.getNewView() instanceof IntakeConfirmView)
+                {
+//                    String uuid = request.getParameter("UUID");
+//                    String param = request.getParameter("UUID");
+//                    if (isValidUUID(param))
+//                        notificationService.confirmIntake(param);
+
 					return true;
+                }
 
 				// Check if a user has logged in
 				boolean isLoggedIn = getSession().getAttribute("user") != null;
@@ -83,4 +94,11 @@ public class MainUI extends UI {
 			}
 		});
 	}
+
+    private boolean isValidUUID(String param) {
+        if (param == null)
+            return false;
+        int uuidLength = 36;
+        return uuidLength == param.length();
+    }
 }
