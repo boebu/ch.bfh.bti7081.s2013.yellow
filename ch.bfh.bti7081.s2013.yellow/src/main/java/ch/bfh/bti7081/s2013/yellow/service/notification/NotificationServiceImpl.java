@@ -8,6 +8,7 @@ import ch.bfh.bti7081.s2013.yellow.service.mail.MailService;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.NotificationContext;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.SendAlarmNotifaction;
 import ch.bfh.bti7081.s2013.yellow.service.notification.strategy.SendReminderNotification;
+import ch.bfh.bti7081.s2013.yellow.ui.medication.IntakeConfirmView;
 import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -130,5 +131,10 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         //Return list of Notifications
         return notificationDAO.findByCriteria(Restrictions.and(
                 Restrictions.eq("state", NotificationState.NEW), Restrictions.lt("sendDate", cmpDate)));
+    }
+
+    public String getIntakeConfirmationLink(Notification notification)
+    {
+        return "http://localhost:8080/#!" + IntakeConfirmView.NAME + "/" +notification.getUuid();
     }
 }

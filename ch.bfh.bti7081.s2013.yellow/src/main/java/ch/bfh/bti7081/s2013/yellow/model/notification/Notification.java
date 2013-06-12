@@ -39,7 +39,7 @@ public class Notification extends YellowEntity<Notification> {
 
     private Date sendDate;
 
-    private String intakeConfirmLink;
+    private String uuid;
 
     @OneToOne
     private Notification parentNotification;
@@ -49,7 +49,7 @@ public class Notification extends YellowEntity<Notification> {
     	this.receiver = receiver;
         this.message = message;
         this.sendDate = sendDate;
-        this.intakeConfirmLink = UUID.randomUUID().toString();
+        this.uuid = UUID.randomUUID().toString();
         this.state = NotificationState.NEW;
 	    this.notificationType = NotificationType.REMINDER;
     }
@@ -60,7 +60,7 @@ public class Notification extends YellowEntity<Notification> {
         this.message = message;
         this.state = state;
         this.parentNotification = parent;
-        this.intakeConfirmLink = UUID.randomUUID().toString();
+        this.uuid = UUID.randomUUID().toString();
     }
 
     public Notification() {
@@ -127,11 +127,11 @@ public class Notification extends YellowEntity<Notification> {
         this.notificationType = notificationType;
     }
 
-    public String getIntakeConfirmLink() {
-        return intakeConfirmLink;
+    public String getUuid() {
+        return uuid;
     }
 
-    public void setIntakeConfirmLink(String intakeConfirmLink) {
-        this.intakeConfirmLink = intakeConfirmLink;
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 }

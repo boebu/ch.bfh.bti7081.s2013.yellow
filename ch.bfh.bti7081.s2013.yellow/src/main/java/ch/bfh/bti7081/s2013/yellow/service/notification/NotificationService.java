@@ -43,6 +43,13 @@ public interface NotificationService extends GenericService<Notification> {
      * @return notification has been found
      */
     boolean confirmIntake(String uuid);
+
+    /**
+     *
+     * @param notification
+     * @return the link to confirm the confirmation
+     */
+    String getIntakeConfirmationLink(Notification notification);
 }
 
 
