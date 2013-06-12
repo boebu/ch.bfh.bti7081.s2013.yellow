@@ -16,7 +16,7 @@ public interface NotificationService extends GenericService<Notification> {
      * find new notifications to send
      * @param 
      */
-	List<Notification> findNewNotificitionsToSend();
+	List<Notification> findNewNotificationsToSend();
     
 	
     /**
@@ -24,7 +24,7 @@ public interface NotificationService extends GenericService<Notification> {
      * @param notification
      */
     void send(Notification notification);
-    
+
     
     /**
      * All notifications which wasn't confirmed by the patient must be resend after timePassed
