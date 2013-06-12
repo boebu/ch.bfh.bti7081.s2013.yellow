@@ -1,5 +1,6 @@
 package ch.bfh.bti7081.s2013.yellow.ui;
 
+import ch.bfh.bti7081.s2013.yellow.ui.medication.IntakeConfirmView;
 import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionListView;
 import ch.bfh.bti7081.s2013.yellow.ui.medication.PrescriptionView;
 import ch.bfh.bti7081.s2013.yellow.ui.notification.NotificationListView;
@@ -34,6 +35,11 @@ public class MainUI extends UI {
 		getNavigator().addView(LoginView.NAME, LoginView.class);
 
 		//
+		// The initial log view where the user can login to the application
+		//
+		getNavigator().addView(IntakeConfirmView.NAME, IntakeConfirmView.class);
+
+		//
 		// Add the main view of the application
 		//
 		getNavigator().addView(HomeView.NAME, HomeView.class);
@@ -51,6 +57,10 @@ public class MainUI extends UI {
 
 			@Override
 			public boolean beforeViewChange(ViewChangeEvent event) {
+
+				// Always allow to navigate to intake confirm view
+				if(event.getNewView() instanceof IntakeConfirmView)
+					return true;
 
 				// Check if a user has logged in
 				boolean isLoggedIn = getSession().getAttribute("user") != null;

@@ -1,38 +1,20 @@
 package ch.bfh.bti7081.s2013.yellow.ui.medication;
 
-import java.io.File;
-import java.sql.Timestamp;
-
-import org.tepi.filtertable.FilterTable;
-
-import ch.bfh.bti7081.s2013.yellow.model.medication.Medicament;
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
-import ch.bfh.bti7081.s2013.yellow.model.person.Patient;
-import ch.bfh.bti7081.s2013.yellow.service.medication.MedicamentService;
 import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
-import ch.bfh.bti7081.s2013.yellow.service.person.PatientService;
-import ch.bfh.bti7081.s2013.yellow.util.FilterDecoratorUtil;
-import ch.bfh.bti7081.s2013.yellow.util.FilterGeneratorUtil;
 import ch.bfh.bti7081.s2013.yellow.util.SpringHelper;
 import com.vaadin.annotations.Title;
-import com.vaadin.data.fieldgroup.FieldGroup;
-import com.vaadin.data.util.BeanItem;
-import com.vaadin.data.util.BeanItemContainer;
-import com.vaadin.data.validator.BeanValidator;
-import com.vaadin.event.MouseEvents.ClickListener;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
-import com.vaadin.server.BrowserWindowOpener;
 import com.vaadin.server.ExternalResource;
 import com.vaadin.server.FileResource;
-import com.vaadin.server.ThemeResource;
-import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinService;
 import com.vaadin.server.VaadinServlet;
-import com.vaadin.shared.ui.AlignmentInfo;
 import com.vaadin.ui.*;
-import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.themes.Reindeer;
+
+import java.io.File;
+import java.sql.Timestamp;
 
 /* 
  * @author bronc1
