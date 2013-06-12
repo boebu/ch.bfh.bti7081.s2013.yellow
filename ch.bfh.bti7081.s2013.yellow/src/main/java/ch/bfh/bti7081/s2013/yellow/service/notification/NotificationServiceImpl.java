@@ -87,10 +87,13 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         }
     }
 
-    @Override
+
+    //Get a list of unconfirmed Notification with State SENT and older than the current time - timePassed (Default 1800s)
     public List<Notification> findSentNotificationsToResend(Integer timePassed) {
+        //Current Time - timepassed
         Date cmpDate = new Date();
         cmpDate.setTime(cmpDate.getTime()-timePassed*1000);
+        //Return list of Notifications
         return notificationDAO.findByCriteria(Restrictions.and(
                 Restrictions.eq("state", NotificationState.SENT), Restrictions.lt("sendDate", cmpDate)));
     }
@@ -101,10 +104,14 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         n.setState(NotificationState.CONFIRMED);
         save(n);
     }
-
+    
     @Override
+    // Get a list of Notifications of State new and older than than current Time
+
     public List<Notification> findNewNotificationsToSend() {
+        //CurrentTime
     	Date cmpDate = new Date();
+        //Return list of Notifications
     	return notificationDAO.findByCriteria(Restrictions.and(
                 Restrictions.eq("state", NotificationState.NEW), Restrictions.lt("sendDate", cmpDate)));
     }

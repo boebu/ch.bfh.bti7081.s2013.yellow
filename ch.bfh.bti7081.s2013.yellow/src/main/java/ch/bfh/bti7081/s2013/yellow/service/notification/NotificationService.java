@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Interface for the NotificationService
- * @author fabianhutzli
+ * @author fabianhutzli, bobanglisovic
  *
  */
 public interface NotificationService extends GenericService<Notification> {
@@ -17,32 +17,24 @@ public interface NotificationService extends GenericService<Notification> {
      * @param 
      */
 	List<Notification> findNewNotificationsToSend();
-    
-	
+
     /**
      * sends the Notification
      * @param notification
      */
     void send(Notification notification);
 
-    
     /**
-     * All notifications which wasn't confirmed by the patient must be resend after timePassed
-     * @param 
+     *  All new notifications must be send
+     * @param
      */
     void sendNotifications();
     
     /**
-     * Notifications within time Range will be sent to receiver
+     * All notifications which wasn't confirmed by the patient must be resend after timePassed
      * @param timePassed in seconds
      */
     void resendNotifications(Integer timePassed);
-
-    /**
-     * Find affected Notifications
-     * @return all affected Notifications
-     */
-    List<Notification> findSentNotificationsToResend(Integer timePassed);
 
     /**
      * searches the Notification with the given uuid and confirms the intake of it
