@@ -8,10 +8,7 @@ import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
 import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationStateMachine;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
@@ -27,15 +24,21 @@ public class Notification extends YellowEntity<Notification> {
     private NotificationStateMachine notificationStateMachine;
 
 
+	@Enumerated(EnumType.ORDINAL)
+	@NotNull
     public NotificationType notificationType;
+
     @ManyToOne(optional = false)
 	@NotNull
     private Person receiver;
     private String message;
+
+	@NotNull
     private NotificationState state;
+
     private Date sendDate;
 
-    @ManyToOne
+    @OneToOne
     private Notification parentNotification;
 
     
@@ -47,7 +50,7 @@ public class Notification extends YellowEntity<Notification> {
         this.message = message;
         this.sendDate = sendDate;
         this.state = NotificationState.NEW;
-        // this.state = new NotificationStateNew();
+	    this.notificationType = NotificationType.REMINDER;
     }
 
     public Notification(User receiver, String message, NotificationState state, Notification parent) {

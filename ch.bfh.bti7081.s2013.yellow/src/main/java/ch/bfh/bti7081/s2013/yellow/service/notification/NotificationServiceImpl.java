@@ -25,9 +25,10 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
     @Autowired
     NotificationDAO notificationDAO;
-
-    @Autowired
-    MailService mailService;
+	@Autowired
+	private SendAlarmNotifaction sendAlarmNotifaction;
+	@Autowired
+	private SendReminderNotification sendReminderNotification;
 
     @PostConstruct
     public void init() {
@@ -41,13 +42,13 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         NotificationContext context = new NotificationContext();
         switch (notification.getNotificationType()) {
             case REMINDER:
-                context.setSendStrategy(new SendReminderNotification());
+                context.setSendStrategy(sendReminderNotification);
                 break;
             case ALARM:
-                context.setSendStrategy(new SendAlarmNotifaction());
+                context.setSendStrategy(sendAlarmNotifaction);
                 break;
             default:
-                context.setSendStrategy(new SendReminderNotification());
+                context.setSendStrategy(sendReminderNotification);
                 break;
         }
         context.send(notification);

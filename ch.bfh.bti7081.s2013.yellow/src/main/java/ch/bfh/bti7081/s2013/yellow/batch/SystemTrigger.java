@@ -1,17 +1,12 @@
 package ch.bfh.bti7081.s2013.yellow.batch;
 
-import java.util.Calendar;
-import java.util.Date;
-
 import ch.bfh.bti7081.s2013.yellow.model.medication.Prescription;
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
-import ch.bfh.bti7081.s2013.yellow.service.mail.MailService;
 import ch.bfh.bti7081.s2013.yellow.service.medication.PrescriptionService;
 import ch.bfh.bti7081.s2013.yellow.service.notification.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jmx.export.MBeanExporter;
-import org.springframework.jmx.export.annotation.ManagedResource;
-import org.springframework.stereotype.Component;
+
+import java.util.Date;
 
 /**
  * @author Boban Glisovic
@@ -26,9 +21,7 @@ public class SystemTrigger {
 	private NotificationService notificationService;
 	@Autowired
 	private PrescriptionService presriptionService;
-	@Autowired
-	private MailService mailService;
-    
+
 	// dummy method to test connection to dao
 	public long countPrescrptions() {
 		return this.presriptionService.countAll();
