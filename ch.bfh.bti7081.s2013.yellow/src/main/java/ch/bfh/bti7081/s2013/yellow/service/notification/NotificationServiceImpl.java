@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -83,5 +82,12 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         cmpDate.setTime(cmpDate.getTime()-timePassed*1000);
         return notificationDAO.findByCriteria(Restrictions.and(
                 Restrictions.eq("state", NotificationState.SENT), Restrictions.lt("sendDate", cmpDate)));
+    }
+
+    @Override
+    public void confirmIntake(String uuid) {
+        Notification n = findByCriteria(Restrictions.eq("uuid", uuid)).get(0);
+        n.setState(NotificationState.CONFIRMED);
+        save(n);
     }
 }

@@ -3,7 +3,6 @@ package ch.bfh.bti7081.s2013.yellow.service.notification;
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 import ch.bfh.bti7081.s2013.yellow.service.generic.GenericService;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,6 +31,11 @@ public interface NotificationService extends GenericService<Notification> {
      */
     List<Notification> findSentNotificationsToResend(Integer timePassed);
 
+    /**
+     * searches the Notification with the given uuid and confirms the intake of it
+     * @param uuid
+     */
+    void confirmIntake(String uuid);
 }
 
 
