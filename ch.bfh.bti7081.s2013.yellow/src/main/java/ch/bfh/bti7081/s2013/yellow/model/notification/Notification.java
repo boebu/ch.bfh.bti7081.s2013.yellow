@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
@@ -22,6 +23,7 @@ import java.util.Date;
 public class Notification extends YellowEntity<Notification> {
 
     @Autowired
+    @Transient
     private NotificationStateMachine notificationStateMachine;
 
 
@@ -33,9 +35,10 @@ public class Notification extends YellowEntity<Notification> {
     private NotificationState state;
     private Date sendDate;
 
-    @OneToOne(mappedBy = "parentNotification")
+    @ManyToOne
     private Notification parentNotification;
 
+    
     //private NotificationState state;
     //private NotificationStateMachine stateMachine;
     public Notification(Person receiver, String message, Date sendDate) {
@@ -43,7 +46,8 @@ public class Notification extends YellowEntity<Notification> {
     	this.receiver = receiver;
         this.message = message;
         this.sendDate = sendDate;
-        //this.state = new NotificationStateNew();
+        this.state = NotificationState.NEW;
+        // this.state = new NotificationStateNew();
     }
 
     public Notification(User receiver, String message, NotificationState state, Notification parent) {
@@ -117,7 +121,7 @@ public class Notification extends YellowEntity<Notification> {
     public void setParentNotification(Notification parentNotification) {
         this.parentNotification = parentNotification;
     }
-
+    
     public NotificationType getNotificationType() {
         return notificationType;
     }

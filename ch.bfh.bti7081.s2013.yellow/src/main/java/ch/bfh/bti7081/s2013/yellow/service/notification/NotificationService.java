@@ -14,6 +14,13 @@ import java.util.List;
 public interface NotificationService extends GenericService<Notification> {
 
     /**
+     * find new notifications to send
+     * @param 
+     */
+	List<Notification> findNewNotificitionsToSend();
+    
+	
+    /**
      * sends the Notification
      * @param notification
      */
@@ -22,7 +29,13 @@ public interface NotificationService extends GenericService<Notification> {
     
     /**
      * All notifications which wasn't confirmed by the patient must be resend after timePassed
-     * @param timePassed in seconds
+     * @param 
+     */
+    void sendNotifications();
+    
+    /**
+     * Notifications within time Range will be sent to receiver
+     * @param timerange in seconds
      */
     void resendNotifications(Integer timePassed);
 

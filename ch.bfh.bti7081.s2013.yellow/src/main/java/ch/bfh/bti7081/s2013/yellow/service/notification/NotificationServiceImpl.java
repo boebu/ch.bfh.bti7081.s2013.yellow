@@ -54,6 +54,13 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
     }
 
     @Override
+    public void sendNotifications() {
+		for(Notification n: findNewNotificitionsToSend()) {
+			send(n);
+		}
+    }
+    
+    @Override
     public void resendNotifications(Integer timePassed) {
 
         //If timePassed not set, set it to Default Value
@@ -83,5 +90,13 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         cmpDate.setTime(cmpDate.getTime()-timePassed*1000);
         return notificationDAO.findByCriteria(Restrictions.and(
                 Restrictions.eq("state", NotificationState.SENT), Restrictions.lt("sendDate", cmpDate)));
+    }
+    
+    @Override
+    // Get a list of Notifications of State new and older than than current Time
+    public List<Notification> findNewNotificitionsToSend() {
+    	Date cmpDate = new Date();
+    	return notificationDAO.findByCriteria(Restrictions.and(
+                Restrictions.eq("state", NotificationState.NEW), Restrictions.lt("sendDate", cmpDate)));
     }
 }

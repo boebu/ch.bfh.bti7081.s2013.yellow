@@ -52,10 +52,13 @@ public class SystemTrigger {
 	}
 	
 	// send Notifications from stored Notifications 
-	public void sendNotifications(int intervalhrs) {
-		for(Notification n: this.notificationService.findAll()) {
-			mailService.sendMessage(n.getReceiver().getEmail(), "TEST", n.getMessage());
-		}
+	public void sendNotifications() {
+		notificationService.sendNotifications();
+	}
+	
+	// send Notifications from stored Notifications 
+	public void resendNotifications() {
+		notificationService.resendNotifications(1800);
 	}
 	
 }
