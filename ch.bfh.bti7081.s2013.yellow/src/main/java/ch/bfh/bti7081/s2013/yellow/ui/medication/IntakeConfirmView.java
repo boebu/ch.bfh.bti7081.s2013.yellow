@@ -24,52 +24,51 @@ import java.io.File;
 @Title("Intake confirm")
 public class IntakeConfirmView extends CustomComponent implements View {
 
-    NotificationService notificationService;
+	NotificationService notificationService;
 
 
-    public static final String NAME = "intakeConfirm";
+	public static final String NAME = "intakeConfirm";
 
-    public IntakeConfirmView() {
-        super();
-        SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
-        notificationService = (NotificationService) springHelper.getBean("notificationService");
+	public IntakeConfirmView() {
+		super();
+		SpringHelper springHelper = new SpringHelper(VaadinServlet.getCurrent().getServletContext());
+		notificationService = (NotificationService) springHelper.getBean("notificationService");
+		setSizeFull();
+	}
 
-    }
+	@Override
+	public void enter(ViewChangeListener.ViewChangeEvent event) {
+		boolean confirmSuccess = notificationService.confirmIntake(event.getParameters());
 
-    @Override
-    public void enter(ViewChangeListener.ViewChangeEvent event) {
-        boolean confirmSuccess = notificationService.confirmIntake(event.getParameters());
+		Label okLabel = new Label();
+		String basePath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
+		String message;
 
-        Label okLabel = new Label();
-        String basePath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        String message;
+		if (confirmSuccess) {
+			okLabel.setIcon(new FileResource(new File(basePath + "/WEB-INF/images/intakeOk.png")));
+			message = "Intake Confirmed";
 
-        if (confirmSuccess) {
-            okLabel.setIcon(new FileResource(new File(basePath+"/WEB-INF/images/intakeOk.png")));
-            message = "Intake Confirmed";
+		} else {
+			okLabel.setIcon(new FileResource(new File(basePath + "/WEB-INF/images/intakeNok.png")));
+			message = "An error occured. The given intake wasn't found. Maybe the link was wrong.";
 
-        }
-        else {
-            okLabel.setIcon(new FileResource(new File(basePath+"/WEB-INF/images/intakeNok.png")));
-            message = "An error occured. The given intake wasn't found. Maybe the link was wrong.";
+		}
+		VerticalLayout fields = new VerticalLayout(okLabel);
+		// Layout with welcome text, goto presc. and logout button
+		fields.setCaption(message);
+		fields.setSpacing(true);
+		fields.setMargin(new MarginInfo(true, true, true, false));
+		fields.setSizeUndefined();
 
-        }
-        VerticalLayout fields = new VerticalLayout(okLabel);
-        // Layout with welcome text, goto presc. and logout button
-        fields.setCaption(message);
-        fields.setSpacing(true);
-        fields.setMargin(new MarginInfo(true, true, true, false));
-        fields.setSizeUndefined();
-
-        // Center the layout and add a theme
-        VerticalLayout viewLayout = new VerticalLayout(fields);
-        viewLayout.setSizeFull();
-        viewLayout.setComponentAlignment(fields, Alignment.MIDDLE_CENTER);
-        viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
-        setCompositionRoot(viewLayout);
+		// Center the layout and add a theme
+		VerticalLayout viewLayout = new VerticalLayout(fields);
+		viewLayout.setSizeFull();
+		viewLayout.setComponentAlignment(fields, Alignment.MIDDLE_CENTER);
+		viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
+		setCompositionRoot(viewLayout);
 
 
-    }
+	}
 
 
 }

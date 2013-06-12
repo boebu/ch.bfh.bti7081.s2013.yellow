@@ -2,6 +2,7 @@ package ch.bfh.bti7081.s2013.yellow.service.notification;
 
 import ch.bfh.bti7081.s2013.yellow.model.notification.Notification;
 import ch.bfh.bti7081.s2013.yellow.service.generic.GenericService;
+import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
 
 import java.util.List;
 
@@ -50,6 +51,14 @@ public interface NotificationService extends GenericService<Notification> {
      * @return the link to confirm the confirmation
      */
     String getIntakeConfirmationLink(Notification notification);
+
+	/**
+	 * Check and set a notification state
+	 * @param notification the notification
+	 * @param notificationState the new state
+	 * @return was change over successful?
+	 */
+	boolean setNotificationState(Notification notification, NotificationState notificationState);
 }
 
 

@@ -41,7 +41,7 @@ public class GenericNotificationSenderTest {
 
         SendAlarmNotifaction gnst = new SendAlarmNotifaction();
         gnst.setNotificationService(notificationService);
-        String expected = "Confirm: http://localhost:8080/#!" + IntakeConfirmView.NAME+ "/" + uuid;
+        String expected = notification.getMessage()+"  Confirm: <a href='http://localhost:8080/#!" + IntakeConfirmView.NAME+ "/" + uuid+"'>here</a>";
 
         Assert.assertEquals(expected, gnst.getContent(notification));
 

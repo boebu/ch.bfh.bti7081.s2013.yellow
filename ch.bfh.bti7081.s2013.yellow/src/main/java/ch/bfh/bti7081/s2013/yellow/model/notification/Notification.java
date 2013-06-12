@@ -20,11 +20,6 @@ import java.util.UUID;
 @Entity
 public class Notification extends YellowEntity<Notification> {
 
-    @Autowired
-    @Transient
-    private NotificationStateMachine notificationStateMachine;
-
-
 	@Enumerated(EnumType.ORDINAL)
 	@NotNull
     public NotificationType notificationType;
@@ -105,9 +100,6 @@ public class Notification extends YellowEntity<Notification> {
     }
 
     public void setState(NotificationState state) {
-
-        if (!notificationStateMachine.validChangeOver(getState(), state))
-            throw new IllegalStateException("Illegal NotificationState change over");
         this.state = state;
     }
 

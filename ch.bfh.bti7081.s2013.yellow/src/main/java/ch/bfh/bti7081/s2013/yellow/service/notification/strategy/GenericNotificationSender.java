@@ -22,14 +22,14 @@ public abstract class GenericNotificationSender implements SendNotificationStrat
 	 * @param notification
 	 */
 	public void sendNotification(Notification notification) {
-		mailService.sendMessage(notification.getReceiver().getEmail(), getSubject(), notification.getMessage());
+		mailService.sendMessage(notification.getReceiver().getEmail(), getSubject(), getContent(notification));
 	}
 
 	abstract String getSubject();
 
     public String getContent(Notification notification) {
-        String link = "<a href='" + notificationService.getIntakeConfirmationLink(notification) + "'> confirm Link </a>";
-        return "Confirm: " + notificationService.getIntakeConfirmationLink(notification);
+        String link = "<a href='" + notificationService.getIntakeConfirmationLink(notification) + "'>here</a>";
+        return notification.getMessage()+"  Confirm: " + link;
     }
 
     public void setNotificationService(NotificationService notificationService) {
