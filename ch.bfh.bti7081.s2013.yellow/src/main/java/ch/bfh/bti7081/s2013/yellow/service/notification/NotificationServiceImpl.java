@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -24,9 +25,12 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
     @Autowired
     NotificationDAO notificationDAO;
-
-    @Autowired
-    MailService mailService;
+    
+	@Autowired
+	private SendAlarmNotifaction sendAlarmNotifaction;
+	@Autowired
+    
+	private SendReminderNotification sendReminderNotification;
 
     @PostConstruct
     public void init() {
@@ -40,18 +44,25 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         NotificationContext context = new NotificationContext();
         switch (notification.getNotificationType()) {
             case REMINDER:
-                context.setSendStrategy(new SendReminderNotification());
+                context.setSendStrategy(sendReminderNotification);
                 break;
             case ALARM:
-                context.setSendStrategy(new SendAlarmNotifaction());
+                context.setSendStrategy(sendAlarmNotifaction);
                 break;
             default:
-                context.setSendStrategy(new SendReminderNotification());
+                context.setSendStrategy(sendReminderNotification);
                 break;
         }
         context.send(notification);
     }
 
+    @Override
+    public void sendNotifications() {
+		for(Notification n: findNewNotificationsToSend()) {
+			send(n);
+		}
+    }
+    
     @Override
     public void resendNotifications(Integer timePassed) {
 
@@ -89,5 +100,13 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
         Notification n = findByCriteria(Restrictions.eq("uuid", uuid)).get(0);
         n.setState(NotificationState.CONFIRMED);
         save(n);
+    }
+    
+    @Override
+    // Get a list of Notifications of State new and older than than current Time
+    public List<Notification> findNewNotificationsToSend() {
+    	Date cmpDate = new Date();
+    	return notificationDAO.findByCriteria(Restrictions.and(
+                Restrictions.eq("state", NotificationState.NEW), Restrictions.lt("sendDate", cmpDate)));
     }
 }

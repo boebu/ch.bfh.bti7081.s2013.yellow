@@ -8,9 +8,7 @@ import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationState;
 import ch.bfh.bti7081.s2013.yellow.util.stateMachine.NotificationStateMachine;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.UUID;
@@ -23,15 +21,22 @@ import java.util.UUID;
 public class Notification extends YellowEntity<Notification> {
 
     @Autowired
+    @Transient
     private NotificationStateMachine notificationStateMachine;
 
+
+	@Enumerated(EnumType.ORDINAL)
+	@NotNull
     public NotificationType notificationType;
 
     @ManyToOne(optional = false)
 	@NotNull
     private Person receiver;
     private String message;
+
+	@NotNull
     private NotificationState state;
+
     private Date sendDate;
 
     private String intakeConfirmLink;
@@ -47,6 +52,8 @@ public class Notification extends YellowEntity<Notification> {
         this.message = message;
         this.sendDate = sendDate;
         this.intakeConfirmLink = UUID.randomUUID().toString();
+        this.state = NotificationState.NEW;
+	    this.notificationType = NotificationType.REMINDER;
     }
 
     public Notification(User receiver, String message, NotificationState state, Notification parent) {
@@ -56,7 +63,6 @@ public class Notification extends YellowEntity<Notification> {
         this.state = state;
         this.parentNotification = parent;
         this.intakeConfirmLink = UUID.randomUUID().toString();
-        //this.state = new NotificationStateNew();
     }
 
     public Notification() {
@@ -121,7 +127,7 @@ public class Notification extends YellowEntity<Notification> {
     public void setParentNotification(Notification parentNotification) {
         this.parentNotification = parentNotification;
     }
-
+    
     public NotificationType getNotificationType() {
         return notificationType;
     }

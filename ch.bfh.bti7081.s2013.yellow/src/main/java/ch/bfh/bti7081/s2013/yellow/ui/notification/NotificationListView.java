@@ -54,10 +54,10 @@ public class NotificationListView extends CustomComponent implements View {
 		//Set the number of visible rows, if more, scrollbar will appear
 		ntfyTable.setPageLength(VISIBLE_ROWS);
 
-		//For every prescription, there's a row in the table
+		//For every notification, there's a row in the table
 		for (Notification notification : notificationService.findAll()) {
 		
-			//Reads the data from the prescription and fills it in the rows
+			//Reads the data from the notification and fills it in the rows
 			ntfyTable.addItem(new Object[]{
 					notification.getId(),
 					notification.getReceiver().getEmail(),
