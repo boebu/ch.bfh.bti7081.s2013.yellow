@@ -5,15 +5,21 @@
 ============================================
 
 == Diary ==
+
+20130613
+--------
+  - Scrum Backlog updated (polla2)
+
 20130612
 --------
   - Anwesend: alle
   - Abschluss von Daily Scrum
     - Beseitigen der Probleme mit Mailversand -> rohdj1, glisb1
-    - Testing abschliessen -> polla2
-    - Allgemein Codereview&Commenting -> alle
-    - Vorbereitung Präsentation -> bronc1
-  - Aufteilung Präsentation => TODO!
+    - Automatisiertes Testing abschliessen -> polla2
+    - Allgemein Codereview & Commenting -> alle
+    - Vorbereitung PrÃ¤sentation -> bronc1
+    - EinnahmebestÃ¤tigung des Patienten -> polla2, rohdj1
+  - Aufteilung PrÃ¤sentation => TODO!
     - Storyboard&Reqs -> bronc1
     - Demo -> rohdj1, glisb1
     - Classdiagram -> rohdj1
