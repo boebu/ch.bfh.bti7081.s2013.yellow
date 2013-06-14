@@ -47,8 +47,8 @@ public class NotificationListView extends CustomComponent implements View {
 		ntfyTable.addContainerProperty("id", Integer.class, null);
 		ntfyTable.addContainerProperty("Receiver", String.class, null);
 		ntfyTable.addContainerProperty("Message", String.class, null);
-		ntfyTable.addContainerProperty("Date created", Timestamp.class, null);
-		ntfyTable.addContainerProperty("Version", Integer.class, null);
+		ntfyTable.addContainerProperty("Send Date", Timestamp.class, null);
+		ntfyTable.addContainerProperty("State", String.class, null);
 
 		
 		//Set the number of visible rows, if more, scrollbar will appear
@@ -62,8 +62,8 @@ public class NotificationListView extends CustomComponent implements View {
 					notification.getId(),
 					notification.getReceiver().getEmail(),
 					notification.getMessage(),
-					notification.getCreation(),
-					notification.getVersion()
+					notification.getSendDate(),
+					notification.getState().toString()
 			}, notification.getId());
 		}
 

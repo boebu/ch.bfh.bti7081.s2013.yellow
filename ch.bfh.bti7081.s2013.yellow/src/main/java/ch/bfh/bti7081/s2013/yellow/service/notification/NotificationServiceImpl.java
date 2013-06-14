@@ -62,6 +62,8 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 	public void sendNotifications() {
 		for (Notification n : findNewNotificationsToSend()) {
 			send(n);
+			setNotificationState(n, NotificationState.SENT);
+			save(n);
 		}
 	}
 
@@ -78,7 +80,7 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 		for (Notification n : unconfirmedNotifications) {
 			Notification newNotification = new Notification(n.getReceiver(), n.getMessage(), n.getSendDate());
 			newNotification.setParentNotification(n);
-			setNotificationState(n, NotificationState.NEW);
+			setNotificationState(newNotification, NotificationState.NEW);
 			newNotification.setNotificationType(NotificationType.REMINDER);
 			save(newNotification);
 
@@ -134,7 +136,7 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
 	@Override
 	public String getIntakeConfirmationLink(Notification notification) {
-		return "http://localhost:8080/#!" + IntakeConfirmView.NAME + "/" + notification.getUuid();
+		return "http://147.87.46.38:8080/#!" + IntakeConfirmView.NAME + "/" + notification.getUuid();
 	}
 
 	@Override
