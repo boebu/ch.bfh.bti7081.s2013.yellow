@@ -10,9 +10,9 @@ import java.util.Date;
 
 /**
  * @author Boban Glisovic
- * This Class Represents a JMX-MBean
- * Create Notifications based on existing Prescriptions
- * Send Notifications
+ *         This Class Represents a JMX-MBean
+ *         Create Notifications based on existing Prescriptions
+ *         Send Notifications
  */
 
 public class SystemTrigger {
@@ -24,6 +24,7 @@ public class SystemTrigger {
 
 	/**
 	 * Count all prescriptions, can be used to test the connection
+	 *
 	 * @return number of all prescriptions
 	 */
 	public long countPrescrptions() {
@@ -32,21 +33,21 @@ public class SystemTrigger {
 
 
 	/**
-	 *  create notification based on valid prescriptions
+	 * create notification based on valid prescriptions
 	 */
 	public void createNotifications() {
-		Date today = new Date();
-		for(Prescription p :this.presriptionService.findActiveandInRange()) {
+		for (Prescription p : this.presriptionService.findActiveandInRange()) {
+			Date today = new Date();
 			today.setHours(0);
 			today.setMinutes(0);
-			for(int i=1;i<=(24/p.getIntervallInHours());i++) {
-				today.setHours(i*p.getIntervallInHours());
-				notificationService.save(new Notification(p.getPatient(),"take this: " + p.getMedicament().getName(),today));
+			for (int i = 1; i <= (24 / p.getIntervallInHours()); i++) {
+				today.setHours(i * p.getIntervallInHours());
+				notificationService.save(new Notification(p.getPatient(), "take this: " + p.getMedicament().getName(), today));
 			}
-			
+
 		}
 	}
-	
+
 	/**
 	 * send Notifications from stored Notifications
 	 */
@@ -60,5 +61,5 @@ public class SystemTrigger {
 	public void resendNotifications() {
 		notificationService.resendNotifications(1800);
 	}
-	
+
 }

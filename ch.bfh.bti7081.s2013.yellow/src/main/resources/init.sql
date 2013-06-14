@@ -147,14 +147,14 @@ INSERT INTO Medicament (id, name, category) VALUES
 
 # sample prescriptions
 INSERT INTO `prescription` (`id`, `creation`, `lastUpdated`, `version`, `updatedBy`, `comment`, `deactivated`, `intervallInHours`, `lastTaken`, `quantity`, `validFrom`, `validUntil`, `medicament_id`, `patient_id`) VALUES
-(32768, '2013-05-22 19:14:42', '2013-05-22 19:14:42', 1, NULL, 'bliblablubb', 0, 8, NULL, 8, '2013-05-08 00:00:00', '2013-10-08 00:00:00', 1088, 2001),
-(32769, '2013-05-22 19:15:36', '2013-05-22 19:15:36', 1, NULL, NULL, 0, 14, NULL, 3, '2013-05-14 00:00:00', '2013-10-08 00:00:00', 1091, 2072),
-(32770, '2013-05-22 19:16:04', '2013-05-22 19:16:04', 1, NULL, NULL, 0, 1, NULL, 5, '2013-05-15 00:00:00', '2013-10-08 00:00:00', 1138, 2043);
+(32768, '2013-05-22 19:14:42', '2013-05-22 19:14:42', 1, NULL, 'bliblablubb', 0, 8, NULL, 8, '2013-05-08 00:00:00', '2013-10-08 00:00:00', 1088, 2000),
+(32769, '2013-05-22 19:15:36', '2013-05-22 19:15:36', 1, NULL, NULL, 0, 8, NULL, 8, '2013-05-14 00:00:00', '2013-10-08 00:00:00', 1091, 2001),
+(32770, '2013-05-22 19:16:04', '2013-05-22 19:16:04', 1, NULL, NULL, 0, 24, NULL, 24, '2013-05-15 00:00:00', '2013-05-08 00:00:00', 1138, 2002);
 
 # sample patients
 INSERT INTO Patient (id, vorname, name, phoneNr, birthday, email) VALUES
 (2000, "Christine", "Mehler", "027 255 91 72", "1991-9-14", "geilename@gmail.com"),
-(2001, "Dieter", "Barth", "055 414 94 58", "1947-11-21", "geilename@gmail.com"),
+(2001, "Dieter", "Barth", "055 414 94 58", "1947-11-21", "P9NIU1JbVmyk3oYlL6OR0PenO6PYAe@api.pushover.net"),
 (2002, "Max", "Berg", "021 443 46 81", "1991-2-15", "geilename@gmail.com"),
 (2003, "Markus", "Bader", "061 638 25 90", "1930-1-6", "geilename@gmail.com"),
 (2004, "Christin", "Kunze", "021 749 55 77", "1941-8-3", "geilename@gmail.com"),

@@ -136,7 +136,7 @@ public class NotificationServiceImpl extends GenericServiceImpl<Notification> im
 
 	@Override
 	public String getIntakeConfirmationLink(Notification notification) {
-		return "http://147.87.46.38:8080/#!" + IntakeConfirmView.NAME + "/" + notification.getUuid();
+		return "http://localhost:8080/#!" + IntakeConfirmView.NAME + "/" + notification.getUuid();
 	}
 
 	@Override
